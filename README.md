@@ -43,12 +43,8 @@ I'm a Data Scientist intrigued by the possibilities of transforming our brains w
 ## 📫 How to Reach Me
 <table>
   <tr>
-    <td>
-      -[Email](mailto:lakshaychawla13@gmail.com)
-    </td>
-    <td>
-      -[LinkedIn](https://www.linkedin.com/in/lakshaychawla13)
-    </td>
+    <td><a href="mailto:lakshaychawla13@gmail.com">Email</a></td>
+    <td><a href="https://www.linkedin.com/in/lakshaychawla13">LinkedIn</a></td>
   </tr>
 </table>
 
