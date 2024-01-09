@@ -30,7 +30,12 @@ I'm a Data Scientist intrigued by the possibilities of transforming our brains w
 - SQL
   
 ## 📫 How to Reach Me
-- [Email](mailto:lakshaychawla13@gmail.com) &nbsp; | &nbsp; [LinkedIn](https://www.linkedin.com/in/lakshaychawla13)
+<table>
+  <tr>
+    <td>[Email](mailto:lakshaychawla13@gmail.com)</td>
+    <td>[LinkedIn](https://www.linkedin.com/in/lakshaychawla13)</td>
+  </tr>
+</table>
 
 ## ⚡ Fun Fact
 I have interests in Behavioural Economics, Strategic Gaming, and Clinical Psychology. Also, I enjoy writing and music.
