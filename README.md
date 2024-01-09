@@ -21,19 +21,34 @@ I'm a Data Scientist intrigued by the possibilities of transforming our brains w
 ![Lakshay's GitHub stats](https://github-readme-stats.vercel.app/api?username=Lakshay-13&show_icons=true&theme=radical&bg_color=967bb6&title_color=0afa9e&text_color=0afa9e)
 
 ## 🚀 Skills
-- Physics Informed Neural Networks(PINNs)
-- Machine Learning and Artificial Intelligence
-- Data Science
-- Python
-- Hive
-- Hadoop
-- SQL
+<table>
+  <tr>
+    <td>Physics Informed Neural Networks(PINNs)</td>
+    <td>Data Science</td>
+  </tr>
+  <tr>
+    <td>Machine Learning and Artificial Intelligence</td>
+    <td>Python</td>
+  </tr>
+  <tr>
+    <td>Hive</td>
+    <td>Hadoop</td>
+  </tr>
+  <tr>
+    <td>Spark</td>
+    <td>SQL</td>
+  </tr>
+</table>
   
 ## 📫 How to Reach Me
 <table>
   <tr>
-    <td>[Email](mailto:lakshaychawla13@gmail.com)</td>
-    <td>[LinkedIn](https://www.linkedin.com/in/lakshaychawla13)</td>
+    <td>
+      -[Email](mailto:lakshaychawla13@gmail.com)
+    </td>
+    <td>
+      -[LinkedIn](https://www.linkedin.com/in/lakshaychawla13)
+    </td>
   </tr>
 </table>
 
