@@ -13,7 +13,7 @@ I'm a Data Scientist intrigued by the possibilities of transforming our brains w
 - **R&D Consultant at System 3** (01/2024 - Present): Developing ML and AI course content, and leveraging data insights for strategic decision-making.
 
 ## 🔭 Current Projects
-- [NeuroDiffHub](http://dev.neurodiff.io): Description of your project here.
+- [NeuroDiffHub](http://dev.neurodiff.io){:target="_blank"}: Description of your project here.
 - Applications of PINNs: Physics Informed Neural Networks.
 - Spectral Analysis of crops.
 
@@ -30,8 +30,8 @@ I'm a Data Scientist intrigued by the possibilities of transforming our brains w
 - SQL
   
 ## 📫 How to Reach Me
-- [LinkedIn](https://www.linkedin.com/in/lakshaychawla13)
-- [Email](mailto:lakshaychawla13@gmail.com) 
+- [LinkedIn](https://www.linkedin.com/in/lakshaychawla13){:target="_blank"}
+- [Email](mailto:lakshaychawla13@gmail.com) {:target="_blank"}
 
 ## ⚡ Fun Fact
 I have interests in behavioural economics, strategic gaming, and clinical psychology. Also, I enjoy writing and music.
