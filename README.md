@@ -13,7 +13,7 @@ I'm a Data Scientist intrigued by the possibilities of transforming our brains w
 - **R&D Consultant at System 3** (01/2024 - Present): Developing ML and AI course content, and leveraging data insights for strategic decision-making.
 
 ## 🔭 Current Projects
-- [neurodiffhub](http://dev.neurodiff.io): Description of your project here.
+- [NEURODIFFHUB](http://dev.neurodiff.io): Description of your project here.
 - Applications of PINNs: Physics Informed Neural Networks.
 - Spectral Analysis of crops.
 
