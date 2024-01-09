@@ -21,32 +21,17 @@ I'm a Data Scientist intrigued by the possibilities of transforming our brains w
 ![Lakshay's GitHub stats](https://github-readme-stats.vercel.app/api?username=Lakshay-13&show_icons=true&theme=radical&bg_color=967bb6&title_color=0afa9e&text_color=0afa9e)
 
 ## 🚀 Skills
-<table>
-  <tr>
-    <td>Physics Informed Neural Networks(PINNs)</td>
-    <td>Data Science</td>
-  </tr>
-  <tr>
-    <td>Machine Learning and Artificial Intelligence</td>
-    <td>Python</td>
-  </tr>
-  <tr>
-    <td>Hive</td>
-    <td>Hadoop</td>
-  </tr>
-  <tr>
-    <td>Spark</td>
-    <td>SQL</td>
-  </tr>
-</table>
+- Physics Informed Neural Networks(PINNs)
+- Machine Learning and Artificial Intelligence
+- Data Science
+- Python
+- Hive
+- Hadoop
+- SQL
   
 ## 📫 How to Reach Me
-<table>
-  <tr>
-    <td><a href="mailto:lakshaychawla13@gmail.com">Email</a></td>
-    <td><a href="https://www.linkedin.com/in/lakshaychawla13">LinkedIn</a></td>
-  </tr>
-</table>
+- [LinkedIn](https://www.linkedin.com/in/lakshaychawla13)
+- [Email](mailto:lakshaychawla13@gmail.com) 
 
 ## ⚡ Fun Fact
 I have interests in Behavioural Economics, Strategic Gaming, and Clinical Psychology. Also, I enjoy writing and music.
