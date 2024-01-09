@@ -2,7 +2,7 @@
 
 <img src="banner.jpg">
 
-I'm a Data Scientist intrigued by the possibilities of transforming our brains with AI. Passionate about Machine Learning, AI, and leveraging data to drive strategic decisions.
+I'm a Data Scientist intrigued by the possibilities of transforming our brains with AI.
 
 ## 📚 Education
 - **Bachelor of Technology (Computer Science Engineering)**
@@ -34,4 +34,4 @@ I'm a Data Scientist intrigued by the possibilities of transforming our brains w
 - [Email](mailto:lakshaychawla13@gmail.com) 
 
 ## ⚡ Fun Fact
-I have interests in Behavioural Economics, Strategic Gaming, and Clinical Psychology. Also, I enjoy writing and music.
+I have interests in behavioural economics, strategic gaming, and clinical psychology. Also, I enjoy writing and music.
