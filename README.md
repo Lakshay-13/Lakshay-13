@@ -10,7 +10,7 @@ I'm a Data Scientist intrigued by the possibilities of transforming our brains w
 
 ## 🌟 Professional Highlights
 - **Research Fellow(Computer Science) at Harvard SEAS** (05/2024-07/2024): Focused on developing new methods for localization for Physics-Informed Neural Networks (PINNs).
-- **Researcher at StellarDNN** (01/2023 - Present): Focused on developing advanced architectures for Physics-Informed Neural Networks (PINNs).
+- **Researcher at StellarDNN** (01/2023 - Present): Focusing on developing advanced architectures for Physics-Informed Neural Networks (PINNs).
 - **R&D Consultant at System 3** (01/2024 - Present): Developing ML and AI course content, and leveraging data insights for strategic decision-making.
 
 ## 🔭 Current Projects
