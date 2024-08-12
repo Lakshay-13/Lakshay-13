@@ -9,9 +9,9 @@ I'm a Data Scientist intrigued by the possibilities of transforming our brains w
   Maharaja Agrasen Institute of Technology (08/2018 - 06/2022, 8.6 CGPA)
 
 ## 🌟 Professional Highlights
-- **Research Fellow(Computer Science) at Harvard SEAS** (05/2024-07/2024): Focused on developing new methods for localization for Physics-Informed Neural Networks (PINNs).
-- **Researcher at StellarDNN** (01/2023 - Present): Focusing on developing advanced architectures for Physics-Informed Neural Networks (PINNs).
 - **R&D Consultant at System 3** (01/2024 - Present): Developing ML and AI course content, and leveraging data insights for strategic decision-making.
+- **Researcher at StellarDNN** (01/2023 - Present): Focusing on developing advanced architectures for Physics-Informed Neural Networks (PINNs).
+- **Research Fellow(Computer Science) at Harvard SEAS** (05/2024-07/2024): Focused on developing new methods for localization for Physics-Informed Neural Networks (PINNs).
 
 ## 🔭 Current Projects
 - [NeuroDiffHub](http://dev.neurodiff.io): A platform to save all your PINNs solvers.
