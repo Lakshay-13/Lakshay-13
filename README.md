@@ -6,7 +6,7 @@ I'm a Data Scientist intrigued by the possibilities of transforming our brains w
 
 ## 📚 Education
 
-- Master of Technology (Artificial Intelligence)**
+- **Master of Technology (Artificial Intelligence)**
   Indian Institute of Technology, IIT, Jodhpur (01/2025 - Present)
 - **Bachelor of Technology (Computer Science Engineering)**
   Maharaja Agrasen Institute of Technology (08/2018 - 06/2022, 8.6 CGPA)
