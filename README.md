@@ -19,7 +19,9 @@ I'm a Data Scientist intrigued by the possibilities of transforming our brains w
 ## 🔭 Current Projects
 - [NeuroDiffHub](http://dev.neurodiff.io): A platform to save all your PINNs solvers.
 - Applications of PINNs: Physics Informed Neural Networks.
-- Spectral Analysis of crops.
+- Spectral Analysis of crops
+- Yield prediction of crops across Santiago
+- Understanding LLMs (Course development)
 
 ## 📈 GitHub Stats
 ![Lakshay's GitHub stats](https://github-readme-stats.vercel.app/api?username=Lakshay-13&show_icons=true&theme=radical&bg_color=967bb6&title_color=0afa9e&text_color=0afa9e)
