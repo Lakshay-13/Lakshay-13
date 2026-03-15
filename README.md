@@ -50,17 +50,6 @@ I am currently pursuing an M.Tech. in Artificial Intelligence at IIT Jodhpur, wh
 - **Programming:** Python, PyTorch, TensorFlow, SQL, LangChain, LangGraph, OpenAI API
 - **Data:** Hive, Hadoop, Spark, Exploratory Data Analysis, Data Visualization
 
-## GitHub Snapshot
-
-<p align="center">
-  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=Lakshay-13&bg_color=0d1117&color=e6edf3&line=0afa9e&point=e6edf3&area=true&hide_border=true&title_color=0afa9e&custom_title=Contribution%20Graph&radius=8&v=20260316g" alt="Lakshay Chawla contribution graph">
-</p>
-
-<p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=Lakshay-13&show_icons=true&hide_border=true&title_color=0afa9e&icon_color=0afa9e&text_color=e6edf3&bg_color=0d1117&cache_seconds=21600&v=20260316g" alt="Lakshay Chawla GitHub stats">
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Lakshay-13&layout=compact&langs_count=6&hide=Jupyter%20Notebook,HTML,CSS,PureBasic&hide_border=true&title_color=0afa9e&text_color=e6edf3&bg_color=0d1117&cache_seconds=21600&v=20260316g" alt="Top languages">
-</p>
-
 ## Education
 
 - **Master of Technology (Artificial Intelligence)**, IIT Jodhpur `(01/2025 - Present)`
