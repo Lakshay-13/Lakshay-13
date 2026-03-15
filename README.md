@@ -1,22 +1,12 @@
 <p align="center">
-  <img src="banner.jpg" alt="Lakshay Chawla banner" width="100%">
+  <img src="hero-banner.jpg" alt="Lakshay Chawla hero banner" width="100%">
 </p>
 
 <p align="center">
-  <img src="icon.png" alt="Lakshay Chawla icon" width="96" height="96">
-</p>
-
-<h1 align="center">Lakshay Chawla</h1>
-
-<p align="center">
-  Data Scientist building AI at the intersection of Physics-Informed Neural Networks (PINNs), 3D vision, and generative modeling.
-</p>
-
-<p align="center">
-  <a href="https://lakshay-13.github.io">Portfolio</a> |
-  <a href="https://www.linkedin.com/in/lakshaychawla13">LinkedIn</a> |
-  <a href="mailto:lakshaychawla13@gmail.com">Email</a> |
-  <a href="https://drive.google.com/file/d/1Ts9XRjdSr6KLHI6jTE11Ybc70nW2ppes/view?usp=sharing">Resume</a>
+  <a href="https://lakshay-13.github.io"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-0AFA9E?style=for-the-badge&logo=googlechrome&logoColor=04110C"></a>
+  <a href="https://www.linkedin.com/in/lakshaychawla13"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0AFA9E?style=for-the-badge&logo=linkedin&logoColor=04110C"></a>
+  <a href="mailto:lakshaychawla13@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-0AFA9E?style=for-the-badge&logo=gmail&logoColor=04110C"></a>
+  <a href="https://drive.google.com/file/d/18PgQ_zQ0XuA0Eyh0GeSW_2LWA-vjwEkp/view?usp=drive_link"><img alt="Resume" src="https://img.shields.io/badge/Resume-0AFA9E?style=for-the-badge&logo=googledrive&logoColor=04110C"></a>
 </p>
 
 ## About
