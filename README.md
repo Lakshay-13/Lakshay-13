@@ -53,8 +53,11 @@ I am currently pursuing an M.Tech. in Artificial Intelligence at IIT Jodhpur, wh
 ## GitHub Snapshot
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=Lakshay-13&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&title_color=0afa9e&icon_color=0afa9e&text_color=e6edf3&bg_color=0d1117&cache_seconds=21600" alt="Lakshay Chawla GitHub stats">
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Lakshay-13&layout=compact&langs_count=8&hide_border=true&title_color=0afa9e&text_color=e6edf3&bg_color=0d1117&cache_seconds=21600" alt="Top languages">
+  <img height="180" src="https://streak-stats.demolab.com?user=Lakshay-13&theme=github-dark-blue&hide_border=true&background=0D1117&ring=0AFA9E&fire=0AFA9E&currStreakLabel=0AFA9E&sideLabels=E6EDF3&dates=8B949E&sideNums=E6EDF3&currStreakNum=E6EDF3&v=20260316" alt="Lakshay Chawla contribution streak">
+</p>
+
+<p align="center">
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Lakshay-13&layout=compact&langs_count=8&hide_border=true&title_color=0afa9e&text_color=e6edf3&bg_color=0d1117&cache_seconds=21600&v=20260316" alt="Top languages">
 </p>
 
 ## Education
