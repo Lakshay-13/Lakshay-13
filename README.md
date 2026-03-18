@@ -36,8 +36,6 @@ I am currently pursuing an M.Tech. in Artificial Intelligence at IIT Jodhpur, wh
 - **[RL-PINNs](https://lakshay-13.github.io/rl-pinn/):** Reinforcement-learning framework for more adaptive and interactive PINN training.
 - **[RAGS-Demo](https://github.com/Lakshay-13/RAGS-Demo):** Retrieval-Augmented Generation demo for improved information retrieval and response quality.
 
-## Live Snapshot
-
 <p align="center">
   <a href="https://lakshay-13.github.io/">
     <img
@@ -46,10 +44,6 @@ I am currently pursuing an M.Tech. in Artificial Intelligence at IIT Jodhpur, wh
       width="100%"
     >
   </a>
-</p>
-
-<p align="center">
-  Live backend snapshot showing Fren server reach and NotifyMe delivery volume.
 </p>
 
 ## Skills
