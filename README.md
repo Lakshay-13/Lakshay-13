@@ -36,20 +36,20 @@ I am currently pursuing an M.Tech. in Artificial Intelligence at IIT Jodhpur, wh
 - **[RL-PINNs](https://lakshay-13.github.io/rl-pinn/):** Reinforcement-learning framework for more adaptive and interactive PINN training.
 - **[RAGS-Demo](https://github.com/Lakshay-13/RAGS-Demo):** Retrieval-Augmented Generation demo for improved information retrieval and response quality.
 
-## NotifyMe Usage
+## Live Snapshot
 
 <p align="center">
-  <a href="https://lakshay-13.github.io/notifyme/">
+  <a href="https://lakshay-13.github.io/">
     <img
-      src="https://www.nextgenaischool.in/api/notifyme/usage-chart.svg?days=30"
-      alt="NotifyMe daily notifications sent"
+      src="https://www.nextgenaischool.in/api/portfolio/live-summary.svg"
+      alt="Live Fren and NotifyMe summary"
       width="100%"
     >
   </a>
 </p>
 
 <p align="center">
-  Live chart from the fren backend showing successful NotifyMe sends per day.
+  Live backend snapshot showing Fren server reach and NotifyMe delivery volume.
 </p>
 
 ## Skills
