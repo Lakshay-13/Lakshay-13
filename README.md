@@ -31,7 +31,7 @@ I am currently pursuing an M.Tech. in Artificial Intelligence at IIT Jodhpur, wh
 - **[FREN Bot](https://lakshay-13.github.io/fren/):** AI-powered Discord bot with chat, meme generation, moderation, games, and custom workflows.
 - **[Fren Shop](https://www.nextgenaischool.in/fren):** Official support and commerce hub for FREN with premium drops, updates, and community tooling.
 - **[Zinging](https://lakshay-13.github.io/zinging/):** Discord music bot with queue controls, library browsing, and recommendation flows.
-- **[NotifyMe](https://lakshay-13.github.io/notifyme/):** Android push-notification receiver built with Kotlin, Jetpack Compose, FCM, device API keys, and automatic website-hosted updates.
+- **[NotifyMe](https://lakshay-13.github.io/notifyme/):** Android push-notification receiver built with Kotlin, Jetpack Compose, FCM, managed device API keys, in-app API docs, and automatic website-hosted updates.
 - **NeuroDiffHub:** Private project hub for neural differential equation experiments and PINN-focused research workflows.
 - **[RL-PINNs](https://lakshay-13.github.io/rl-pinn/):** Reinforcement-learning framework for more adaptive and interactive PINN training.
 - **[RAGS-Demo](https://github.com/Lakshay-13/RAGS-Demo):** Retrieval-Augmented Generation demo for improved information retrieval and response quality.
