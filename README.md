@@ -37,7 +37,7 @@ I am currently pursuing an M.Tech. in Artificial Intelligence at IIT Jodhpur, wh
 - **[RL-PINNs](https://lakshay-13.github.io/rl-pinn/):** Reinforcement-learning framework for more adaptive and interactive PINN training.
 
 <p align="center">
-  <img src="https://www.nextgenaischool.in/api/portfolio/live-summary.svg" alt="Live Fren and NotifyMe summary" width="100%">
+  <img src="https://www.nextgenaischool.in/api/portfolio/full-stats.svg" alt="Live Fren and NotifyMe summary" width="100%">
 </p>
 
 ## Skills
