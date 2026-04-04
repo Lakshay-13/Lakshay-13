@@ -36,14 +36,14 @@ I am currently pursuing an M.Tech. in Artificial Intelligence at IIT Jodhpur, wh
 - **[Fren Shop](https://www.nextgenaischool.in/fren):** Official support and commerce hub for FREN with premium drops, updates, and community tooling.
 - **[RL-PINNs](https://lakshay-13.github.io/rl-pinn/):** Reinforcement-learning framework for more adaptive and interactive PINN training.
 
+## Live Ecosystem Stats
+
 <p align="center">
-  <a href="https://lakshay-13.github.io/">
-    <img
-      src="https://www.nextgenaischool.in/api/portfolio/live-summary.svg"
-      alt="Live Fren and NotifyMe summary"
-      width="100%"
-    >
-  </a>
+  <img src="stats-badge.svg" alt="Live ecosystem statistics showing Fren servers, NotifyMe notifications, URL Extractor mappings, and ArtGridX profiles" width="100%">
+</p>
+
+<p align="center">
+  <small><em>Stats updated: April 4, 2026 | View <a href="https://lakshay-13.github.io/">live dashboard</a> for real-time updates</em></small>
 </p>
 
 ## Skills
