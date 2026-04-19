@@ -33,6 +33,7 @@ I am currently pursuing an M.Tech. in Artificial Intelligence at IIT Jodhpur, wh
 - **[NotifyMe](https://lakshay-13.github.io/notifyme/):** Android push-notification receiver built with Kotlin, Jetpack Compose, FCM, managed device API keys, in-app API docs, and automatic website-hosted updates.
 - **[URL Extractor](https://url.nextgenaischool.in/):** Project landing page for URL Extractor.
 - **[Zinging](https://lakshay-13.github.io/zinging/):** Discord music bot with queue controls, library browsing, and recommendation flows.
+- **[Tree](https://tree.nextgenaischool.in/):** Interactive phylogenetic tree explorer with search, branch navigation, and evolutionary path tracing.
 - **[Fren Shop](https://www.nextgenaischool.in/fren):** Official support and commerce hub for FREN with premium drops, updates, and community tooling.
 - **[RL-PINNs](https://lakshay-13.github.io/rl-pinn/):** Reinforcement-learning framework for more adaptive and interactive PINN training.
 
