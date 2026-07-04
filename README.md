@@ -14,7 +14,7 @@
 I am a data scientist building AI at the intersection of Physics-Informed Neural Networks, 3D vision, agentic systems, product infrastructure, and AI education.
 
 - Research, products, education, and open-source work are connected by the same goal: make AI systems useful, grounded, and accessible.
-- My research focuses on Physics-Informed Neural Networks, 3D vision/generation, and physically grounded intelligence. I started my research journey at Harvard SEAS and currently work with [CLARITY Lab, IIT Jodhpur](https://home.iitj.ac.in/~hardikjain/clarityLab.html).
+- My research focuses on Physics-Informed Neural Networks, 3D vision/generation, and physically grounded intelligence. I started my research journey at Harvard SEAS and currently work with [CLARITY Lab, IIT Jodhpur](https://home.iitj.ac.in/~hardikjain/ClarityLab.html).
 - I am also building AI education products, developer tools, and applied AI systems across the [NextGenAISchool](https://www.nextgenaischool.in/) ecosystem.
 
 ## Experience
