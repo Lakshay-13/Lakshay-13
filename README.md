@@ -30,8 +30,6 @@ I am a data scientist building AI at the intersection of Physics-Informed Neural
 
 ## Projects
 
-Product surfaces first, repositories second. The sequence starts with current deployed systems and active platforms.
-
 - **[FREN Bot](https://lakshay-13.github.io/fren/):** AI-powered community platform with games, moderation, social loops, AI utilities, and premium workflows.
 - **[ArtGridX](https://artgridx.nextgenaischool.in/):** Portfolio publishing for artists, studios, and creative independents with templates, analytics, and custom domains.
 - **[NotifyMe](https://lakshay-13.github.io/notifyme/):** Android notification platform with profile-labelled alerts, local messaging, history sync, callbacks, and portable conversation data.
