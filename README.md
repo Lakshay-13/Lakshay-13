@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="hero-banner-v2.jpg" alt="Lakshay Chawla hero banner" width="100%">
+  <img src="top-banner.jpg" alt="Lakshay Chawla hero banner" width="100%">
 </p>
 
 <p align="center">
