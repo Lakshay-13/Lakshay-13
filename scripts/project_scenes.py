@@ -41,10 +41,18 @@ def scene(content, css):
 
 
 def fren():
-    p = '<ellipse cx="160" cy="116" rx="101" ry="92" fill="url(#purple-glow)"/>'
-    p += '<ellipse class="fren-shadow" cx="160" cy="207" rx="63" ry="7" fill="#393251" opacity=".5"/>'
-    p += '<g class="fren-brand">'+logo('logos/fren.png',77,29,166,166)+'</g>'
-    return scene(p, '.fren-brand{transform-box:fill-box;transform-origin:center;animation:frenBrand 4s ease-in-out infinite}.fren-shadow{animation:frenShadow 4s infinite}@keyframes frenBrand{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-7px) rotate(2deg)}}@keyframes frenShadow{0%,100%{opacity:.45}50%{opacity:.22}}')
+    p = '<defs><clipPath id="fren-emblem"><circle cx="160" cy="112" r="47"/></clipPath></defs>'
+    p += '<ellipse cx="160" cy="112" rx="94" ry="88" fill="url(#purple-glow)"/>'
+    p += path('M160 48V61M113 112H76V163M207 112H249V163', '#485968', width=1.3)
+    p += '<circle class="fren-halo" cx="160" cy="112" r="53" fill="none" stroke="#b9a7ff" stroke-width="1.2"/>'
+    p += '<g clip-path="url(#fren-emblem)">'+logo('logos/fren.png',106,58,108,108)+'</g>'
+    p += rect(109,13,102,33,'#1b2035','#4d476c',9)+label(160,35,'Games',14,PURPLE,'text-anchor="middle"')
+    p += rect(13,165,124,37,'#11292a','#2d5050',9)+label(75,189,'AI utilities',14,MINT,'text-anchor="middle"')
+    p += rect(181,165,134,37,'#172235','#43516c',9)+label(248,189,'Moderation',14,WHITE,'text-anchor="middle"')
+    p += dot(160,52,2.5,PURPLE,'class="fren-game-signal"')
+    p += dot(94,112,2.5,MINT,'class="fren-ai-signal"')
+    p += dot(228,112,2.5,PURPLE,'class="fren-mod-signal"')
+    return scene(p, '.fren-halo{animation:frenHalo 4s ease-in-out infinite}.fren-game-signal{animation:frenGame 4s infinite}.fren-ai-signal{animation:frenAI 4s infinite}.fren-mod-signal{animation:frenMod 4s infinite}@keyframes frenHalo{0%,100%{opacity:.3}50%{opacity:.85}}@keyframes frenGame{0%,100%{transform:translateY(0);opacity:.2}60%{transform:translateY(9px);opacity:1}}@keyframes frenAI{0%,100%{transform:translate(0,0);opacity:.25}40%{transform:translate(-18px,0);opacity:1}80%{transform:translate(-18px,43px);opacity:.3}}@keyframes frenMod{0%,100%{transform:translate(0,0);opacity:.25}45%{transform:translate(21px,0);opacity:1}80%{transform:translate(21px,43px);opacity:.3}}')
 
 
 def pinnhub():
@@ -61,10 +69,17 @@ def pinnhub():
 
 
 def artgridx():
-    p='<ellipse cx="161" cy="115" rx="107" ry="86" fill="url(#mint-glow)"/>'
-    p+='<g class="art-brand">'+logo('logos/artgridx.png',60,12,200,200)+'</g>'
-    p+=path('M89 215Q160 201 231 215',PURPLE,'class="art-brush"',width=2)
-    return scene(p,'.art-brand{transform-box:fill-box;transform-origin:center;animation:artBrand 8s ease-in-out infinite}.art-brush{stroke-dasharray:150;animation:artBrush 8s ease-in-out infinite}@keyframes artBrand{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}@keyframes artBrush{0%,100%{stroke-dashoffset:150;opacity:.2}40%,75%{stroke-dashoffset:0;opacity:.7}}')
+    p='<ellipse cx="75" cy="111" rx="88" ry="95" fill="url(#purple-glow)"/>'
+    p+=logo('logos/artgridx.png',0,46,147,147)
+    p+=rect(154,25,147,178,'#101824','#344251',12)
+    p+=label(169,49,'ARTIST STUDIO',10,'#b4c2cd')
+    p+=rect(169,61,59,68,'#1a3439','#34535a',5)+rect(237,61,49,42,'#28233c','#49425c',5)+rect(237,111,49,43,'#19342c','#315849',5)
+    p+=path('M177 119V73H220M246 72H278M246 79H272M246 86H276', '#5f8287', width=1)
+    p+='<g class="art-layout">'+rect(177,78,16,33,'#294f4a','none',3)+rect(198,78,22,18,'#65548d','none',3)+rect(198,101,22,10,'#344358','none',2)+'</g>'
+    p+=path('M245 145L254 120 266 139 277 125',PURPLE,width=1.4)
+    p+=label(169,149,'Templates',12,WHITE)+label(169,176,'Domains · Analytics',11,'#a5bbc6')
+    p+='<rect class="art-frame" x="169" y="61" width="59" height="68" rx="5" fill="none" stroke="#2effbf" stroke-width="1.4"/>'
+    return scene(p,'.art-frame{stroke-dasharray:64 190;animation:artFrame 8s linear infinite}.art-layout{animation:artLayout 8s ease-in-out infinite}@keyframes artFrame{to{stroke-dashoffset:-254}}@keyframes artLayout{0%,100%{opacity:.55}45%,70%{opacity:1}}')
 
 
 def notifyme():
@@ -85,7 +100,8 @@ def host():
     p+=path('M157 108H182M175 101 182 108 175 115',DIM)
     p+=path('M211 138H285A19 19 0 0 0 286 100A32 32 0 0 0 224 87A26 26 0 0 0 211 138Z',MINT,fill='#143329',width=1.8)
     p+='<g class="host-upload">'+path('M247 124V96M237 106 247 96 257 106',MINT,width=2.5)+'</g>'
-    p+=rect(204,157,91,32,'#142133',DIM,7)+path('M224 174 231 167A6 6 0 0 1 239 175L236 178M237 173 244 166A6 6 0 0 1 252 174L245 181',PURPLE,width=1.6)
+    p+=rect(204,157,91,32,'#142133',DIM,7)
+    p+='<g transform="translate(236 160) scale(1.08)" fill="none" stroke="#b9a7ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7 .2l3-3a5 5 0 0 0-7-7l-1.7 1.7M14 11a5 5 0 0 0-7-.2l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></g>'
     p+=label(34,211,'FILES',12,WHITE)+label(215,211,'SHARE LINKS',12,MINT)
     return scene(p,'.host-upload{animation:hostUpload 4s ease-in-out infinite}@keyframes hostUpload{0%,100%{transform:translateY(5px);opacity:.4}50%{transform:translateY(-4px);opacity:1}}')
 
@@ -118,12 +134,15 @@ def watermark():
 
 
 def frenshop():
-    p=rect(19,22,282,184,'#102028','#2d4446',14)
-    p+=logo('logos/fren.png',35,56,124,124)+label(180,79,'FREN',19,WHITE)+label(180,103,'Premium drops',12,'#b6c6d7')+label(180,123,'Community',12,'#8ea7b9')
-    p+=path('M176 144H187L198 174H266L275 150H190',PURPLE,width=2)
-    p+=dot(211,187,4,PURPLE)+dot(260,187,4,PURPLE)
-    p+='<g class="shop-package">'+rect(223,136,20,24,'#1e5748',MINT,3)+path('M226 143H240',MINT,width=1)+'</g>'
-    return scene(p,'.shop-package{animation:shopPackage 8s ease-in-out infinite}@keyframes shopPackage{0%,100%{transform:translateY(-12px);opacity:.3}45%,75%{transform:translateY(11px);opacity:1}}')
+    p='<ellipse cx="80" cy="119" rx="92" ry="89" fill="url(#purple-glow)"/>'
+    p+=logo('logos/frenshop.png',5,47,146,146)
+    p+=path('M151 71H168M151 121H168M151 171H168','#665281',width=1.2)
+    for index,(y,title) in enumerate([(51,'Premium passes'),(101,'Collectibles'),(151,'Bot upgrades')]):
+        p+=rect(168,y,139,40,'#1b2033','#4b4265',9)
+        p+='<g class="shop-entitlement" style="animation-delay:-'+str(index*1.1)+'s">'+dot(181,y+20,3,PURPLE)+'</g>'
+        p+=label(193,y+25,title,12.5,'#ded5f0')
+    p+=path('M158 71H165M158 121H165M158 171H165',PURPLE,'class="shop-unlock"',width=2)
+    return scene(p,'.shop-entitlement{animation:shopEntitlement 4s ease-in-out infinite}.shop-unlock{stroke-dasharray:2 8;animation:shopUnlock 4s linear infinite}@keyframes shopEntitlement{0%,100%{opacity:.35}50%{opacity:1}}@keyframes shopUnlock{to{stroke-dashoffset:-20}}')
 
 
 def tree():

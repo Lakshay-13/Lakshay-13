@@ -61,11 +61,11 @@
     "kind": "official portfolio artwork"
   },
   "frenshop": {
-    "source": "https://lakshay-13.github.io/fren/assets/fren-server.png",
-    "sha256": "4ac157d3b182a68ae047fc9763f11af6e47d88290de3e40931044105c49091e0",
-    "file": "logos/fren.png",
-    "kind": "official FREN artwork",
-    "original_sha256": "f69b96e34ecb275a77794299cff787da768d93a2fcfe04c2da52ac1b70f824fa"
+    "source": "https://www.nextgenaischool.in/fren/logo_fren_shop_transparent.png",
+    "file": "logos/frenshop.png",
+    "sha256": "9755dfebd0fdfe193220d59d72fd4271fdb43d568e11dc73f0b9f1e9c574ccb4",
+    "kind": "official Fren Shop logo",
+    "original_sha256": "4309990bf8627043e786cd3f46801bdd4e853bcfc1ecb56c0be8b7e0144bdd07"
   },
   "watermark": {
     "source": "Watermark Studio application: static/img/logo_watermark_studio.png",

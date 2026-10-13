@@ -206,7 +206,11 @@ def project_card(project, index, mobile=False):
     ]
     name_x = 92 if project.get("artwork") else (30 if mobile else 36)
     if project.get("artwork"):
-        parts.append(asset_image(project["artwork"], 30 if mobile else 36, 55, 44, 44))
+        artwork = asset_image(project["artwork"], 30 if mobile else 36, 55, 44, 44)
+        if project["id"] == "fren":
+            icon_x = 52 if mobile else 58
+            artwork = f'<defs><clipPath id="project-emblem"><circle cx="{icon_x}" cy="77" r="22"/></clipPath></defs><g clip-path="url(#project-emblem)">{artwork}</g>'
+        parts.append(artwork)
     title_lines = wrap_pixels(project["name"], 590-name_x if mobile else 820-name_x, 36)
     for line_index, line in enumerate(title_lines):
         parts.append(text(name_x, 86 + line_index * 42, line, 36, **{"font-weight": 700, "letter-spacing": -.6}))
@@ -279,7 +283,10 @@ def toolkit_panel(profile, mobile=False):
     parts = [text(36, 48, "From research to production", 32, **{"font-weight": 700}),
              text(36, 83, "Data science / AI / systems", 22, "#afbbc9")]
     tiles = [("Python", "brands/python.svg"), ("Codex", "brands/codex-terminal.svg"),
-             ("GCP / AWS", None), ("Database / APIs", None), ("PINNs / Neural nets", None)]
+             ("GCP / AWS", None), ("SQL / Databases", None), ("PINNs / Neural nets", None)]
+    defs = f'''<filter id="mint-ink" color-interpolation-filters="sRGB"><feFlood flood-color="{MINT}"/><feComposite in2="SourceAlpha" operator="in"/></filter>
+<filter id="purple-ink" color-interpolation-filters="sRGB"><feFlood flood-color="{LAVENDER}"/><feComposite in2="SourceAlpha" operator="in"/></filter>
+<filter id="aws-ink" color-interpolation-filters="sRGB"><feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -.333333 -.333333 -.333333 0 1"/><feComponentTransfer><feFuncA type="linear" slope="1.6"/></feComponentTransfer><feComposite in2="SourceAlpha" operator="in" result="cutout"/><feFlood flood-color="{LAVENDER}"/><feComposite in2="cutout" operator="in"/></filter>'''
     columns = 3 if mobile else 5
     tile_width = (width-72-(columns-1)*14)/columns
     for i, (name, file) in enumerate(tiles):
@@ -287,18 +294,15 @@ def toolkit_panel(profile, mobile=False):
         parts.append(f'<rect x="{x}" y="{y}" width="{tile_width}" height="120" rx="14" fill="#111d2d"/>')
         center = x+tile_width/2
         if file:
-            parts.append(f'<rect x="{center-27}" y="{y+13}" width="54" height="54" rx="12" fill="#edf1f5"/>')
-            icon_size = 32 if "chatgpt" in file else 38
-            parts.append(asset_image(file, center-icon_size/2, y+40-icon_size/2, icon_size, icon_size))
+            ink = "mint-ink" if i == 0 else "purple-ink"
+            parts.append(f'<g filter="url(#{ink})">'+asset_image(file, center-26, y+14, 52, 52)+'</g>')
         elif i == 2:
-            parts.append(f'<rect x="{center-66}" y="{y+15}" width="132" height="49" rx="10" fill="#edf1f5"/>')
-            parts.append(asset_image("brands/gcp-mark.png", center-54, y+20, 40, 40))
-            parts.append(asset_image("brands/aws.png", center+4, y+23, 54, 34))
+            parts.append('<g filter="url(#mint-ink)">'+asset_image("brands/gcp-mark.png", center-60, y+14, 50, 50)+'</g>')
+            parts.append(f'<g filter="url(#aws-ink)"><svg x="{center+6}" y="{y+20}" width="61" height="40" viewBox="37 23 105 63">'+asset_image("brands/aws.png", 0, 0, 179, 109)+'</svg></g>')
         elif i == 3:
-            parts.append(f'<ellipse cx="{center-29}" cy="{y+25}" rx="18" ry="6" fill="#162e32" stroke="{MINT}" stroke-width="1.6"/>')
-            parts.append(f'<path d="M {center-47} {y+25} V {y+52} C {center-47} {y+61} {center-11} {y+61} {center-11} {y+52} V {y+25} M {center-47} {y+37} C {center-47} {y+46} {center-11} {y+46} {center-11} {y+37}" fill="none" stroke="{MINT}" stroke-width="1.6"/>')
-            parts.append(text(center+30, y+52, "{ }", 25, LAVENDER, **{"text-anchor": "middle", "class": "mono"}))
-            parts.append(f'<path d="M {center-2} {y+42} H {center+6} M {center+3} {y+39} L {center+6} {y+42} L {center+3} {y+45}" fill="none" stroke="#8da7b3" stroke-width="1.5"/>')
+            parts.append(f'<ellipse cx="{center-14}" cy="{y+23}" rx="22" ry="7" fill="#12332e" stroke="{MINT}" stroke-width="1.7"/>')
+            parts.append(f'<path d="M {center-36} {y+23} V {y+52} C {center-36} {y+63} {center+8} {y+63} {center+8} {y+52} V {y+23} M {center-36} {y+37} C {center-36} {y+47} {center+8} {y+47} {center+8} {y+37}" fill="none" stroke="{MINT}" stroke-width="1.7"/>')
+            parts.append(f'<rect x="{center-8}" y="{y+32}" width="43" height="31" rx="5" fill="#172239" stroke="{LAVENDER}" stroke-width="1.5"/><path d="M {center-7} {y+42} H {center+34} M {center+6} {y+43} V {y+62} M {center+20} {y+43} V {y+62} M {center-7} {y+52} H {center+34}" fill="none" stroke="{LAVENDER}" stroke-width="1.1"/>')
         else:
             for layer, count in enumerate([2,3,2]):
                 for n in range(count):
@@ -324,7 +328,7 @@ def toolkit_panel(profile, mobile=False):
         cursor += row_height
     height = cursor + 8
     description = "; ".join(group["group"] + ": " + ", ".join(group["items"]) for group in profile["toolkit"])
-    return svg(width, height, "Toolkit", description, panel(width, height, parts))
+    return svg(width, height, "Toolkit", description, panel(width, height, parts), defs)
 
 
 def about_panel(profile, mobile=False):
@@ -373,27 +377,41 @@ CONTACT_ICONS = {
 }
 
 
-def contact_card(entry, mobile=False):
-    brand = entry["id"] in ["research", "building"]
-    width, height = ((640, 166) if mobile else (1200, 136)) if brand else ((200, 196) if mobile else (380, 190))
-    color = MINT if entry["id"] in ["email", "github", "portfolio", "research"] else LAVENDER
-    if brand:
-        parts = [asset_image(entry["artwork"], 22, 15, 98, height-30), text(145, 55, entry["label"], 30, **{"font-weight": 700})]
-        value_x, value_y, value_size, value_width = 145, 99, 24, width-211
-    else:
-        icon_scale = .65 if mobile else .85
-        parts = [f'<g transform="translate(20 19) scale({icon_scale})" fill="none" stroke="#c3d6dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{CONTACT_ICONS[entry["id"]]}</g>', text(20 if mobile else 88, 85 if mobile else 56, entry["label"], 26, **{"font-weight": 700})]
-        value_x, value_y, value_size, value_width = 20, 124 if mobile else 117, 18 if mobile else 23, width-40
+def connect_card(entry, mobile=False):
+    width, height = (200, 190) if mobile else (380, 154)
+    color = MINT if entry["id"] in ["email", "github", "portfolio"] else LAVENDER
+    label_x, label_y = (20, 94) if mobile else (86, 55)
+    parts = [
+        '<style>.contact-glow{animation:contactGlow 4s ease-in-out infinite}@keyframes contactGlow{0%,100%{opacity:.06}50%{opacity:.15}}</style>',
+        f'<rect x="20" y="20" width="48" height="48" rx="15" fill="#15252c" stroke="#2b4248" stroke-width="1"/>',
+        f'<rect class="contact-glow" x="20" y="20" width="48" height="48" rx="15" fill="{color}"/>',
+        f'<g transform="translate(28 28) scale(.53)" fill="none" stroke="{color}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">{CONTACT_ICONS[entry["id"]]}</g>',
+        text(label_x, label_y, entry["label"], 24, "#edf2f7", **{"font-weight": 700}),
+        f'<g transform="translate({width-45} 25)" fill="none" stroke="{color}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17 17 4M4 4H17V17"/></g>',
+    ]
     value = entry["value"]
-    if mobile and not brand and entry["id"] == "email":
+    if mobile and entry["id"] == "email":
         lines = [value.split("@")[0], "@"+value.split("@")[1]]
-    elif mobile and not brand and entry["id"] in ["github", "portfolio"]:
+    elif mobile and entry["id"] in ["github", "portfolio"]:
         lines = value.split("/") if entry["id"] == "github" else ["lakshay-13", ".github.io"]
     else:
-        lines = wrap_pixels(value, value_width, value_size)
+        lines = wrap_pixels(value, width-42, 17 if mobile else 21)
+    for index, line in enumerate(lines):
+        parts.append(text(22, (127 if mobile else 112)+index*25, line, 17 if mobile else 21, "#b7c8d6"))
+    return svg(width, height, entry["label"], entry["value"], panel(width, height, parts))
+
+
+def contact_card(entry, mobile=False):
+    if entry["id"] not in ["research", "building"]:
+        return connect_card(entry, mobile=mobile)
+    width, height = (640, 166) if mobile else (1200, 136)
+    color = MINT if entry["id"] == "research" else LAVENDER
+    parts = [asset_image(entry["artwork"], 22, 15, 98, height-30), text(145, 55, entry["label"], 30, **{"font-weight": 700})]
+    value_x, value_y, value_size, value_width = 145, 99, 24, width-211
+    lines = wrap_pixels(entry["value"], value_width, value_size)
     for index, line in enumerate(lines):
         parts.append(text(value_x, value_y+index*29, line, value_size, "#afc1d1"))
-    arrow_y = height/2 if brand else 41
+    arrow_y = height/2
     parts.append(f'<path d="M {width-48} {arrow_y-8} H {width-32} V {arrow_y+8} M {width-48} {arrow_y+8} L {width-32} {arrow_y-8}" fill="none" stroke="{color}" stroke-width="1.6"/>')
     parts.append(f'<circle class="signal" cx="{width-28}" cy="{height-25}" r="2.5" fill="{color}"/>')
     return svg(width, height, entry["label"], entry["value"], panel(width, height, parts))

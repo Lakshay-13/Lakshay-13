@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def picture(stem, alt, animated="svg", still="svg", link=None, width="100%"):
     def asset(suffix, extension):
-        return f"assets/{stem}{suffix}.{extension}?v=5"
+        return f"assets/{stem}{suffix}.{extension}?v=6"
     markup = f'''<picture>
   <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="{asset('-mobile-still', still)}">
   <source media="(prefers-reduced-motion: reduce)" srcset="{asset('-still', still)}">
@@ -26,7 +26,7 @@ def main():
              "## About", picture("about", " ".join(profile["about"].values()))]
     for entry in profile["about_links"]:
         parts.append(picture(f'connect/{entry["id"]}', f'{entry["label"]}: {entry["value"]}', link=entry["url"]))
-    parts.append("## Selected work")
+    parts.append("## Projects")
     for project in projects:
         alt = f'{project["name"]}. {project["description"]}'
         if not project["url"]:
