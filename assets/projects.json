@@ -1,10 +1,114 @@
 [
-  {"id":"fren","name":"FREN Bot","category":"COMMUNITY / APPLIED AI","color":"#2effbf","description":"AI-powered communities with games, moderation, social loops, AI utilities, and premium workflows.","tags":["Community","AI utilities","Moderation"],"url":"https://lakshay-13.github.io/fren/"},
-  {"id":"pinnhub","name":"PINN Hub","category":"RESEARCH / SCIENTIFIC ML","color":"#b9a7ff","description":"A research hub for Physics-Informed Neural Networks and neural differential-equation experiments.","tags":["PINNs","Differential equations","Research"],"url":"https://pinnhub.nextgenaischool.in/"},
-  {"id":"artgridx","name":"ArtGridX","category":"PRODUCTS / CREATIVE TOOLS","color":"#2effbf","description":"Portfolio publishing for artists, studios, and creative independents.","tags":["Portfolios","Publishing","Creative tools"],"url":"https://artgridx.nextgenaischool.in/"},
-  {"id":"notifyme","name":"NotifyMe","category":"ANDROID / DEVELOPER TOOLS","color":"#b9a7ff","description":"Profile-labelled alerts, local messaging, history sync, callbacks, and portable conversation data.","tags":["Android","Notifications","Callbacks"],"url":"https://lakshay-13.github.io/notifyme/"},
-  {"id":"host","name":"Host","category":"PRODUCTS / INFRASTRUCTURE","color":"#2effbf","description":"Developer-first hosting with simple deployment workflows and production-ready defaults.","tags":["Hosting","Deployment","Infrastructure"],"url":"https://lakshay-13.github.io/host/"},
-  {"id":"rlpinn","name":"RL-PINNs","category":"RESEARCH / REINFORCEMENT LEARNING","color":"#b9a7ff","description":"Adaptive Physics-Informed Neural Network training control loops through reinforcement learning.","tags":["Reinforcement learning","PINNs","Adaptive training"],"url":"https://lakshay-13.github.io/rl-pinn/"},
-  {"id":"tree","name":"Tree","category":"PRODUCTS / IDENTITY","color":"#2effbf","description":"Modern identity and profile surfaces built around interactive tree systems.","tags":["Identity","Profiles","Interactive systems"],"url":"https://tree.nextgenaischool.in/"},
-  {"id":"zinging","name":"Zinging","category":"AGENTIC AI / AUTOMATION","color":"#b9a7ff","description":"A self-evolving AI bot and agent ecosystem for adaptive communities, automation, and agentic utilities.","tags":["Agents","Automation","Communities"],"url":"https://lakshay-13.github.io/zinging/"}
+  {
+    "id": "fren",
+    "name": "FREN Bot",
+    "category": "COMMUNITY / APPLIED AI",
+    "color": "#2effbf",
+    "description": "AI-powered communities with games, moderation, social loops, AI utilities, and premium workflows.",
+    "tags": [
+      "Community",
+      "AI utilities",
+      "Moderation"
+    ],
+    "url": "https://lakshay-13.github.io/fren/",
+    "artwork": "logos/fren.png"
+  },
+  {
+    "id": "pinnhub",
+    "name": "PINN Hub",
+    "category": "RESEARCH / SCIENTIFIC ML",
+    "color": "#b9a7ff",
+    "description": "A research hub for Physics-Informed Neural Networks and neural differential-equation experiments.",
+    "tags": [
+      "PINNs",
+      "Differential equations",
+      "Research"
+    ],
+    "url": "https://pinnhub.nextgenaischool.in/",
+    "artwork": "logos/pinnhub.png"
+  },
+  {
+    "id": "artgridx",
+    "name": "ArtGridX",
+    "category": "PRODUCTS / CREATIVE TOOLS",
+    "color": "#2effbf",
+    "description": "Portfolio publishing for artists, studios, and creative independents.",
+    "tags": [
+      "Portfolios",
+      "Publishing",
+      "Creative tools"
+    ],
+    "url": "https://artgridx.nextgenaischool.in/",
+    "artwork": "logos/artgridx.png"
+  },
+  {
+    "id": "notifyme",
+    "name": "NotifyMe",
+    "category": "ANDROID / DEVELOPER TOOLS",
+    "color": "#b9a7ff",
+    "description": "Profile-labelled alerts, local messaging, history sync, callbacks, and portable conversation data.",
+    "tags": [
+      "Android",
+      "Notifications",
+      "Callbacks"
+    ],
+    "url": "https://lakshay-13.github.io/notifyme/",
+    "artwork": "logos/notifyme.png"
+  },
+  {
+    "id": "host",
+    "name": "Host",
+    "category": "PRODUCTS / INFRASTRUCTURE",
+    "color": "#2effbf",
+    "description": "Developer-first hosting with simple deployment workflows and production-ready defaults.",
+    "tags": [
+      "Hosting",
+      "Deployment",
+      "Infrastructure"
+    ],
+    "url": "https://lakshay-13.github.io/host/",
+    "artwork": "logos/host.png"
+  },
+  {
+    "id": "rlpinn",
+    "name": "RL-PINNs",
+    "category": "RESEARCH / REINFORCEMENT LEARNING",
+    "color": "#b9a7ff",
+    "description": "Adaptive Physics-Informed Neural Network training control loops through reinforcement learning.",
+    "tags": [
+      "Reinforcement learning",
+      "PINNs",
+      "Adaptive training"
+    ],
+    "url": "https://lakshay-13.github.io/rl-pinn/",
+    "artwork": "logos/rlpinn.png"
+  },
+  {
+    "id": "tree",
+    "name": "Tree",
+    "category": "PRODUCTS / IDENTITY",
+    "color": "#2effbf",
+    "description": "Modern identity and profile surfaces built around interactive tree systems.",
+    "tags": [
+      "Identity",
+      "Profiles",
+      "Interactive systems"
+    ],
+    "url": "https://tree.nextgenaischool.in/",
+    "artwork": null
+  },
+  {
+    "id": "zinging",
+    "name": "Zinging",
+    "category": "AGENTIC AI / AUTOMATION",
+    "color": "#b9a7ff",
+    "description": "A self-evolving AI bot and agent ecosystem for adaptive communities, automation, and agentic utilities.",
+    "tags": [
+      "Agents",
+      "Automation",
+      "Communities"
+    ],
+    "url": "https://lakshay-13.github.io/zinging/",
+    "artwork": "logos/zinging.png"
+  }
 ]

@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="24" viewBox="0 0 1200 24" role="img" aria-labelledby="title description">
-<title id="title"></title>
-<desc id="description"></desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title description">
+<title id="title">Education</title>
+<desc id="description">Master of Technology (Artificial Intelligence), IIT Jodhpur (01/2025 - Present); Bachelor of Technology (Computer Science Engineering), Maharaja Agrasen Institute of Technology (08/2018 - 06/2022, 8.6 CGPA)</desc>
 <defs>
 <linearGradient id="surface" x2="1" y2="1"><stop stop-color="#07110f"/><stop offset=".55" stop-color="#080d16"/><stop offset="1" stop-color="#141126"/></linearGradient>
 <linearGradient id="edge"><stop stop-color="#2effbf" stop-opacity=".65"/><stop offset=".55" stop-color="#b9a7ff" stop-opacity=".15"/><stop offset="1" stop-color="#b9a7ff" stop-opacity=".65"/></linearGradient>
@@ -28,6 +28,6 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#f4f7fb}
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes signal{0%,100%{opacity:.35}50%{opacity:1}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
-</style>
-<path d="M 0 12 H 1200" stroke="url(#edge)" stroke-width="1"/><path class="flow" d="M 0 12 H 1200" stroke="#2effbf" stroke-width="2"/>
+*{animation:none!important}</style>
+<rect x="1" y="1" width="1198" height="298" rx="20" fill="url(#surface)" stroke="#243331"/><path d="M 45 43 V 173" stroke="#2effbf" stroke-opacity=".2" stroke-width="2"/><path class="flow" d="M 45 43 V 173" stroke="#2effbf" stroke-opacity=".85" stroke-width="2"/><circle cx="45" cy="43" r="8" fill="#10251f" stroke="#2effbf" stroke-width="2"/><circle class="signal" cx="45" cy="43" r="4" fill="#2effbf" style="animation-delay:-0s"/><text x="76" y="52" font-size="28" font-weight="700">Master of Technology (Artificial Intelligence)</text><text x="76" y="87" font-size="21" style="fill:#2effbf">IIT Jodhpur</text><text x="76" y="122" font-size="18" class="muted">01/2025 - Present</text><circle cx="45" cy="173" r="8" fill="#10251f" stroke="#b9a7ff" stroke-width="2"/><circle class="signal" cx="45" cy="173" r="4" fill="#b9a7ff" style="animation-delay:-2s"/><text x="76" y="182" font-size="28" font-weight="700">Bachelor of Technology (Computer Science Engineering)</text><text x="76" y="217" font-size="21" style="fill:#b9a7ff">Maharaja Agrasen Institute of Technology</text><text x="76" y="252" font-size="18" class="muted">08/2018 - 06/2022, 8.6 CGPA</text>
 </svg>

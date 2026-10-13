@@ -1,0 +1,147 @@
+{
+  "experience": [
+    {
+      "role": "CEO",
+      "organization": "NextGenAISchool",
+      "dates": "05/2026 - Present"
+    },
+    {
+      "role": "Researcher",
+      "organization": "CLARITY Lab, IIT Jodhpur",
+      "dates": "06/2026 - Present"
+    },
+    {
+      "role": "Project Associate",
+      "organization": "IIT Jodhpur",
+      "dates": "12/2025 - 05/2026"
+    },
+    {
+      "role": "Freelancer",
+      "organization": "Independent",
+      "dates": "05/2025 - 11/2025"
+    },
+    {
+      "role": "R&D Consultant",
+      "organization": "System 3",
+      "dates": "01/2024 - 05/2025"
+    },
+    {
+      "role": "Research Fellow (Computer Science)",
+      "organization": "Harvard SEAS",
+      "dates": "05/2024 - 07/2024"
+    },
+    {
+      "role": "Researcher",
+      "organization": "StellarDNN",
+      "dates": "01/2023 - 08/2024"
+    },
+    {
+      "role": "Learning Experience Supervisor + Analytics Consultant",
+      "organization": "Univ.AI",
+      "dates": "05/2022 - 12/2023"
+    },
+    {
+      "role": "Big Data Analytics & Data Science Intern",
+      "organization": "Appinventiv",
+      "dates": "02/2022 - 06/2022"
+    },
+    {
+      "role": "Big Data Analytics & Data Science Intern",
+      "organization": "Jio",
+      "dates": "08/2021 - 02/2022"
+    },
+    {
+      "role": "Big Data Analytics & Data Science Intern",
+      "organization": "Havells India Ltd",
+      "dates": "01/2021 - 07/2021"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Technology (Artificial Intelligence)",
+      "institution": "IIT Jodhpur",
+      "dates": "01/2025 - Present"
+    },
+    {
+      "degree": "Bachelor of Technology (Computer Science Engineering)",
+      "institution": "Maharaja Agrasen Institute of Technology",
+      "dates": "08/2018 - 06/2022, 8.6 CGPA"
+    }
+  ],
+  "toolkit": [
+    {
+      "group": "AI & Machine Learning",
+      "items": [
+        "PINNs",
+        "Neural Differential Equations",
+        "3D Vision",
+        "3D Generative Modeling",
+        "Computer Vision",
+        "Generative AI",
+        "LLMs",
+        "RAG",
+        "Agentic LLM Systems",
+        "Multi-Agent Workflows",
+        "Reinforcement Learning"
+      ]
+    },
+    {
+      "group": "Languages & Frameworks",
+      "items": [
+        "Python",
+        "TypeScript",
+        "Kotlin",
+        "SQL",
+        "PyTorch",
+        "TensorFlow",
+        "CUDA",
+        "Next.js",
+        "React",
+        "Jetpack Compose"
+      ]
+    },
+    {
+      "group": "LLM & Data Stack",
+      "items": [
+        "LangChain",
+        "LangGraph",
+        "OpenAI API",
+        "Google GenAI/Gemini API",
+        "Ollama",
+        "vLLM",
+        "Hugging Face",
+        "NumPy",
+        "Pandas",
+        "Hive",
+        "Hadoop",
+        "Spark",
+        "EDA",
+        "Data Visualization"
+      ]
+    },
+    {
+      "group": "Product & Backend",
+      "items": [
+        "FastAPI",
+        "Express.js",
+        "PostgreSQL",
+        "Redis",
+        "Docker",
+        "Linux",
+        "S3-Compatible Storage",
+        "Firebase/FCM"
+      ]
+    },
+    {
+      "group": "Developer Tools",
+      "items": [
+        "Git",
+        "GitHub",
+        "GitHub Actions",
+        "API Design",
+        "Production Deployments",
+        "Observability"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "fren": {
+    "source": "https://lakshay-13.github.io/fren/assets/fren-server.png",
+    "sha256": "f69b96e34ecb275a77794299cff787da768d93a2fcfe04c2da52ac1b70f824fa",
+    "file": "logos/fren.png",
+    "kind": "official artwork"
+  },
+  "pinnhub": {
+    "source": "https://pinnhub.nextgenaischool.in/branding/pinn-hub-logo.png",
+    "sha256": "ac408efc4568a038c8be95933368275fc0cfafd3b607db70df9aba7b75491fd3",
+    "file": "logos/pinnhub.png",
+    "kind": "official artwork"
+  },
+  "artgridx": {
+    "source": "https://artgridx.nextgenaischool.in/assets/brand/artgridx-light.png",
+    "sha256": "6df191ac579b83c9120fbb354add2c02ab8bf9d120e5593c51565643da60eaf2",
+    "file": "logos/artgridx.png",
+    "kind": "official artwork"
+  },
+  "notifyme": {
+    "source": "https://lakshay-13.github.io/notifyme-logo.png",
+    "sha256": "0025e06db02185a0f0938dba0ba4690a562bf0b6f8d6ddcca6861a3e5c450098",
+    "file": "logos/notifyme.png",
+    "kind": "official artwork"
+  },
+  "host": {
+    "source": "https://lakshay-13.github.io/host/assets/host-logo.png",
+    "sha256": "4d27cf9c56a90483fb8d393ce532059637595edefd23c5828f2bc8522b47290a",
+    "file": "logos/host.png",
+    "kind": "official artwork"
+  },
+  "rlpinn": {
+    "source": "https://lakshay-13.github.io/rl-pinn/rlpinns.png",
+    "sha256": "aa0fc44de43cec32f7d1fa6b1938f7180fd6d54d394a8b6f0305ddea6b051907",
+    "file": "logos/rlpinn.png",
+    "kind": "project poster"
+  },
+  "zinging": {
+    "source": "https://lakshay-13.github.io/zinging/zinging-ai.png",
+    "sha256": "e942b6d8c2ab960d738e80fc4e7ae0d4475f67497e759c64ea871be732d26207",
+    "file": "logos/zinging.png",
+    "kind": "official artwork"
+  },
+  "tree": {
+    "source": "https://tree.nextgenaischool.in/",
+    "file": null,
+    "kind": "project name",
+    "note": "The linked site returns 404; no unrelated or invented logo is used."
+  }
+}

@@ -26,6 +26,12 @@ async function main() {
           probe.src = image.getAttribute('href');
         })));
       });
+      const clippedPills = await page.evaluate(() => [...document.querySelectorAll('[data-pill]')].filter(pill => {
+        const bounds = pill.querySelector('text').getBBox();
+        const rect = pill.querySelector('rect');
+        return bounds.x < Number(rect.getAttribute('x')) + 8 || bounds.x + bounds.width > Number(rect.getAttribute('x')) + Number(rect.getAttribute('width')) - 8;
+      }).length);
+      if (clippedPills) throw new Error(`${name}: ${clippedPills} labels do not fit inside their pills.`);
       await page.emulateMedia({ reducedMotion: 'reduce' });
       await page.screenshot({ path: path.join(root, 'assets', `${name}-still.png`), omitBackground: true });
       await page.emulateMedia({ reducedMotion: 'no-preference' });
@@ -38,11 +44,15 @@ async function main() {
         }, frame * 1000 / fps);
         await page.screenshot({ path: path.join(frames, `${String(frame).padStart(4, '0')}.png`), omitBackground: true });
       }
+      const rawGif = path.join(root, '.preview', `${name}-raw.gif`);
       execFileSync('ffmpeg', [
         '-hide_banner', '-loglevel', 'error', '-y', '-framerate', String(fps),
         '-i', path.join(frames, '%04d.png'),
-        '-filter_complex', 'format=rgb24,split[a][b];[a]palettegen=stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=3:diff_mode=rectangle',
-        '-loop', '0', path.join(root, 'assets', `${name}.gif`)
+        '-filter_complex', 'split[a][b];[a]palettegen=stats_mode=diff:reserve_transparent=1[p];[b][p]paletteuse=dither=bayer:bayer_scale=3:diff_mode=rectangle',
+        '-loop', '0', rawGif
+      ], { stdio: 'inherit' });
+      execFileSync(process.env.GIFSICLE_PATH || 'gifsicle', [
+        '-O3', rawGif, '-o', path.join(root, 'assets', `${name}.gif`)
       ], { stdio: 'inherit' });
       await page.close();
       console.log(`Exported ${name}: ${duration}s loop at ${fps}fps, plus reduced-motion PNG.`);
