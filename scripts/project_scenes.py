@@ -5,11 +5,19 @@ Scenes illustrate workflows; they do not represent measurements or product UI.
 
 import html
 import math
+import base64
+from pathlib import Path
 
 MINT = "#2effbf"
 PURPLE = "#b9a7ff"
 WHITE = "#d5e1ed"
 DIM = "#3c5064"
+
+
+def logo(filename, x, y, width, height):
+    binary = (Path(__file__).resolve().parents[1] / "assets" / filename).read_bytes()
+    encoded = base64.b64encode(binary).decode()
+    return f'<image x="{x}" y="{y}" width="{width}" height="{height}" href="data:image/png;base64,{encoded}" preserveAspectRatio="xMidYMid meet"/>'
 
 
 def rect(x, y, w, h, fill="#101b29", stroke=DIM, rx=10, attrs=""):
@@ -33,15 +41,10 @@ def scene(content, css):
 
 
 def fren():
-    p = rect(18, 17, 268, 182, rx=18) + rect(18, 17, 268, 29, "#1a2636", rx=12)
-    p += label(38, 37, "FREN / COMMUNITY GAMES", 12, PURPLE)
-    p += rect(38, 60, 126, 29, "#243348", "none", 12) + label(50, 80, "/play with fren", 14)
-    p += '<g class="fren-reply">' + rect(86, 105, 181, 40, "#12362d", "#2c6657", 12) + label(101, 130, "Your next round is ready.", 13, MINT) + '</g>'
-    for i in range(3): p += dot(46+i*14, 167, 3, PURPLE, f'class="fren-typing" style="animation-delay:-{i*.35}s"')
-    p += '<g class="fren-dice">' + rect(226, 157, 44, 44, "#202239", PURPLE, 9)
-    for x,y in [(237,168),(259,168),(248,179),(237,190),(259,190)]: p += dot(x,y,2,PURPLE)
-    p += '</g>'
-    return scene(p, '.fren-reply{animation:frenReply 8s infinite}.fren-typing{animation:frenTyping 1.6s infinite}.fren-dice{transform-box:fill-box;transform-origin:center;animation:frenDice 8s infinite}@keyframes frenReply{0%,18%,95%,100%{opacity:0;transform:translateY(12px)}30%,82%{opacity:1;transform:translateY(0)}}@keyframes frenTyping{0%,100%{opacity:.25}50%{opacity:1}}@keyframes frenDice{0%,38%,100%{transform:rotate(0)}48%{transform:rotate(-12deg)}58%{transform:rotate(12deg)}68%,85%{transform:rotate(0)}}')
+    p = '<ellipse cx="160" cy="116" rx="101" ry="92" fill="url(#purple-glow)"/>'
+    p += '<ellipse class="fren-shadow" cx="160" cy="207" rx="63" ry="7" fill="#393251" opacity=".5"/>'
+    p += '<g class="fren-brand">'+logo('logos/fren.png',77,29,166,166)+'</g>'
+    return scene(p, '.fren-brand{transform-box:fill-box;transform-origin:center;animation:frenBrand 4s ease-in-out infinite}.fren-shadow{animation:frenShadow 4s infinite}@keyframes frenBrand{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-7px) rotate(2deg)}}@keyframes frenShadow{0%,100%{opacity:.45}50%{opacity:.22}}')
 
 
 def pinnhub():
@@ -58,13 +61,10 @@ def pinnhub():
 
 
 def artgridx():
-    p = rect(18,22,85,116,"#16253b",DIM,5)+rect(116,22,86,75,"#282239",DIM,5)+rect(216,22,86,116,"#143327",DIM,5)+rect(116,108,86,91,"#153035",DIM,5)
-    p += dot(60,64,23,PURPLE)+path('M25 123 53 86 95 123',MINT,fill='#27564a')
-    p += path('M129 78C135 27 179 91 190 43',PURPLE,'class="art-paint"',width=7)
-    p += '<g class="art-tile">'+path('M228 124 234 66 268 42 288 89 256 130',MINT,fill='#275548')+'</g>'
-    p += path('M132 183 150 127 187 166 171 183',PURPLE,fill='#423b60')
-    p += label(23,224,'GALLERY / CREATE / PUBLISH',12,PURPLE)
-    return scene(p,'.art-paint{stroke-dasharray:130;animation:artPaint 8s ease-in-out infinite}.art-tile{transform-box:fill-box;transform-origin:center;animation:artTile 8s ease-in-out infinite}@keyframes artPaint{0%,100%{stroke-dashoffset:130;opacity:.2}65%,85%{stroke-dashoffset:0;opacity:1}}@keyframes artTile{0%,100%{transform:rotate(0)}50%{transform:rotate(-5deg)}}')
+    p='<ellipse cx="161" cy="115" rx="107" ry="86" fill="url(#mint-glow)"/>'
+    p+='<g class="art-brand">'+logo('logos/artgridx.png',60,12,200,200)+'</g>'
+    p+=path('M89 215Q160 201 231 215',PURPLE,'class="art-brush"',width=2)
+    return scene(p,'.art-brand{transform-box:fill-box;transform-origin:center;animation:artBrand 8s ease-in-out infinite}.art-brush{stroke-dasharray:150;animation:artBrush 8s ease-in-out infinite}@keyframes artBrand{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}@keyframes artBrush{0%,100%{stroke-dashoffset:150;opacity:.2}40%,75%{stroke-dashoffset:0;opacity:.7}}')
 
 
 def notifyme():
@@ -73,28 +73,36 @@ def notifyme():
     for i,word in enumerate(['Job complete','Callback ready','History synced']):
         y=70+i*42
         p+='<g class="notify-toast" style="animation-delay:-'+str(i*2)+'s">'+rect(109,y,99,32,'#19372f','#36584e',8)+dot(119,y+16,3,MINT)+label(130,y+20,word,10)+'</g>'
-    p+=path('M46 107H84M78 101 84 107 78 113',PURPLE,'class="notify-send"')+label(26,137,'API',15,PURPLE)
+    p+=label(13,112,'API',15,PURPLE)+path('M46 107H84M78 101 84 107 78 113',PURPLE,'class="notify-send"')
     p+=dot(159,203,3,WHITE)
     return scene(p,'.notify-toast{animation:notifyToast 8s infinite}.notify-send{animation:notifySend 8s infinite}@keyframes notifyToast{0%,12%,100%{opacity:0;transform:translateY(-13px)}25%,88%{opacity:1;transform:translateY(0)}}@keyframes notifySend{0%,100%{opacity:.3;transform:translateX(0)}45%{opacity:1;transform:translateX(9px)}}')
 
 
 def host():
-    p=label(24,27,'BUILD → DEPLOY → LIVE',14,MINT)+rect(22,59,76,88,rx=8)+label(38,87,'</>',27,PURPLE)
-    p+=path('M36 104H82M36 116H66',DIM)+rect(207,55,87,126,rx=8)
-    for i in range(3): p+=rect(221,70+i*28,59,19,'#15283a',DIM,4)+dot(269,79+i*28,2,MINT)
-    p+=path('M105 103H197',DIM)
-    p+='<g class="host-bundle">'+rect(108,91,22,24,'#234d42',MINT,4)+path('M114 99H123M114 105H120',MINT)+'</g>'
-    p+='<g class="host-live">'+dot(251,202,12,'#123b2e')+path('M246 202 250 206 257 197',MINT)+label(211,227,'LIVE RELEASE',11,MINT)+'</g>'
-    return scene(p,'.host-bundle{animation:hostBundle 8s ease-in-out infinite}.host-live{animation:hostLive 8s infinite}@keyframes hostBundle{0%,10%{transform:translateX(0);opacity:0}20%{opacity:1}65%,85%{transform:translateX(78px);opacity:1}95%,100%{transform:translateX(78px);opacity:0}}@keyframes hostLive{0%,60%,100%{opacity:.25}72%,90%{opacity:1}}')
+    p=rect(23,39,126,138,'#122133',DIM,10)
+    p+=rect(36,55,100,57,'#1b3542','none',6)+dot(61,72,8,PURPLE)+path('M44 102 70 82 86 96 106 78 128 103',MINT)
+    p+=path('M40 130H121M40 143H104M40 156H113','#91a8bd',width=2)
+    p+=path('M157 108H182M175 101 182 108 175 115',DIM)
+    p+=path('M211 138H285A19 19 0 0 0 286 100A32 32 0 0 0 224 87A26 26 0 0 0 211 138Z',MINT,fill='#143329',width=1.8)
+    p+='<g class="host-upload">'+path('M247 124V96M237 106 247 96 257 106',MINT,width=2.5)+'</g>'
+    p+=rect(204,157,91,32,'#142133',DIM,7)+path('M224 174 231 167A6 6 0 0 1 239 175L236 178M237 173 244 166A6 6 0 0 1 252 174L245 181',PURPLE,width=1.6)
+    p+=label(34,211,'FILES',12,WHITE)+label(215,211,'SHARE LINKS',12,MINT)
+    return scene(p,'.host-upload{animation:hostUpload 4s ease-in-out infinite}@keyframes hostUpload{0%,100%{transform:translateY(5px);opacity:.4}50%{transform:translateY(-4px);opacity:1}}')
 
 
 def rlpinn():
-    p=rect(15,35,93,52,'#26233c',PURPLE,12)+label(36,66,'RL POLICY',14,PURPLE)+rect(209,111,94,54,'#16332b',MINT,12)+label(224,143,'PINN',23,MINT)
-    p+=path('M112 62H260V106',DIM)+path('M209 141H64V91',DIM)
-    p+=dot(137,62,5,PURPLE,'class="rl-action"')+dot(172,141,4,MINT,'class="rl-feedback"')
-    p+=label(157,45,'ACTION',11,PURPLE)+label(71,168,'RESIDUAL / REWARD',11,MINT)
-    p+=path('M22 215H139M22 215V182',DIM)+path('M30 201 51 207 72 189 94 193 128 182',PURPLE,'class="rl-reward"')
-    return scene(p,'.rl-action{animation:rlAction 8s linear infinite}.rl-feedback{animation:rlFeedback 8s linear infinite}.rl-reward{stroke-dasharray:125;animation:rlReward 8s infinite}@keyframes rlAction{0%{transform:translate(0,0);opacity:0}10%{opacity:1}50%{transform:translate(123px,0);opacity:1}70%{transform:translate(123px,42px);opacity:1}90%,100%{transform:translate(123px,42px);opacity:0}}@keyframes rlFeedback{0%,20%,100%{opacity:0;transform:translate(0,0)}30%{opacity:1}70%{transform:translate(-108px,0);opacity:1}90%{transform:translate(-108px,-47px);opacity:0}}@keyframes rlReward{0%,100%{stroke-dashoffset:125}80%{stroke-dashoffset:0}}')
+    p=label(18,26,'ADAPTIVE PINN TRAINING',12,WHITE)+rect(18,47,168,126,'#101b28','#35485a',4)
+    for row in range(5):p+=path(f'M30 {64+row*22}H173','#253748',width=.7)
+    for col in range(7):p+=path(f'M{31+col*23} 58V163','#253748',width=.7)
+    p+=path('M30 146C59 151 75 72 103 88S144 156 173 75',PURPLE,width=1.4)
+    for i,(x,y) in enumerate([(40,119),(63,103),(87,87),(110,108),(139,122),(160,99)]):
+        p+=dot(x,y,3.5,MINT,f'class="rl-sample" style="animation-delay:-{i*.6}s"')
+    p+=rect(228,67,73,34,'#172237','#62708c',4)+label(242,89,'POLICY',12,PURPLE)
+    p+=path('M229 81H207V107H189M195 103 189 107 195 111',PURPLE,width=1.3)
+    p+=path('M189 147H265V106M261 113 265 106 269 113',MINT,width=1.3)
+    p+=label(215,57,'ACTION',9,PURPLE)+label(226,169,'STATE',9,MINT)
+    p+=label(29,191,'Residual field / adaptive sampling',11,'#a8b8c9')
+    return scene(p,'.rl-sample{animation:rlSample 4s ease-in-out infinite}@keyframes rlSample{0%,100%{opacity:.25}50%{opacity:1}}')
 
 
 def slidenext():
@@ -104,17 +112,18 @@ def slidenext():
 
 
 def watermark():
-    p=rect(28,21,225,176,'#1c293c',DIM,8)+dot(84,72,25,'#8275b5')+path('M42 183 119 96 167 155 202 119 241 183',MINT,fill='#225949')
-    p+='<g class="watermark-stamp" transform="rotate(-20 150 113)">'+rect(67,96,166,34,'#0d1520',PURPLE,3)+label(81,118,'WATERMARK',20,PURPLE)+'</g>'
-    p+=rect(254,160,44,39,'#13362f',MINT,7)+path('M265 159V150A11 11 0 0 1 287 150V159',MINT)+dot(276,179,3,MINT)
-    return scene(p,'.watermark-stamp{animation:watermarkStamp 8s ease-in-out infinite}@keyframes watermarkStamp{0%,10%,100%{opacity:0}35%,85%{opacity:.95}}')
+    p='<ellipse cx="160" cy="122" rx="111" ry="92" fill="url(#purple-glow)"/>'
+    p+='<g class="watermark-brand">'+logo('logos/watermark.png',45,25,230,170)+'</g>'
+    return scene(p,'.watermark-brand{animation:watermarkBrand 8s ease-in-out infinite}@keyframes watermarkBrand{0%,100%{transform:translateY(0)}15%{transform:translateY(-8px)}32%{transform:translateY(5px)}42%,85%{transform:translateY(0)}}')
 
 
 def frenshop():
-    p=path('M23 65H45L66 152H240L264 82H54',PURPLE,width=3)+dot(90,179,13,PURPLE)+dot(224,179,13,PURPLE)
-    p+='<g class="shop-drop">'+rect(108,38,89,74,'#24352f',MINT,12)+path('M131 51V42A22 22 0 0 1 175 42V51',MINT)+label(124,87,'FREN',21,MINT)+'</g>'
-    p+=label(45,216,'PREMIUM / COMMUNITY',13,PURPLE)
-    return scene(p,'.shop-drop{animation:shopDrop 8s cubic-bezier(.4,0,.2,1) infinite}@keyframes shopDrop{0%,100%{transform:translateY(-14px);opacity:.25}40%,76%{transform:translateY(34px);opacity:1}}')
+    p=rect(19,22,282,184,'#102028','#2d4446',14)
+    p+=logo('logos/fren.png',35,56,124,124)+label(180,79,'FREN',19,WHITE)+label(180,103,'Premium drops',12,'#b6c6d7')+label(180,123,'Community',12,'#8ea7b9')
+    p+=path('M176 144H187L198 174H266L275 150H190',PURPLE,width=2)
+    p+=dot(211,187,4,PURPLE)+dot(260,187,4,PURPLE)
+    p+='<g class="shop-package">'+rect(223,136,20,24,'#1e5748',MINT,3)+path('M226 143H240',MINT,width=1)+'</g>'
+    return scene(p,'.shop-package{animation:shopPackage 8s ease-in-out infinite}@keyframes shopPackage{0%,100%{transform:translateY(-12px);opacity:.3}45%,75%{transform:translateY(11px);opacity:1}}')
 
 
 def tree():
@@ -126,24 +135,23 @@ def tree():
 
 
 def zinging():
-    p=rect(111,74,94,64,'#1c293a',PURPLE,20)+label(123,112,'AGENT',20,PURPLE)
-    points=[(56,34,'CODE'),(257,36,'TOOLS'),(256,188,'MEMORY'),(45,191,'TRANSLATE')]
-    for i,(x,y,word) in enumerate(points):
-        p+=path(f'M158 106Q{x} 106 {x} {y}',DIM)
-        p+=rect(x-36,y-15,72,30,'#122921',MINT,8)+label(x,y+4,word,10,MINT,'text-anchor="middle"')
-        p+=dot(158,106,4,MINT,f'class="zing-route-{i}"')
-    css=''
-    for i,(x,y,_) in enumerate(points):
-        css+=f'.zing-route-{i}'+'{animation:zingRoute'+str(i)+' 8s '+str(i*1.2)+'s infinite}@keyframes zingRoute'+str(i)+'{0%,100%{transform:translate(0,0);opacity:0}20%{opacity:1}65%{transform:translate('+str(x-158)+'px,'+str(y-106)+'px);opacity:1}90%{transform:translate('+str(x-158)+'px,'+str(y-106)+'px);opacity:0}}'
-    return scene(p,css)
+    p='<g class="zing-brand">'+logo('logos/zinging.png',8,33,174,174)+'</g>'
+    routes=['M158 70H183V62H195','M179 121H195','M158 174H183V180H195']
+    for i,(y,word) in enumerate([(46,'Chat'),(105,'Translate'),(164,'Memory')]):
+        p+=path(routes[i],'#5fab66','class="zing-trace"',width=1.3)
+        p+='<g class="zing-capability" style="animation-delay:-'+str(i*1.2)+'s">'+rect(194,y,111,33,'#143425','#31553a',7)+dot(208,y+16,2.5,'#b5f55f')+label(220,y+21,word,14,'#d1f0c5')+'</g>'
+    return scene(p,'.zing-brand{animation:zingBrand 4s ease-in-out infinite}.zing-trace{stroke-dasharray:4 11;animation:zingTrace 4s linear infinite}.zing-capability{animation:zingCapability 4s ease-in-out infinite}@keyframes zingBrand{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}@keyframes zingTrace{to{stroke-dashoffset:-60}}@keyframes zingCapability{0%,100%{opacity:.65}50%{opacity:1}}')
 
 
 def url():
-    p=rect(16,33,172,39,'#23243a',PURPLE,11)+label(29,58,'tenor / giphy / klipy',12,PURPLE)+path('M99 82V122H207',DIM)
-    p+=rect(197,89,103,112,'#123128',MINT,12)+path('M233 114 233 168 270 141Z',MINT,fill='#2effbf')
-    p+=label(23,180,'LINK → MEDIA URL',14,MINT)
-    p+=dot(99,92,5,PURPLE,'class="url-resolve"')+rect(204,94,89,101,'none',MINT,8,'class="url-result"')
-    return scene(p,'.url-resolve{animation:urlResolve 8s linear infinite}.url-result{animation:urlResult 8s infinite}@keyframes urlResolve{0%,100%{opacity:0;transform:translate(0,0)}15%{opacity:1}40%{transform:translate(0,30px)}65%,80%{transform:translate(107px,30px);opacity:1}95%{transform:translate(107px,30px);opacity:0}}@keyframes urlResult{0%,50%,100%{opacity:.15}65%,90%{opacity:1}}')
+    p=label(22,25,'SOURCE LINK',11,'#a9b9c9')+rect(20,38,280,43,'#172439','#35455f',9)
+    p+=label(35,65,'Tenor · Pinterest · Giphy · KLIPY',13,PURPLE)
+    p+=path('M160 91V118M154 111 160 118 166 111','#6a8190',width=1.5)
+    p+=rect(20,134,154,82,'#112f2c','#355a53',10)+path('M88 153V197L121 175Z',MINT,fill='#2effbf',width=1)
+    p+=label(192,157,'MEDIA URL',11,'#a9b9c9')+label(192,181,'Direct link',14,MINT)
+    p+=path('M196 198H278',MINT,'class="url-link"',width=1.5)
+    p+=rect(29,75,262,2,'#b9a7ff','none',0,'class="url-progress"')
+    return scene(p,'.url-progress{transform-box:fill-box;transform-origin:left;animation:urlProgress 8s ease-in-out infinite}.url-link{stroke-dasharray:84;animation:urlLink 8s ease-in-out infinite}@keyframes urlProgress{0%,100%{transform:scaleX(.04);opacity:.25}50%,85%{transform:scaleX(1);opacity:.8}}@keyframes urlLink{0%,25%,100%{stroke-dashoffset:84;opacity:.25}60%,85%{stroke-dashoffset:0;opacity:.9}}')
 
 
 def rags():

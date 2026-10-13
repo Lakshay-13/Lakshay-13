@@ -30,5 +30,33 @@
     "kind": "official Codex documentation terminal icon",
     "sha256": "71f11b4c7b87e85e9e16a831403a2a1bc8f2eed9bf248ee34018248de06c0bcd",
     "original_sha256": "8c1354ef00c92260f3d698c43236d2a33f16fe09312d55a925184fd06d378e1a"
+  },
+  "python": {
+    "source": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg",
+    "file": "brands/python.svg",
+    "sha256": "baec8662a1461c2cacc326b54d2727cb2f1ce07ba02d00f5b826d035104f649f",
+    "original_sha256": "baec8662a1461c2cacc326b54d2727cb2f1ce07ba02d00f5b826d035104f649f",
+    "kind": "official provider branding"
+  },
+  "gcp": {
+    "source": "https://www.gstatic.com/cgc/google-cloud-logo-fullcolor.svg",
+    "file": "brands/gcp.svg",
+    "sha256": "735f43fc314509f6ddd3183ed6276cda08fb14a71143ce74045d1624232df3cd",
+    "original_sha256": "9579d2aca20e69e79eafb41c89c421d82d926bdc2d54c037d5d67874a4d6f2f3",
+    "kind": "official provider branding"
+  },
+  "aws": {
+    "source": "https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_179x109.png",
+    "file": "brands/aws.png",
+    "sha256": "b0bf8c677c01b0bb5a3305fa6ea09f65a5446c9e175c99fa02bdc666ddb31bc5",
+    "original_sha256": "94de254f3fadea01265e65c7430097f386db15d5d34372de344b2bd8670048b9",
+    "kind": "official AWS smile logo"
+  },
+  "gcp-mark": {
+    "source": "https://www.gstatic.com/cgc/supercloud_favicon.ico",
+    "file": "brands/gcp-mark.png",
+    "sha256": "507a54fef14caa7f23817522b42a5f51bdedba41e7cd1c35c39be31ac6538583",
+    "original_sha256": "89e4ff99a1447b9ef9a3e4c45a081e24acfd8cdad54ec7d4a1f9458f164f0659",
+    "kind": "official Google Cloud product icon"
   }
 }

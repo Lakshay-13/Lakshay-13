@@ -85,10 +85,10 @@ def still(content):
     return content.replace("</style>", "*{animation:none!important}</style>")
 
 
-def stars(width, height, count=65):
+def stars(width, height, count=250):
     rng = random.Random(13)
     return "".join(
-        f'<circle class="glint" cx="{rng.uniform(18, width-18):.1f}" cy="{rng.uniform(18, height-18):.1f}" r="{rng.choice([.7, 1, 1.4]):.1f}" fill="{rng.choice([MINT, LAVENDER, "#d6e9e3"])}" style="animation-delay:-{rng.uniform(0, 4):.2f}s"/>'
+        f'<circle class="poster-star" cx="{rng.uniform(18, width-18):.1f}" cy="{rng.uniform(18, height-18):.1f}" r="{rng.choice([.6, .8, 1.1, 1.5]):.1f}" fill="{rng.choice([MINT, LAVENDER, "#d6e9e3"])}" style="animation-delay:-{rng.uniform(0, 2):.2f}s"/>'
         for _ in range(count)
     )
 
@@ -120,13 +120,13 @@ def asset_image(file, x, y, width, height):
 def star_wreath(cx, cy, radius):
     rng = random.Random(13)
     parts = []
-    for index in range(42):
-        angle = index * 2 * math.pi / 42
+    for index in range(72):
+        angle = index * 2 * math.pi / 72
         x, y = cx + radius * math.cos(angle), cy + radius * math.sin(angle)
-        size = rng.choice([2, 2.5, 3.5, 4.5])
+        size = 6.5 if index % 18 == 0 else rng.choice([2, 2.5, 3.5, 4.5, 5])
         color = rng.choice(["#e0f4ed", MINT, LAVENDER])
-        parts.append(f'<path class="glint" d="M {x:.2f} {y-size:.2f} Q {x:.2f} {y:.2f} {x+size:.2f} {y:.2f} Q {x:.2f} {y:.2f} {x:.2f} {y+size:.2f} Q {x:.2f} {y:.2f} {x-size:.2f} {y:.2f} Q {x:.2f} {y:.2f} {x:.2f} {y-size:.2f} Z" fill="{color}" style="animation-delay:-{rng.uniform(0,4):.2f}s"/>')
-    return "".join(parts)
+        parts.append(f'<path class="poster-spark" d="M {x:.2f} {y-size:.2f} Q {x:.2f} {y:.2f} {x+size:.2f} {y:.2f} Q {x:.2f} {y:.2f} {x:.2f} {y+size:.2f} Q {x:.2f} {y:.2f} {x-size:.2f} {y:.2f} Q {x:.2f} {y:.2f} {x:.2f} {y-size:.2f} Z" fill="{color}" style="animation-delay:-{rng.uniform(0,1.6):.2f}s"/>')
+    return f'<g class="poster-orbit" style="transform-origin:{cx}px {cy}px">'+"".join(parts)+'</g>'
 
 
 def chip(x, y, label, color=MINT, size=13):
@@ -150,7 +150,8 @@ def banner(mobile=False):
         f'<rect x="1" y="1" width="{width-2}" height="{height-2}" rx="26" fill="url(#surface)" stroke="#233330"/>',
         f'<ellipse cx="{cx}" cy="{cy}" rx="250" ry="235" fill="url(#mint-glow)"/>',
         f'<ellipse cx="{width*.15}" cy="{height}" rx="{width*.6}" ry="200" fill="url(#purple-glow)"/>',
-        stars(width, height),
+        '<style>.poster-star{animation:posterTwinkle 2s ease-in-out infinite}.poster-spark{animation:posterSpark 1.6s ease-in-out infinite}.poster-orbit{transform-box:view-box;animation:posterOrbit 8s linear infinite}@keyframes posterTwinkle{0%,100%{opacity:.25}50%{opacity:.9}}@keyframes posterSpark{0%,100%{opacity:.45}50%{opacity:1}}@keyframes posterOrbit{to{transform:rotate(360deg)}}</style>',
+        stars(width, height, 190 if mobile else 250),
     ]
     # A quiet perspective grid and wave traces connect the scene to scientific ML.
     grid_top = height - 90
@@ -162,7 +163,7 @@ def banner(mobile=False):
         y = grid_top + i * i * 7
         parts.append(f'<path d="M 24 {y} H {width-24}" stroke="{MINT}" stroke-opacity=".065"/>')
     parts.extend([
-        star_wreath(cx, cy, size*.54),
+        star_wreath(cx, cy, size*.53),
         f'<g mask="url(#portrait-mask)"><svg x="{px}" y="{py}" width="{size}" height="{size}" viewBox="260 125 1040 1040" overflow="hidden"><image href="data:image/jpeg;base64,{original}" width="4441" height="1200"/></svg></g>',
         f'<circle class="breath" cx="{cx+size*.43}" cy="{cy+size*.2}" r="6" fill="{MINT}" filter="url(#glow)"/>',
         f'<circle cx="{cx+size*.43}" cy="{cy+size*.2}" r="3" fill="{MINT}"/>',
@@ -277,8 +278,8 @@ def toolkit_panel(profile, mobile=False):
     width = 640 if mobile else 1200
     parts = [text(36, 48, "From research to production", 32, **{"font-weight": 700}),
              text(36, 83, "Data science / AI / systems", 22, "#afbbc9")]
-    tiles = [("OpenAI API", "brands/openai.svg"), ("Codex", "brands/codex-terminal.svg"),
-             ("GPT / LLMs", "brands/chatgpt.png"), ("API systems", None), ("PINNs / Neural nets", None)]
+    tiles = [("Python", "brands/python.svg"), ("Codex", "brands/codex-terminal.svg"),
+             ("GCP / AWS", None), ("Database / APIs", None), ("PINNs / Neural nets", None)]
     columns = 3 if mobile else 5
     tile_width = (width-72-(columns-1)*14)/columns
     for i, (name, file) in enumerate(tiles):
@@ -289,8 +290,15 @@ def toolkit_panel(profile, mobile=False):
             parts.append(f'<rect x="{center-27}" y="{y+13}" width="54" height="54" rx="12" fill="#edf1f5"/>')
             icon_size = 32 if "chatgpt" in file else 38
             parts.append(asset_image(file, center-icon_size/2, y+40-icon_size/2, icon_size, icon_size))
+        elif i == 2:
+            parts.append(f'<rect x="{center-66}" y="{y+15}" width="132" height="49" rx="10" fill="#edf1f5"/>')
+            parts.append(asset_image("brands/gcp-mark.png", center-54, y+20, 40, 40))
+            parts.append(asset_image("brands/aws.png", center+4, y+23, 54, 34))
         elif i == 3:
-            parts.append(text(center, y+56, "{ / }", 35, LAVENDER, **{"text-anchor": "middle", "class": "mono"}))
+            parts.append(f'<ellipse cx="{center-29}" cy="{y+25}" rx="18" ry="6" fill="#162e32" stroke="{MINT}" stroke-width="1.6"/>')
+            parts.append(f'<path d="M {center-47} {y+25} V {y+52} C {center-47} {y+61} {center-11} {y+61} {center-11} {y+52} V {y+25} M {center-47} {y+37} C {center-47} {y+46} {center-11} {y+46} {center-11} {y+37}" fill="none" stroke="{MINT}" stroke-width="1.6"/>')
+            parts.append(text(center+30, y+52, "{ }", 25, LAVENDER, **{"text-anchor": "middle", "class": "mono"}))
+            parts.append(f'<path d="M {center-2} {y+42} H {center+6} M {center+3} {y+39} L {center+6} {y+42} L {center+3} {y+45}" fill="none" stroke="#8da7b3" stroke-width="1.5"/>')
         else:
             for layer, count in enumerate([2,3,2]):
                 for n in range(count):

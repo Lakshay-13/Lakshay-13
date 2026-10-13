@@ -12,17 +12,21 @@ async function main() {
   const browser = await chromium.launch({ headless: true, channel: process.env.BROWSER_CHANNEL || 'chrome' });
   try {
     const flags = new Set(process.argv.slice(2));
+    const selected = process.argv.find(arg => arg.startsWith('--select='))?.slice(9).split(',');
+    const includeProjects = flags.has('--projects') || flags.has('--all') || Boolean(selected);
     const jobs = [];
-    if (!flags.has('--projects') || flags.has('--all')) jobs.push(['banner', 15], ['banner-mobile', 15]);
-    if (flags.has('--projects') || flags.has('--all')) {
+    if (!includeProjects || flags.has('--all') || flags.has('--with-banner')) jobs.push(['banner', 15], ['banner-mobile', 15]);
+    if (includeProjects) {
       const projects = JSON.parse(await fs.readFile(path.join(root, 'assets', 'projects.json'), 'utf8'));
-      for (const project of projects) jobs.push([`projects/${project.id}`, 12], [`projects/${project.id}-mobile`, 12]);
+      if (selected?.some(id => !projects.some(project => project.id === id))) throw new Error('An unknown project was selected.');
+      for (const project of projects.filter(project => !selected || selected.includes(project.id))) jobs.push([`projects/${project.id}`, 12], [`projects/${project.id}-mobile`, 12]);
     }
     async function exportLoop(name, fps) {
       const source = await fs.readFile(path.join(root, 'assets', `${name}.svg`), 'utf8');
       const [, widthText, heightText] = source.match(/<svg[^>]*width="(\d+)" height="(\d+)"/);
       const width = Number(widthText), height = Number(heightText);
       const frames = path.join(root, '.preview', `${name}-frames`);
+      await fs.rm(frames, { recursive: true, force: true });
       await fs.mkdir(frames, { recursive: true });
       const page = await browser.newPage({ viewport: { width, height }, deviceScaleFactor: 1 });
       await page.goto(pathToFileURL(path.join(root, 'assets', `${name}.svg`)).href);

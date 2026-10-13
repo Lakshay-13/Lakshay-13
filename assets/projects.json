@@ -58,13 +58,13 @@
   {
     "id": "host",
     "name": "Host",
-    "category": "PRODUCTS / INFRASTRUCTURE",
+    "category": "PRODUCTS / FILE SHARING",
     "color": "#2effbf",
-    "description": "Developer-first hosting with simple deployment workflows and production-ready defaults.",
+    "description": "Upload images and documents, organize your files, and share them through simple public links.",
     "tags": [
-      "Hosting",
-      "Deployment",
-      "Infrastructure"
+      "File hosting",
+      "Images & documents",
+      "Shareable links"
     ],
     "url": "https://lakshay-13.github.io/host/",
     "artwork": "logos/host.png"
@@ -109,7 +109,7 @@
       "Publishing"
     ],
     "url": "https://watermark.nextgenaischool.in/",
-    "artwork": null
+    "artwork": "logos/watermark.png"
   },
   {
     "id": "frenshop",

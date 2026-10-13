@@ -1,45 +1,52 @@
 {
   "fren": {
     "source": "https://lakshay-13.github.io/fren/assets/fren-server.png",
-    "sha256": "f69b96e34ecb275a77794299cff787da768d93a2fcfe04c2da52ac1b70f824fa",
+    "sha256": "4ac157d3b182a68ae047fc9763f11af6e47d88290de3e40931044105c49091e0",
     "file": "logos/fren.png",
-    "kind": "official artwork"
+    "kind": "official artwork",
+    "original_sha256": "f69b96e34ecb275a77794299cff787da768d93a2fcfe04c2da52ac1b70f824fa"
   },
   "pinnhub": {
     "source": "https://pinnhub.nextgenaischool.in/branding/pinn-hub-logo.png",
-    "sha256": "ac408efc4568a038c8be95933368275fc0cfafd3b607db70df9aba7b75491fd3",
+    "sha256": "53a86deb3ef25bfb688abdf966eebe63d9120bddec783ecdc76eb7dd0fa2ecfc",
     "file": "logos/pinnhub.png",
-    "kind": "official artwork"
+    "kind": "official artwork",
+    "original_sha256": "ac408efc4568a038c8be95933368275fc0cfafd3b607db70df9aba7b75491fd3"
   },
   "artgridx": {
     "source": "https://artgridx.nextgenaischool.in/assets/brand/artgridx-light.png",
-    "sha256": "6df191ac579b83c9120fbb354add2c02ab8bf9d120e5593c51565643da60eaf2",
+    "sha256": "e8829f99a450f932077339a6d7aa168f4fded0878d209996f1f4ad5d259e51fa",
     "file": "logos/artgridx.png",
-    "kind": "official artwork"
+    "kind": "official artwork",
+    "original_sha256": "6df191ac579b83c9120fbb354add2c02ab8bf9d120e5593c51565643da60eaf2"
   },
   "notifyme": {
     "source": "https://lakshay-13.github.io/notifyme-logo.png",
-    "sha256": "0025e06db02185a0f0938dba0ba4690a562bf0b6f8d6ddcca6861a3e5c450098",
+    "sha256": "0151ed2e3674bc8f718df747ccb3dc7a02ca897f9dd1db6e228e5b84f1c72eb9",
     "file": "logos/notifyme.png",
-    "kind": "official artwork"
+    "kind": "official artwork",
+    "original_sha256": "0025e06db02185a0f0938dba0ba4690a562bf0b6f8d6ddcca6861a3e5c450098"
   },
   "host": {
     "source": "https://lakshay-13.github.io/host/assets/host-logo.png",
-    "sha256": "4d27cf9c56a90483fb8d393ce532059637595edefd23c5828f2bc8522b47290a",
+    "sha256": "8bde179ced20765f5803c2998f4b6b8f146b09544c626fa853e738dd4a595166",
     "file": "logos/host.png",
-    "kind": "official artwork"
+    "kind": "official artwork",
+    "original_sha256": "4d27cf9c56a90483fb8d393ce532059637595edefd23c5828f2bc8522b47290a"
   },
   "rlpinn": {
     "source": "https://lakshay-13.github.io/rl-pinn/rlpinns.png",
-    "sha256": "aa0fc44de43cec32f7d1fa6b1938f7180fd6d54d394a8b6f0305ddea6b051907",
+    "sha256": "c865b4284d3874b3d3630ec108332e7f41d0722ea2f7bb931d888c47c022d43e",
     "file": "logos/rlpinn.png",
-    "kind": "project poster"
+    "kind": "project poster",
+    "original_sha256": "aa0fc44de43cec32f7d1fa6b1938f7180fd6d54d394a8b6f0305ddea6b051907"
   },
   "zinging": {
     "source": "https://lakshay-13.github.io/zinging/zinging-ai.png",
-    "sha256": "e942b6d8c2ab960d738e80fc4e7ae0d4475f67497e759c64ea871be732d26207",
+    "sha256": "e4181b2142c7cf81d794d8436f71a09c5912aa9dc746926dec1f6084a145ec8f",
     "file": "logos/zinging.png",
-    "kind": "official artwork"
+    "kind": "official artwork",
+    "original_sha256": "e942b6d8c2ab960d738e80fc4e7ae0d4475f67497e759c64ea871be732d26207"
   },
   "tree": {
     "source": "https://tree.nextgenaischool.in/",
@@ -55,8 +62,16 @@
   },
   "frenshop": {
     "source": "https://lakshay-13.github.io/fren/assets/fren-server.png",
-    "sha256": "f69b96e34ecb275a77794299cff787da768d93a2fcfe04c2da52ac1b70f824fa",
+    "sha256": "4ac157d3b182a68ae047fc9763f11af6e47d88290de3e40931044105c49091e0",
     "file": "logos/fren.png",
-    "kind": "official FREN artwork"
+    "kind": "official FREN artwork",
+    "original_sha256": "f69b96e34ecb275a77794299cff787da768d93a2fcfe04c2da52ac1b70f824fa"
+  },
+  "watermark": {
+    "source": "Watermark Studio application: static/img/logo_watermark_studio.png",
+    "website": "https://watermark.nextgenaischool.in/",
+    "file": "logos/watermark.png",
+    "sha256": "0dee61b446fa8610a9bdba1c32d18c51fb6efb02996f890862ff1ed5f851570e",
+    "kind": "official application logo"
   }
 }
