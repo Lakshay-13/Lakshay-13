@@ -16,7 +16,7 @@ async function main() {
     if (!flags.has('--projects') || flags.has('--all')) jobs.push(['banner', 15], ['banner-mobile', 15]);
     if (flags.has('--projects') || flags.has('--all')) {
       const projects = JSON.parse(await fs.readFile(path.join(root, 'assets', 'projects.json'), 'utf8'));
-      for (const project of projects) jobs.push([`projects/${project.id}`, 8], [`projects/${project.id}-mobile`, 8]);
+      for (const project of projects) jobs.push([`projects/${project.id}`, 12], [`projects/${project.id}-mobile`, 12]);
     }
     async function exportLoop(name, fps) {
       const source = await fs.readFile(path.join(root, 'assets', `${name}.svg`), 'utf8');

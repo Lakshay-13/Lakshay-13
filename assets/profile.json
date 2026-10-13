@@ -154,13 +154,15 @@
       "id": "research",
       "label": "CLARITY Lab",
       "value": "IIT Jodhpur / Research",
-      "url": "https://home.iitj.ac.in/~hardikjain/ClarityLab.html"
+      "url": "https://home.iitj.ac.in/~hardikjain/ClarityLab.html",
+      "artwork": "brands/clarity.png"
     },
     {
       "id": "building",
       "label": "NextGenAISchool",
       "value": "AI education / Products / Developer tools",
-      "url": "https://www.nextgenaischool.in/"
+      "url": "https://www.nextgenaischool.in/",
+      "artwork": "brands/nextgen.png"
     }
   ],
   "connect": [

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="166" viewBox="0 0 640 166" role="img" aria-labelledby="title description">
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="196" viewBox="0 0 200 196" role="img" aria-labelledby="title description">
 <title id="title">Portfolio</title>
 <desc id="description">lakshay-13.github.io</desc>
 <defs>
@@ -34,5 +34,5 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#f4f7fb}
 @keyframes meter{0%,100%{transform:scaleY(.3);opacity:.35}50%{transform:scaleY(1);opacity:.75}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
 </style>
-<rect x="1" y="1" width="638" height="164" rx="20" fill="url(#surface)" stroke="#243331"/><g transform="translate(29 53.0)" fill="none" stroke="#c3d6dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="30" cy="30" r="22"/><ellipse cx="30" cy="30" rx="10" ry="22"/><path d="M8 30h44M12 18h36M12 42h36"/></g><text x="114" y="53" font-size="28" font-weight="700">Portfolio</text><text x="114" y="92" font-size="25" style="fill:#afc1d1">lakshay-13.github.io</text><path d="M 577 73.0 H 597 V 93.0 M 577 93.0 L 597 73.0" fill="none" stroke="#2effbf" stroke-width="2"/><path class="flow" d="M 24 157 H 616" stroke="#2effbf" stroke-opacity=".6" stroke-width="2"/>
+<rect x="1" y="1" width="198" height="194" rx="20" fill="url(#surface)" stroke="#243331"/><g transform="translate(20 19) scale(0.65)" fill="none" stroke="#c3d6dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="30" cy="30" r="22"/><ellipse cx="30" cy="30" rx="10" ry="22"/><path d="M8 30h44M12 18h36M12 42h36"/></g><text x="20" y="85" font-size="26" font-weight="700">Portfolio</text><text x="20" y="124" font-size="18" style="fill:#afc1d1">lakshay-13</text><text x="20" y="153" font-size="18" style="fill:#afc1d1">.github.io</text><path d="M 152 33 H 168 V 49 M 152 49 L 168 33" fill="none" stroke="#2effbf" stroke-width="1.6"/><circle class="signal" cx="172" cy="171" r="2.5" fill="#2effbf"/>
 </svg>

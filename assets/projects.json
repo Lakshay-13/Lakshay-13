@@ -156,13 +156,13 @@
   {
     "id": "url",
     "name": "URL Extractor",
-    "category": "DEVELOPER TOOLS / AUTOMATION",
+    "category": "API / MEDIA RESOLUTION",
     "color": "#b9a7ff",
-    "description": "Lightweight extraction tool designed to surface links quickly from captured and generated content.",
+    "description": "Resolve Tenor, Pinterest, Giphy, and KLIPY links into direct media URLs through an API.",
     "tags": [
-      "Web",
-      "Automation",
-      "Tools"
+      "Media links",
+      "Resolver API",
+      "Automation"
     ],
     "url": "https://url.nextgenaischool.in/",
     "artwork": "logos/url.png"
@@ -248,12 +248,13 @@
   {
     "id": "morph",
     "name": "Morph Images",
-    "category": "COMPUTER VISION / IMAGING",
+    "category": "VISUAL TOOLS / GRAPH MORPHING",
     "color": "#2effbf",
-    "description": "Image morphing project focused on computer vision techniques.",
+    "description": "Turn two or more graph images into a smooth morphing GIF, with adjustable frames and timing.",
     "tags": [
-      "Computer Vision",
-      "Python"
+      "Graphs",
+      "GIFs",
+      "Streamlit"
     ],
     "url": "https://github.com/Lakshay-13/Morph-Images",
     "artwork": null
@@ -263,10 +264,11 @@
     "name": "Transcribe App",
     "category": "SPEECH / TRANSCRIPTION",
     "color": "#b9a7ff",
-    "description": "Application for automatic speech-to-text transcription workflows.",
+    "description": "A native macOS transcription app for audio and video, with local Whisper and optional OpenAI API modes.",
     "tags": [
-      "Speech",
-      "App"
+      "SwiftUI",
+      "Whisper",
+      "Transcription"
     ],
     "url": "https://github.com/Lakshay-13/transcribe-app",
     "artwork": null
@@ -274,12 +276,13 @@
   {
     "id": "grid",
     "name": "Grid",
-    "category": "DISTRIBUTED SYSTEMS / CLOUD",
+    "category": "CREATIVE CODE / GENERATIVE DESIGN",
     "color": "#2effbf",
-    "description": "Framework direction for distributed computing and resource management.",
+    "description": "Create customizable triangular tessellation patterns with colors, gradients, transparency, and high-resolution exports.",
     "tags": [
-      "Distributed Systems",
-      "Cloud"
+      "Tessellation",
+      "Patterns",
+      "Streamlit"
     ],
     "url": "https://github.com/Lakshay-13/grid",
     "artwork": null

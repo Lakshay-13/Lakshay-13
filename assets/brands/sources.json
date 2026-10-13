@@ -1,0 +1,33 @@
+{
+  "clarity": {
+    "source": "https://home.iitj.ac.in/~hardikjain/assets/images/clarity/clarity-logo-dark.png",
+    "file": "brands/clarity.png",
+    "kind": "official dark-mode CLARITY Lab logo",
+    "sha256": "479e49e467200054576e2df625146e7cadcc761cd355bcabbf6f91a09ac6ae2b"
+  },
+  "nextgen": {
+    "source": "https://www.nextgenaischool.in/logo_nextgenaischool.png?sitev=81e830382740",
+    "file": "brands/nextgen.png",
+    "kind": "official NextGenAISchool logo",
+    "sha256": "d36ff49fb64e269673355b87c72d8102a6ff5e34dcf229937403504b9218fd3c"
+  },
+  "openai": {
+    "source": "https://learn.chatgpt.com/docs",
+    "file": "brands/openai.svg",
+    "kind": "official header Blossom paths with standalone SVG namespace",
+    "sha256": "e20026b660774a02ff9287fb489d1a61e00d8b2a0f5dae0d60f1be29e217113e",
+    "original_sha256": "57fea7e36a45cef8ebd63fb51b1ab617f4de3874a4ab7797ba603bdd6ba89707"
+  },
+  "chatgpt": {
+    "source": "https://learn.chatgpt.com/favicon.png",
+    "file": "brands/chatgpt.png",
+    "kind": "official ChatGPT favicon",
+    "sha256": "8d5575ee667ff715cd3e3074d5296edc68d5aadd89720d203e13131b68b22a04"
+  },
+  "codex-terminal": {
+    "source": "https://learn.chatgpt.com/images/codex/icons/terminal.svg",
+    "file": "brands/codex-terminal.svg",
+    "kind": "official Codex documentation terminal icon",
+    "sha256": "8c1354ef00c92260f3d698c43236d2a33f16fe09312d55a925184fd06d378e1a"
+  }
+}

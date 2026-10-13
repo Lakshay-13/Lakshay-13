@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="136" viewBox="0 0 1200 136" role="img" aria-labelledby="title description">
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="190" viewBox="0 0 380 190" role="img" aria-labelledby="title description">
 <title id="title">Email</title>
 <desc id="description">lakshaychawla13@gmail.com</desc>
 <defs>
@@ -34,5 +34,5 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#f4f7fb}
 @keyframes meter{0%,100%{transform:scaleY(.3);opacity:.35}50%{transform:scaleY(1);opacity:.75}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
 </style>
-<rect x="1" y="1" width="1198" height="134" rx="20" fill="url(#surface)" stroke="#243331"/><g transform="translate(29 38.0)" fill="none" stroke="#c3d6dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="16" width="44" height="30" rx="5"/><path d="m9 18 21 16 21-16"/></g><text x="114" y="52" font-size="28" font-weight="700">Email</text><text x="114" y="92" font-size="26" style="fill:#afc1d1">lakshaychawla13@gmail.com</text><path d="M 1137 58.0 H 1157 V 78.0 M 1137 78.0 L 1157 58.0" fill="none" stroke="#2effbf" stroke-width="2"/><path class="flow" d="M 24 127 H 1176" stroke="#2effbf" stroke-opacity=".6" stroke-width="2"/>
+<rect x="1" y="1" width="378" height="188" rx="20" fill="url(#surface)" stroke="#243331"/><g transform="translate(20 19) scale(0.85)" fill="none" stroke="#c3d6dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="16" width="44" height="30" rx="5"/><path d="m9 18 21 16 21-16"/></g><text x="88" y="56" font-size="26" font-weight="700">Email</text><text x="20" y="117" font-size="23" style="fill:#afc1d1">lakshaychawla13@gmail.com</text><path d="M 332 33 H 348 V 49 M 332 49 L 348 33" fill="none" stroke="#2effbf" stroke-width="1.6"/><circle class="signal" cx="352" cy="165" r="2.5" fill="#2effbf"/>
 </svg>

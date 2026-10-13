@@ -3,11 +3,13 @@
 import base64
 import html
 import json
+import math
 import random
 import textwrap
 from pathlib import Path
 from xml.etree import ElementTree
 from PIL import ImageFont
+from project_scenes import render as project_scene
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "assets"
@@ -109,6 +111,24 @@ def wrap_pixels(value, width, size):
     return lines + ([line] if line else [])
 
 
+def asset_image(file, x, y, width, height):
+    mime = "image/svg+xml" if file.endswith(".svg") else "image/png"
+    encoded = base64.b64encode((ASSETS / file).read_bytes()).decode()
+    return f'<image x="{x}" y="{y}" width="{width}" height="{height}" href="data:{mime};base64,{encoded}" preserveAspectRatio="xMidYMid meet"/>'
+
+
+def star_wreath(cx, cy, radius):
+    rng = random.Random(13)
+    parts = []
+    for index in range(42):
+        angle = index * 2 * math.pi / 42
+        x, y = cx + radius * math.cos(angle), cy + radius * math.sin(angle)
+        size = rng.choice([2, 2.5, 3.5, 4.5])
+        color = rng.choice(["#e0f4ed", MINT, LAVENDER])
+        parts.append(f'<path class="glint" d="M {x:.2f} {y-size:.2f} Q {x:.2f} {y:.2f} {x+size:.2f} {y:.2f} Q {x:.2f} {y:.2f} {x:.2f} {y+size:.2f} Q {x:.2f} {y:.2f} {x-size:.2f} {y:.2f} Q {x:.2f} {y:.2f} {x:.2f} {y-size:.2f} Z" fill="{color}" style="animation-delay:-{rng.uniform(0,4):.2f}s"/>')
+    return "".join(parts)
+
+
 def chip(x, y, label, color=MINT, size=13):
     width = chip_width(label, size)
     return (
@@ -142,29 +162,27 @@ def banner(mobile=False):
         y = grid_top + i * i * 7
         parts.append(f'<path d="M 24 {y} H {width-24}" stroke="{MINT}" stroke-opacity=".065"/>')
     parts.extend([
-        f'<ellipse cx="{cx}" cy="{cy}" rx="{size*.57}" ry="{size*.39}" transform="rotate(-23 {cx} {cy})" fill="none" stroke="{MINT}" stroke-opacity=".22"/>',
-        f'<ellipse class="flow" cx="{cx}" cy="{cy}" rx="{size*.57}" ry="{size*.39}" transform="rotate(-23 {cx} {cy})" fill="none" stroke="{MINT}" stroke-opacity=".7" stroke-width="2"/>',
-        f'<ellipse class="dash" cx="{cx}" cy="{cy}" rx="{size*.49}" ry="{size*.55}" fill="none" stroke="{LAVENDER}" stroke-opacity=".35"/>',
+        star_wreath(cx, cy, size*.54),
         f'<g mask="url(#portrait-mask)"><svg x="{px}" y="{py}" width="{size}" height="{size}" viewBox="260 125 1040 1040" overflow="hidden"><image href="data:image/jpeg;base64,{original}" width="4441" height="1200"/></svg></g>',
         f'<circle class="breath" cx="{cx+size*.43}" cy="{cy+size*.2}" r="6" fill="{MINT}" filter="url(#glow)"/>',
         f'<circle cx="{cx+size*.43}" cy="{cy+size*.2}" r="3" fill="{MINT}"/>',
     ])
     if mobile:
         parts.extend([
-            text(320, 35, "RESEARCHER / FREELANCER", 23, MINT, **{"text-anchor": "middle", "letter-spacing": 1.5, "class": "mono", "font-weight": 700}),
-            text(320, 412, "Lakshay Chawla.", 54, **{"text-anchor": "middle", "font-weight": 700, "letter-spacing": -2}),
-            text(320, 451, "Scientific ML / AI Research", 23, LAVENDER, **{"text-anchor": "middle"}),
+            text(320, 35, "AI researcher / Entrepreneur / Educator", 22, LAVENDER, **{"text-anchor": "middle"}),
+            text(320, 424, "Lakshay Chawla.", 54, **{"text-anchor": "middle", "font-weight": 700, "letter-spacing": -2}),
+            text(320, 463, "Data Scientist", 27, LAVENDER, **{"text-anchor": "middle"}),
             text(320, 558, "Useful, grounded, accessible AI.", 22, **{"text-anchor": "middle", "class": "muted"}),
             text(320, 623, "CLARITY LAB / IIT JODHPUR", 15, MINT, **{"text-anchor": "middle", "class": "mono"}),
             text(320, 651, "NEXTGENAISCHOOL", 15, LAVENDER, **{"text-anchor": "middle", "class": "mono", "letter-spacing": 2}),
         ])
-        x, y = (width - sum(chip_width(label, 15) for label in ["PINNs", "3D Vision", "Generative AI"]) - 16) / 2, 479
+        x, y = (width - sum(chip_width(label, 15) for label in ["PINNs", "3D Vision", "Generative AI"]) - 16) / 2, 491
     else:
         parts.extend([
-            text(56, 55, "RESEARCHER / FREELANCER", 25, MINT, **{"letter-spacing": 1.5, "class": "mono", "font-weight": 700}),
+            text(56, 55, "AI researcher / Entrepreneur / Educator", 23, LAVENDER),
             text(52, 157, "Lakshay", 86, **{"font-weight": 700, "letter-spacing": -3}),
             text(52, 243, "Chawla.", 86, **{"font-weight": 700, "letter-spacing": -3}),
-            text(56, 289, "Scientific ML / AI Research", 24, LAVENDER),
+            text(56, 289, "Data Scientist", 27, LAVENDER),
             text(56, 391, "AI that is useful, grounded, and accessible.", 19, **{"class": "muted"}),
             text(56, 446, "CLARITY LAB / IIT JODHPUR", 12, MINT, **{"class": "mono", "letter-spacing": 1}),
             text(1144, 446, "NEXTGENAISCHOOL", 12, LAVENDER, **{"text-anchor": "end", "class": "mono", "letter-spacing": 1}),
@@ -174,28 +192,7 @@ def banner(mobile=False):
         markup, pill_width = chip(x, y, label, size=15)
         parts.append(markup)
         x += pill_width + 8
-    return svg(width, height, "Lakshay Chawla — Researcher / Freelancer", "The original illustrated avatar in a mint and lavender orbital starfield. Researcher and freelancer working across data science, PINNs, 3D vision, and generative AI.", '<g clip-path="url(#panel-clip)">' + "".join(parts) + '</g>', defs)
-
-
-def artwork(project):
-    color = project["color"]
-    parts = [
-        '<rect x="-120" y="-108" width="240" height="216" rx="22" fill="#0c1420" stroke="#27333f"/>',
-        f'<circle cx="0" cy="-8" r="84" fill="none" stroke="{color}" stroke-opacity=".16"/>',
-        f'<g class="orbit"><circle cx="0" cy="-8" r="84" fill="none" stroke="{color}" stroke-opacity=".6" stroke-dasharray="20 508" stroke-width="2"/></g>',
-    ]
-    if project.get("artwork"):
-        encoded = base64.b64encode((ASSETS / project["artwork"]).read_bytes()).decode()
-        image = f'<image x="-70" y="-76" width="140" height="136" href="data:image/png;base64,{encoded}" preserveAspectRatio="xMidYMid meet"/>'
-        parts.append(f'<g class="drift">{image}</g>')
-    else:
-        # These are motion illustrations, not substitute project logos.
-        for i in range(3):
-            parts.append(f'<path class="dash" d="M -66 {-28+i*26} C -34 {-66+i*26} 10 {30+i*10} 66 {-28+i*26}" fill="none" stroke="{color}" stroke-width="2" stroke-opacity="{.65-i*.12}"/>')
-        parts.append(text(0, 68, project["tags"][0], 15, "#c2cbd7", **{"text-anchor": "middle", "class": "mono"}))
-    for i in range(9):
-        parts.append(f'<rect class="meter" x="{-46+i*12}" y="{87-(i%3)*5}" width="5" height="{12+(i%3)*5}" rx="2" fill="{color}" style="animation-delay:-{i*.4}s"/>')
-    return "".join(parts)
+    return svg(width, height, "Lakshay Chawla — Data Scientist", "Original titles restored: AI researcher / Entrepreneur / Educator. Data Scientist working on PINNs, 3D Vision, and Generative AI. The unchanged illustrated avatar is surrounded by a circular wreath of blinking stars.", '<g clip-path="url(#panel-clip)">' + "".join(parts) + '</g>', defs)
 
 
 def project_card(project, index, mobile=False):
@@ -206,25 +203,24 @@ def project_card(project, index, mobile=False):
         f'<path d="M 22 1 H {width-22}" stroke="{color}" stroke-opacity=".5"/>',
         text(30 if mobile else 36, 36 if mobile else 38, project["category"], 16 if mobile else 17, "#afc9c2", **{"class": "mono", "letter-spacing": .5}),
     ]
-    title_lines = wrap_pixels(project["name"], 550 if mobile else 784, 36)
+    name_x = 92 if project.get("artwork") else (30 if mobile else 36)
+    if project.get("artwork"):
+        parts.append(asset_image(project["artwork"], 30 if mobile else 36, 55, 44, 44))
+    title_lines = wrap_pixels(project["name"], 590-name_x if mobile else 820-name_x, 36)
     for line_index, line in enumerate(title_lines):
-        parts.append(text(30 if mobile else 36, 86 + line_index * 42, line, 36, **{"font-weight": 700, "letter-spacing": -.6}))
+        parts.append(text(name_x, 86 + line_index * 42, line, 36, **{"font-weight": 700, "letter-spacing": -.6}))
     desc_y = 126 + (len(title_lines)-1)*42
     lines = wrap_pixels(project["description"], 565 if mobile else 784, 25 if mobile else 24)
     for line_index, line in enumerate(lines):
         parts.append(text(30 if mobile else 36, desc_y + line_index * 33, line, 25 if mobile else 24, "#c2cbd7"))
     for line_index, line in enumerate(wrap_pixels(" / ".join(project["tags"]), 340 if mobile else 780, 18)):
         parts.append(text(30 if mobile else 36, (342 if mobile else 241) + line_index * 26, line, 18, "#9aadb9"))
-    cta = "PREVIEW SOON" if not project.get("url") else "EXPLORE PROJECT"
     if mobile:
-        parts.append(f'<g transform="translate(508 348) scale(.72)">{artwork(project)}</g>')
-        parts.append(text(30, 425, cta, 16, color, **{"class": "mono", "letter-spacing": .6}))
-        if project.get("url"):
-            parts.append(f'<path d="M 216 419 H 235 M 230 414 L 235 419 L 230 424" fill="none" stroke="{color}" stroke-width="1.5"/>')
+        parts.append(f'<g transform="translate(384 267) scale(.72)">{project_scene(project["id"])}</g>')
     else:
-        parts.append('<path d="M 852 28 V 254" stroke="#243331"/>')
-        parts.append(f'<g transform="translate(1022 125)">{artwork(project)}</g>')
-        parts.append(text(1022, 261, cta, 13, color, **{"class": "mono", "letter-spacing": .6, "text-anchor": "middle"}))
+        parts.append(f'<g transform="translate(862 24)">{project_scene(project["id"])}</g>')
+    if not project.get("url"):
+        parts.append(text(30 if mobile else 36, 425 if mobile else 268, "PREVIEW SOON", 15, color, **{"class": "mono"}))
     return svg(width, height, project["name"], project["description"], "".join(parts))
 
 
@@ -278,17 +274,42 @@ def education_panel(profile, mobile=False):
 
 
 def toolkit_panel(profile, mobile=False):
-    width, cursor = (640 if mobile else 1200), 126
+    width = 640 if mobile else 1200
     parts = [text(36, 48, "From research to production", 32, **{"font-weight": 700}),
              text(36, 83, "Data science / AI / systems", 22, "#afbbc9")]
+    tiles = [("OpenAI API", "brands/openai.svg"), ("Codex", "brands/codex-terminal.svg"),
+             ("GPT / LLMs", "brands/chatgpt.png"), ("API systems", None), ("PINNs / Neural nets", None)]
+    columns = 3 if mobile else 5
+    tile_width = (width-72-(columns-1)*14)/columns
+    for i, (name, file) in enumerate(tiles):
+        x, y = 36+(i%columns)*(tile_width+14), 110+(i//columns)*136
+        parts.append(f'<rect x="{x}" y="{y}" width="{tile_width}" height="120" rx="14" fill="#111d2d"/>')
+        center = x+tile_width/2
+        if file:
+            parts.append(f'<rect x="{center-27}" y="{y+13}" width="54" height="54" rx="12" fill="#edf1f5"/>')
+            icon_size = 32 if "chatgpt" in file else 38
+            parts.append(asset_image(file, center-icon_size/2, y+40-icon_size/2, icon_size, icon_size))
+        elif i == 3:
+            parts.append(text(center, y+56, "{ / }", 35, LAVENDER, **{"text-anchor": "middle", "class": "mono"}))
+        else:
+            for layer, count in enumerate([2,3,2]):
+                for n in range(count):
+                    nx, ny = center-43+layer*43, y+24+n*19+(3-count)*9
+                    if layer<2:
+                        for m in range([3,2][layer]):
+                            dest_y=y+24+m*19+(3-[3,2][layer])*9
+                            parts.append(f'<path d="M {nx} {ny} L {nx+43} {dest_y}" stroke="#486371" stroke-opacity=".45"/>')
+                    parts.append(f'<circle class="signal" cx="{nx}" cy="{ny}" r="4.5" fill="{MINT if layer%2==0 else LAVENDER}" style="animation-delay:-{layer+n*.4}s"/>')
+        title_size = 17 if mobile and i == 4 else 19
+        parts.append(text(center, y+97, name, title_size, "#c9d5e1", **{"text-anchor": "middle"}))
+    cursor = 110+((len(tiles)+columns-1)//columns)*136+24
     for group_index, group in enumerate(profile["toolkit"]):
         color = MINT if group_index % 2 == 0 else LAVENDER
         size = 29 if mobile else 24
         lines = wrap_pixels("  /  ".join(group["items"]), width-90 if mobile else 762, size)
         row_height = 88 + len(lines)*40 if mobile else max(108, 48+len(lines)*38)
         parts.append(f'<rect x="24" y="{cursor-24}" width="{width-48}" height="{row_height-12}" rx="14" fill="{("#101824" if group_index%2==0 else "#0d1520")}"/>')
-        parts.append(f'<path d="M 36 {cursor-8} V {cursor+row_height-56}" stroke="{color}" stroke-opacity=".16" stroke-width="2"/>')
-        parts.append(f'<path class="flow" d="M 36 {cursor-8} V {cursor+row_height-56}" stroke="{color}" stroke-opacity=".6" stroke-width="2"/>')
+        parts.append(f'<circle class="signal" cx="39" cy="{cursor+2}" r="2.5" fill="{color}" style="animation-delay:-{group_index*.8}s"/>')
         parts.append(text(55, cursor+10, group["group"], 27 if mobile else 25, "#d4dde9", **{"font-weight": 700}))
         for line_index, line in enumerate(lines):
             parts.append(text(55 if mobile else 388, cursor+56+line_index*40 if mobile else cursor+10+line_index*38, line, size, "#b8c5d5"))
@@ -327,7 +348,8 @@ def about_panel(profile, mobile=False):
             parts.append(text(x, cursor, line, 28 if mobile else 24, "#b8c5d5"))
             cursor += 37 if mobile else 33
     height = max(height, cursor+50)
-    parts.append(f'<path d="M 36 {height-25} H {width-36}" stroke="#27363f"/><path class="flow" d="M 36 {height-25} H {width-36}" stroke="{MINT}" stroke-opacity=".65" stroke-width="2"/>')
+    for i in range(4):
+        parts.append(f'<circle class="glint" cx="{width-91+i*15}" cy="{39+(i%2)*7}" r="2" fill="{LAVENDER}" style="animation-delay:-{i*.7}s"/>')
     return svg(width, height, "About Lakshay Chawla", " ".join(about.values()), panel(width, height, parts))
 
 
@@ -343,16 +365,29 @@ CONTACT_ICONS = {
 }
 
 
-def contact_card(entry, mobile=False, compact=False):
-    width, height = (640, 166) if mobile else (1200, 136)
+def contact_card(entry, mobile=False):
+    brand = entry["id"] in ["research", "building"]
+    width, height = ((640, 166) if mobile else (1200, 136)) if brand else ((200, 196) if mobile else (380, 190))
     color = MINT if entry["id"] in ["email", "github", "portfolio", "research"] else LAVENDER
-    parts = [f'<g transform="translate(29 {height/2-30})" fill="none" stroke="#c3d6dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{CONTACT_ICONS[entry["id"]]}</g>',
-             text(114, 53 if mobile else 52, entry["label"], 28, **{"font-weight": 700})]
+    if brand:
+        parts = [asset_image(entry["artwork"], 22, 15, 98, height-30), text(145, 55, entry["label"], 30, **{"font-weight": 700})]
+        value_x, value_y, value_size, value_width = 145, 99, 24, width-211
+    else:
+        icon_scale = .65 if mobile else .85
+        parts = [f'<g transform="translate(20 19) scale({icon_scale})" fill="none" stroke="#c3d6dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{CONTACT_ICONS[entry["id"]]}</g>', text(20 if mobile else 88, 85 if mobile else 56, entry["label"], 26, **{"font-weight": 700})]
+        value_x, value_y, value_size, value_width = 20, 124 if mobile else 117, 18 if mobile else 23, width-40
     value = entry["value"]
-    for index, line in enumerate(wrap_pixels(value, width-188, 25 if mobile else 26)):
-        parts.append(text(114, 92+index*31, line, 25 if mobile else 26, "#afc1d1"))
-    parts.append(f'<path d="M {width-63} {height/2-10} H {width-43} V {height/2+10} M {width-63} {height/2+10} L {width-43} {height/2-10}" fill="none" stroke="{color}" stroke-width="2"/>')
-    parts.append(f'<path class="flow" d="M 24 {height-9} H {width-24}" stroke="{color}" stroke-opacity=".6" stroke-width="2"/>')
+    if mobile and not brand and entry["id"] == "email":
+        lines = [value.split("@")[0], "@"+value.split("@")[1]]
+    elif mobile and not brand and entry["id"] in ["github", "portfolio"]:
+        lines = value.split("/") if entry["id"] == "github" else ["lakshay-13", ".github.io"]
+    else:
+        lines = wrap_pixels(value, value_width, value_size)
+    for index, line in enumerate(lines):
+        parts.append(text(value_x, value_y+index*29, line, value_size, "#afc1d1"))
+    arrow_y = height/2 if brand else 41
+    parts.append(f'<path d="M {width-48} {arrow_y-8} H {width-32} V {arrow_y+8} M {width-48} {arrow_y+8} L {width-32} {arrow_y-8}" fill="none" stroke="{color}" stroke-width="1.6"/>')
+    parts.append(f'<circle class="signal" cx="{width-28}" cy="{height-25}" r="2.5" fill="{color}"/>')
     return svg(width, height, entry["label"], entry["value"], panel(width, height, parts))
 
 

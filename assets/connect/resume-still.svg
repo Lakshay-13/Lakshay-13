@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="136" viewBox="0 0 1200 136" role="img" aria-labelledby="title description">
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="190" viewBox="0 0 380 190" role="img" aria-labelledby="title description">
 <title id="title">Resume</title>
 <desc id="description">View resume</desc>
 <defs>
@@ -34,5 +34,5 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#f4f7fb}
 @keyframes meter{0%,100%{transform:scaleY(.3);opacity:.35}50%{transform:scaleY(1);opacity:.75}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
 *{animation:none!important}</style>
-<rect x="1" y="1" width="1198" height="134" rx="20" fill="url(#surface)" stroke="#243331"/><g transform="translate(29 38.0)" fill="none" stroke="#c3d6dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h22l10 10v36H16V7Z M38 7v12h10M23 29h18M23 37h18M23 45h12"/></g><text x="114" y="52" font-size="28" font-weight="700">Resume</text><text x="114" y="92" font-size="26" style="fill:#afc1d1">View resume</text><path d="M 1137 58.0 H 1157 V 78.0 M 1137 78.0 L 1157 58.0" fill="none" stroke="#b9a7ff" stroke-width="2"/><path class="flow" d="M 24 127 H 1176" stroke="#b9a7ff" stroke-opacity=".6" stroke-width="2"/>
+<rect x="1" y="1" width="378" height="188" rx="20" fill="url(#surface)" stroke="#243331"/><g transform="translate(20 19) scale(0.85)" fill="none" stroke="#c3d6dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h22l10 10v36H16V7Z M38 7v12h10M23 29h18M23 37h18M23 45h12"/></g><text x="88" y="56" font-size="26" font-weight="700">Resume</text><text x="20" y="117" font-size="23" style="fill:#afc1d1">View resume</text><path d="M 332 33 H 348 V 49 M 332 49 L 348 33" fill="none" stroke="#b9a7ff" stroke-width="1.6"/><circle class="signal" cx="352" cy="165" r="2.5" fill="#b9a7ff"/>
 </svg>
