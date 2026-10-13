@@ -69,9 +69,7 @@ def pinnhub():
 
 
 def artgridx():
-    p='<ellipse cx="75" cy="111" rx="88" ry="95" fill="url(#purple-glow)"/>'
-    p+=logo('logos/artgridx.png',0,46,147,147)
-    p+=rect(154,25,147,178,'#101824','#344251',12)
+    p=rect(154,25,147,178,'#101824','#344251',12)
     p+=label(169,49,'ARTIST STUDIO',10,'#b4c2cd')
     p+=rect(169,61,59,68,'#1a3439','#34535a',5)+rect(237,61,49,42,'#28233c','#49425c',5)+rect(237,111,49,43,'#19342c','#315849',5)
     p+=path('M177 119V73H220M246 72H278M246 79H272M246 86H276', '#5f8287', width=1)
@@ -79,6 +77,7 @@ def artgridx():
     p+=path('M245 145L254 120 266 139 277 125',PURPLE,width=1.4)
     p+=label(169,149,'Templates',12,WHITE)+label(169,176,'Domains · Analytics',11,'#a5bbc6')
     p+='<rect class="art-frame" x="169" y="61" width="59" height="68" rx="5" fill="none" stroke="#2effbf" stroke-width="1.4"/>'
+    p='<ellipse cx="160" cy="119" rx="109" ry="105" fill="url(#purple-glow)"/><g transform="translate(-95 -5) scale(1.12)">'+p+'</g>'
     return scene(p,'.art-frame{stroke-dasharray:64 190;animation:artFrame 8s linear infinite}.art-layout{animation:artLayout 8s ease-in-out infinite}@keyframes artFrame{to{stroke-dashoffset:-254}}@keyframes artLayout{0%,100%{opacity:.55}45%,70%{opacity:1}}')
 
 
@@ -134,15 +133,20 @@ def watermark():
 
 
 def frenshop():
-    p='<ellipse cx="80" cy="119" rx="92" ry="89" fill="url(#purple-glow)"/>'
-    p+=logo('logos/frenshop.png',5,47,146,146)
-    p+=path('M151 71H168M151 121H168M151 171H168','#665281',width=1.2)
-    for index,(y,title) in enumerate([(51,'Premium passes'),(101,'Collectibles'),(151,'Bot upgrades')]):
-        p+=rect(168,y,139,40,'#1b2033','#4b4265',9)
-        p+='<g class="shop-entitlement" style="animation-delay:-'+str(index*1.1)+'s">'+dot(181,y+20,3,PURPLE)+'</g>'
-        p+=label(193,y+25,title,12.5,'#ded5f0')
-    p+=path('M158 71H165M158 121H165M158 171H165',PURPLE,'class="shop-unlock"',width=2)
-    return scene(p,'.shop-entitlement{animation:shopEntitlement 4s ease-in-out infinite}.shop-unlock{stroke-dasharray:2 8;animation:shopUnlock 4s linear infinite}@keyframes shopEntitlement{0%,100%{opacity:.35}50%{opacity:1}}@keyframes shopUnlock{to{stroke-dashoffset:-20}}')
+    outline='M27 42H293Q307 42 307 56V104C289 104 289 132 307 132V180Q307 194 293 194H27Q13 194 13 180V132C31 132 31 104 13 104V56Q13 42 27 42Z'
+    p='<defs><clipPath id="shop-pass-clip"><path d="'+outline+'"/></clipPath><linearGradient id="shop-foil"><stop stop-color="#2effbf" stop-opacity="0"/><stop offset=".5" stop-color="#b9a7ff" stop-opacity=".16"/><stop offset="1" stop-color="#2effbf" stop-opacity="0"/></linearGradient></defs>'
+    p+='<ellipse cx="163" cy="122" rx="141" ry="102" fill="url(#purple-glow)"/>'
+    p+=path(outline,'#74668e',fill='#141d30',width=1.3)
+    p+='<g clip-path="url(#shop-pass-clip)"><g class="shop-foil"><path d="M-60 42H10L76 194H6Z" fill="url(#shop-foil)"/></g></g>'
+    p+=path('M230 57V179','#625678','stroke-dasharray="2 7"',width=1)
+    p+=label(35,68,'DIGITAL / COMMUNITY',10,'#a9b4ca')
+    p+=label(35,100,'FREN SHOP',23,WHITE)
+    p+=label(35,128,'Premium passes',14,PURPLE)
+    p+=label(35,160,'Upgrades & collectibles',11,'#b1bfce')
+    p+=logo('logos/frenshop.png',242,66,55,55)
+    p+=label(269,146,'DIGITAL',9,MINT,'text-anchor="middle"')+label(269,161,'PERKS',9,MINT,'text-anchor="middle"')
+    p+=path('M37 179H104',MINT,'class="shop-pass-accent"',width=1.7)
+    return scene(p,'.shop-foil{animation:shopFoil 8s linear infinite}.shop-pass-accent{animation:shopAccent 4s ease-in-out infinite}@keyframes shopFoil{0%{transform:translateX(40px);opacity:.6}85%{transform:translateX(365px);opacity:.6}100%{transform:translateX(365px);opacity:0}}@keyframes shopAccent{0%,100%{opacity:.35}50%{opacity:.85}}')
 
 
 def tree():
@@ -163,14 +167,21 @@ def zinging():
 
 
 def url():
-    p=label(22,25,'SOURCE LINK',11,'#a9b9c9')+rect(20,38,280,43,'#172439','#35455f',9)
-    p+=label(35,65,'Tenor · Pinterest · Giphy · KLIPY',13,PURPLE)
-    p+=path('M160 91V118M154 111 160 118 166 111','#6a8190',width=1.5)
-    p+=rect(20,134,154,82,'#112f2c','#355a53',10)+path('M88 153V197L121 175Z',MINT,fill='#2effbf',width=1)
-    p+=label(192,157,'MEDIA URL',11,'#a9b9c9')+label(192,181,'Direct link',14,MINT)
-    p+=path('M196 198H278',MINT,'class="url-link"',width=1.5)
-    p+=rect(29,75,262,2,'#b9a7ff','none',0,'class="url-progress"')
-    return scene(p,'.url-progress{transform-box:fill-box;transform-origin:left;animation:urlProgress 8s ease-in-out infinite}.url-link{stroke-dasharray:84;animation:urlLink 8s ease-in-out infinite}@keyframes urlProgress{0%,100%{transform:scaleX(.04);opacity:.25}50%,85%{transform:scaleX(1);opacity:.8}}@keyframes urlLink{0%,25%,100%{stroke-dashoffset:84;opacity:.25}60%,85%{stroke-dashoffset:0;opacity:.9}}')
+    p=label(160,25,'Tenor · Pinterest · Giphy · KLIPY',12,'#b5c2ce','text-anchor="middle"')
+    p+=rect(19,52,113,114,'#142032','#42516b',9)
+    for x in (32,41,50):p+=dot(x,65,1.7,'#8495a9')
+    p+=path('M30 78H120','#35455c',width=1)
+    p+='<g transform="translate(56 89) scale(1.5)" fill="none" stroke="#b9a7ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7 .2l3-3a5 5 0 0 0-7-7l-1.7 1.7M14 11a5 5 0 0 0-7-.2l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></g>'
+    p+=path('M40 143H111',PURPLE,width=1.4)
+    p+=path('M141 109H193M185 102 193 109 185 116','#75899d',width=1.5)
+    p+=dot(145,109,2.5,MINT,'class="url-transfer"')
+    p+=path('M209 52H278L296 70V166H209Z',MINT,fill='#122c2a',width=1.4)+path('M278 52V70H296','#69a997',width=1.2)
+    p+=rect(221,85,63,43,'#193c36','#42695e',5)+dot(235,97,4,'#86bfb0')
+    p+=path('M225 122 241 108 255 122 269 111 280 121',MINT,width=1.5)
+    p+=path('M221 145H281','#719f91',width=1.2)
+    p+=path('M223 125H282',MINT,'class="url-media-scan"',width=1.2)
+    p+=label(76,194,'Page URL',13,WHITE,'text-anchor="middle"')+label(252,194,'Direct media URL',12,MINT,'text-anchor="middle"')
+    return scene(p,'.url-transfer{animation:urlTransfer 4s linear infinite}.url-media-scan{animation:urlMediaScan 4s ease-in-out infinite}@keyframes urlTransfer{0%{transform:translateX(0);opacity:.5}75%{transform:translateX(46px);opacity:1}100%{transform:translateX(46px);opacity:0}}@keyframes urlMediaScan{0%,100%{transform:translateY(0);opacity:.2}50%{transform:translateY(-35px);opacity:.7}}')
 
 
 def rags():

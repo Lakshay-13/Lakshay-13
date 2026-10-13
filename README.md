@@ -54,10 +54,10 @@
 
 <a href="https://artgridx.nextgenaischool.in/" target="_blank" rel="noopener noreferrer">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/artgridx-mobile-still.svg?v=6">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/artgridx-still.svg?v=6">
-  <source media="(max-width: 540px)" srcset="assets/projects/artgridx-mobile.gif?v=6">
-  <img src="assets/projects/artgridx.gif?v=6" alt="ArtGridX. Portfolio publishing for artists, studios, and creative independents." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/artgridx-mobile-still.svg?v=7">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/artgridx-still.svg?v=7">
+  <source media="(max-width: 540px)" srcset="assets/projects/artgridx-mobile.gif?v=7">
+  <img src="assets/projects/artgridx.gif?v=7" alt="ArtGridX. Portfolio publishing for artists, studios, and creative independents." width="100%">
 </picture>
 </a>
 
@@ -106,10 +106,10 @@
 
 <a href="https://www.nextgenaischool.in/fren" target="_blank" rel="noopener noreferrer">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/frenshop-mobile-still.svg?v=6">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/frenshop-still.svg?v=6">
-  <source media="(max-width: 540px)" srcset="assets/projects/frenshop-mobile.gif?v=6">
-  <img src="assets/projects/frenshop.gif?v=6" alt="Fren Shop. Official shop and support hub for FREN with premium drops, updates, and community goodies." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/frenshop-mobile-still.svg?v=7">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/frenshop-still.svg?v=7">
+  <source media="(max-width: 540px)" srcset="assets/projects/frenshop-mobile.gif?v=7">
+  <img src="assets/projects/frenshop.gif?v=7" alt="Fren Shop. Official shop and support hub for FREN with premium drops, updates, and community goodies." width="100%">
 </picture>
 </a>
 
@@ -133,10 +133,10 @@
 
 <a href="https://url.nextgenaischool.in/" target="_blank" rel="noopener noreferrer">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/url-mobile-still.svg?v=6">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/url-still.svg?v=6">
-  <source media="(max-width: 540px)" srcset="assets/projects/url-mobile.gif?v=6">
-  <img src="assets/projects/url.gif?v=6" alt="URL Extractor. Resolve Tenor, Pinterest, Giphy, and KLIPY links into direct media URLs through an API." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/url-mobile-still.svg?v=7">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/url-still.svg?v=7">
+  <source media="(max-width: 540px)" srcset="assets/projects/url-mobile.gif?v=7">
+  <img src="assets/projects/url.gif?v=7" alt="URL Extractor. Resolve Tenor, Pinterest, Giphy, and KLIPY links into direct media URLs through an API." width="100%">
 </picture>
 </a>
 

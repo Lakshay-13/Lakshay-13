@@ -8,8 +8,9 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def picture(stem, alt, animated="svg", still="svg", link=None, width="100%"):
+    version = 7 if stem in {"projects/artgridx", "projects/frenshop", "projects/url"} else 6
     def asset(suffix, extension):
-        return f"assets/{stem}{suffix}.{extension}?v=6"
+        return f"assets/{stem}{suffix}.{extension}?v={version}"
     markup = f'''<picture>
   <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="{asset('-mobile-still', still)}">
   <source media="(prefers-reduced-motion: reduce)" srcset="{asset('-still', still)}">
