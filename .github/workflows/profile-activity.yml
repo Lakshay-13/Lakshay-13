@@ -1,0 +1,89 @@
+name: Refresh profile activity
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 3 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-activity
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - name: Refresh verified activity
+        id: refresh
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/update_activity.py
+      - name: Publish updated activity
+        id: publish
+        shell: bash
+        run: |
+          if git diff --quiet -- README.md assets/activity.svg assets/activity-mobile.svg assets/activity-still.svg assets/activity-mobile-still.svg; then
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md assets/activity.svg assets/activity-mobile.svg assets/activity-still.svg assets/activity-mobile-still.svg
+          git commit -m 'Refresh GitHub profile activity'
+          if ! git push; then
+            echo 'error=Activity was generated, but git push failed. See the workflow logs.' >> "$GITHUB_OUTPUT"
+            exit 1
+          fi
+      - name: NotifyMe completion
+        if: always()
+        env:
+          NOTIFYME_API_KEY: ${{ secrets.NOTIFYME_API_KEY }}
+          JOB_STATUS: ${{ job.status }}
+          REFRESH_ERROR: ${{ steps.refresh.outputs.error }}
+          PUBLISH_ERROR: ${{ steps.publish.outputs.error }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os, sys, time
+          from urllib.error import HTTPError, URLError
+          from urllib.request import Request, urlopen
+
+          key = os.environ.get('NOTIFYME_API_KEY')
+          if not key:
+              sys.exit('NOTIFYME_API_KEY is missing; completion notification could not be sent.')
+          success = os.environ['JOB_STATUS'] == 'success'
+          status = 'Success' if success else 'Failed'
+          summary = 'Verified activity was refreshed and published.' if success else (
+              os.environ.get('REFRESH_ERROR') or os.environ.get('PUBLISH_ERROR') or
+              'The workflow failed before activity generation or publication completed.'
+          )
+          body = f"Project: Lakshay-13 GitHub Profile\nTask: Daily activity refresh completion\nStatus: {status}\n{'Summary' if success else 'Error'}: {summary}\nRun: {os.environ['RUN_URL']}"
+          payload = json.dumps({
+              'title': f"Lakshay-13 GitHub Profile - Activity Refresh {'Complete' if success else 'Failed'}",
+              'body': body, 'actionType': 'open_history'
+          }).encode()
+          for attempt in range(3):
+              try:
+                  request = Request('https://www.nextgenaischool.in/api/notifyme/send', data=payload, headers={
+                      'Authorization': f'Bearer {key}', 'Content-Type': 'application/json'
+                  })
+                  with urlopen(request, timeout=30) as response:
+                      result = json.load(response)
+                  if result.get('error') or result.get('success') is False:
+                      raise RuntimeError('NotifyMe did not accept the notification.')
+                  print('NotifyMe completion notification accepted.')
+                  break
+              except (HTTPError, URLError, TimeoutError, RuntimeError) as error:
+                  if attempt == 2:
+                      reason = f'HTTP {error.code}' if isinstance(error, HTTPError) else type(error).__name__
+                      sys.exit(f'NotifyMe failed after 3 attempts: {reason}.')
+                  time.sleep(2 ** attempt)
+          PY
