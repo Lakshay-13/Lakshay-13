@@ -143,5 +143,62 @@
         "Observability"
       ]
     }
+  ],
+  "about": {
+    "intro": "I build AI across Physics-Informed Neural Networks, 3D vision, agentic systems, product infrastructure, and AI education.",
+    "research": "My research focuses on PINNs, 3D vision/generation, and physically grounded intelligence. My research journey began at Harvard SEAS; I now work with CLARITY Lab, IIT Jodhpur.",
+    "building": "Across NextGenAISchool, I build AI education products, developer tools, and applied AI systems. Research, products, education, and open-source work share a goal: useful, grounded, accessible AI."
+  },
+  "about_links": [
+    {
+      "id": "research",
+      "label": "CLARITY Lab",
+      "value": "IIT Jodhpur / Research",
+      "url": "https://home.iitj.ac.in/~hardikjain/ClarityLab.html"
+    },
+    {
+      "id": "building",
+      "label": "NextGenAISchool",
+      "value": "AI education / Products / Developer tools",
+      "url": "https://www.nextgenaischool.in/"
+    }
+  ],
+  "connect": [
+    {
+      "id": "email",
+      "label": "Email",
+      "value": "lakshaychawla13@gmail.com",
+      "url": "mailto:lakshaychawla13@gmail.com"
+    },
+    {
+      "id": "phone",
+      "label": "Phone",
+      "value": "+91 9811096411",
+      "url": "https://lakshay-13.github.io/#contact"
+    },
+    {
+      "id": "github",
+      "label": "GitHub",
+      "value": "github.com/Lakshay-13",
+      "url": "https://github.com/Lakshay-13"
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "value": "lakshaychawla13",
+      "url": "https://www.linkedin.com/in/lakshaychawla13"
+    },
+    {
+      "id": "portfolio",
+      "label": "Portfolio",
+      "value": "lakshay-13.github.io",
+      "url": "https://lakshay-13.github.io"
+    },
+    {
+      "id": "resume",
+      "label": "Resume",
+      "value": "View resume",
+      "url": "https://drive.google.com/file/d/18PgQ_zQ0XuA0Eyh0GeSW_2LWA-vjwEkp/view?usp=sharing"
+    }
   ]
 }

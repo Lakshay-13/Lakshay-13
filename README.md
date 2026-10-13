@@ -1,238 +1,316 @@
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/banner-mobile-still.png?v=2">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/banner-still.png?v=2">
-  <source media="(max-width: 540px)" srcset="assets/banner-mobile.gif?v=2">
-  <img src="assets/banner.gif?v=2" alt="Lakshay Chawla — the original illustrated avatar with an animated mint and lavender starfield, neon orbits, and a scientific wireframe. Data scientist, AI researcher, entrepreneur, and educator." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/banner-mobile-still.png?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/banner-still.png?v=3">
+  <source media="(max-width: 540px)" srcset="assets/banner-mobile.gif?v=3">
+  <img src="assets/banner.gif?v=3" alt="Lakshay Chawla — Researcher / Freelancer. The original illustrated avatar, animated mint and lavender orbits, PINNs, 3D Vision, and Generative AI." width="100%">
 </picture>
-
-# Hi, I'm Lakshay.
-
-**Data Scientist**
-
-AI researcher · Entrepreneur · Educator
-
-Research, products, and education — connected by a goal of making AI useful, grounded, and accessible.
-
-<p align="center">
-  <a href="https://lakshay-13.github.io"><img alt="Portfolio" src="badge-portfolio.svg"></a>
-  <a href="https://www.linkedin.com/in/lakshaychawla13"><img alt="LinkedIn" src="badge-linkedin.svg"></a>
-  <a href="mailto:lakshaychawla13@gmail.com"><img alt="Email" src="badge-email.svg"></a>
-  <a href="https://drive.google.com/file/d/18PgQ_zQ0XuA0Eyh0GeSW_2LWA-vjwEkp/view?usp=sharing"><img alt="Resume" src="badge-resume.svg"></a>
-</p>
 
 ## About
 
-I am a data scientist building AI at the intersection of Physics-Informed Neural Networks, 3D vision, agentic systems, product infrastructure, and AI education.
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/about-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/about-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/about-mobile.svg?v=3">
+  <img src="assets/about.svg?v=3" alt="I build AI across Physics-Informed Neural Networks, 3D vision, agentic systems, product infrastructure, and AI education. My research focuses on PINNs, 3D vision/generation, and physically grounded intelligence. My research journey began at Harvard SEAS; I now work with CLARITY Lab, IIT Jodhpur. Across NextGenAISchool, I build AI education products, developer tools, and applied AI systems. Research, products, education, and open-source work share a goal: useful, grounded, accessible AI." width="100%">
+</picture>
 
-- Research, products, education, and open-source work are connected by the same goal: make AI systems useful, grounded, and accessible.
-- My research focuses on Physics-Informed Neural Networks, 3D vision/generation, and physically grounded intelligence. I started my research journey at Harvard SEAS and currently work with [CLARITY Lab, IIT Jodhpur](https://home.iitj.ac.in/~hardikjain/ClarityLab.html).
-- I am also building AI education products, developer tools, and applied AI systems across the [NextGenAISchool](https://www.nextgenaischool.in/) ecosystem.
+<a href="https://home.iitj.ac.in/~hardikjain/ClarityLab.html">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/connect/research-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/connect/research-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/connect/research-mobile.svg?v=3">
+  <img src="assets/connect/research.svg?v=3" alt="CLARITY Lab: IIT Jodhpur / Research" width="100%">
+</picture>
+</a>
+
+<a href="https://www.nextgenaischool.in/">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/connect/building-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/connect/building-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/connect/building-mobile.svg?v=3">
+  <img src="assets/connect/building.svg?v=3" alt="NextGenAISchool: AI education / Products / Developer tools" width="100%">
+</picture>
+</a>
 
 ## Selected work
 
-A few things I'm building across research, communities, and the NextGenAISchool ecosystem.
-
-
 <a href="https://lakshay-13.github.io/fren/">
-  <picture>
-    <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/fren-mobile-still.svg?v=2">
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/fren-still.svg?v=2">
-    <source media="(max-width: 540px)" srcset="assets/projects/fren-mobile.svg?v=2">
-    <img src="assets/projects/fren.svg?v=2" alt="FREN Bot. AI-powered communities with games, moderation, social loops, AI utilities, and premium workflows." width="100%">
-  </picture>
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/fren-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/fren-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/projects/fren-mobile.gif?v=3">
+  <img src="assets/projects/fren.gif?v=3" alt="FREN Bot. AI-powered communities with games, moderation, social loops, AI utilities, and premium workflows." width="100%">
+</picture>
 </a>
 
 <a href="https://pinnhub.nextgenaischool.in/">
-  <picture>
-    <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/pinnhub-mobile-still.svg?v=2">
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/pinnhub-still.svg?v=2">
-    <source media="(max-width: 540px)" srcset="assets/projects/pinnhub-mobile.svg?v=2">
-    <img src="assets/projects/pinnhub.svg?v=2" alt="PINN Hub. A research hub for Physics-Informed Neural Networks and neural differential-equation experiments." width="100%">
-  </picture>
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/pinnhub-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/pinnhub-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/projects/pinnhub-mobile.gif?v=3">
+  <img src="assets/projects/pinnhub.gif?v=3" alt="PINN Hub. A research hub for Physics-Informed Neural Networks and neural differential-equation experiments." width="100%">
+</picture>
 </a>
 
 <a href="https://artgridx.nextgenaischool.in/">
-  <picture>
-    <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/artgridx-mobile-still.svg?v=2">
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/artgridx-still.svg?v=2">
-    <source media="(max-width: 540px)" srcset="assets/projects/artgridx-mobile.svg?v=2">
-    <img src="assets/projects/artgridx.svg?v=2" alt="ArtGridX. Portfolio publishing for artists, studios, and creative independents." width="100%">
-  </picture>
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/artgridx-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/artgridx-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/projects/artgridx-mobile.gif?v=3">
+  <img src="assets/projects/artgridx.gif?v=3" alt="ArtGridX. Portfolio publishing for artists, studios, and creative independents." width="100%">
+</picture>
 </a>
 
 <a href="https://lakshay-13.github.io/notifyme/">
-  <picture>
-    <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/notifyme-mobile-still.svg?v=2">
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/notifyme-still.svg?v=2">
-    <source media="(max-width: 540px)" srcset="assets/projects/notifyme-mobile.svg?v=2">
-    <img src="assets/projects/notifyme.svg?v=2" alt="NotifyMe. Profile-labelled alerts, local messaging, history sync, callbacks, and portable conversation data." width="100%">
-  </picture>
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/notifyme-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/notifyme-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/projects/notifyme-mobile.gif?v=3">
+  <img src="assets/projects/notifyme.gif?v=3" alt="NotifyMe. Profile-labelled alerts, local messaging, history sync, callbacks, and portable conversation data." width="100%">
+</picture>
 </a>
 
 <a href="https://lakshay-13.github.io/host/">
-  <picture>
-    <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/host-mobile-still.svg?v=2">
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/host-still.svg?v=2">
-    <source media="(max-width: 540px)" srcset="assets/projects/host-mobile.svg?v=2">
-    <img src="assets/projects/host.svg?v=2" alt="Host. Developer-first hosting with simple deployment workflows and production-ready defaults." width="100%">
-  </picture>
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/host-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/host-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/projects/host-mobile.gif?v=3">
+  <img src="assets/projects/host.gif?v=3" alt="Host. Developer-first hosting with simple deployment workflows and production-ready defaults." width="100%">
+</picture>
 </a>
 
 <a href="https://lakshay-13.github.io/rl-pinn/">
-  <picture>
-    <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/rlpinn-mobile-still.svg?v=2">
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/rlpinn-still.svg?v=2">
-    <source media="(max-width: 540px)" srcset="assets/projects/rlpinn-mobile.svg?v=2">
-    <img src="assets/projects/rlpinn.svg?v=2" alt="RL-PINNs. Adaptive Physics-Informed Neural Network training control loops through reinforcement learning." width="100%">
-  </picture>
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/rlpinn-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/rlpinn-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/projects/rlpinn-mobile.gif?v=3">
+  <img src="assets/projects/rlpinn.gif?v=3" alt="RL-PINNs. Adaptive Physics-Informed Neural Network training control loops through reinforcement learning." width="100%">
+</picture>
+</a>
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/slidenext-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/slidenext-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/projects/slidenext-mobile.gif?v=3">
+  <img src="assets/projects/slidenext.gif?v=3" alt="SlideNext. Next-generation presentation platform for AI-assisted decks, education workflows, and structured storytelling. Preview soon." width="100%">
+</picture>
+
+<a href="https://watermark.nextgenaischool.in/">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/watermark-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/watermark-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/projects/watermark-mobile.gif?v=3">
+  <img src="assets/projects/watermark.gif?v=3" alt="Watermark Studio. Protected publishing workspace for image watermarking, branded exports, document protection, and controlled content distribution with per-user history and admin visibility." width="100%">
+</picture>
+</a>
+
+<a href="https://www.nextgenaischool.in/fren">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/frenshop-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/frenshop-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/projects/frenshop-mobile.gif?v=3">
+  <img src="assets/projects/frenshop.gif?v=3" alt="Fren Shop. Official shop and support hub for FREN with premium drops, updates, and community goodies." width="100%">
+</picture>
 </a>
 
 <a href="https://tree.nextgenaischool.in/">
-  <picture>
-    <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/tree-mobile-still.svg?v=2">
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/tree-still.svg?v=2">
-    <source media="(max-width: 540px)" srcset="assets/projects/tree-mobile.svg?v=2">
-    <img src="assets/projects/tree.svg?v=2" alt="Tree. Modern identity and profile surfaces built around interactive tree systems." width="100%">
-  </picture>
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/tree-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/tree-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/projects/tree-mobile.gif?v=3">
+  <img src="assets/projects/tree.gif?v=3" alt="Tree. Modern identity and profile surfaces built around interactive tree systems." width="100%">
+</picture>
 </a>
 
 <a href="https://lakshay-13.github.io/zinging/">
-  <picture>
-    <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/zinging-mobile-still.svg?v=2">
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/zinging-still.svg?v=2">
-    <source media="(max-width: 540px)" srcset="assets/projects/zinging-mobile.svg?v=2">
-    <img src="assets/projects/zinging.svg?v=2" alt="Zinging. A self-evolving AI bot and agent ecosystem for adaptive communities, automation, and agentic utilities." width="100%">
-  </picture>
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/zinging-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/zinging-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/projects/zinging-mobile.gif?v=3">
+  <img src="assets/projects/zinging.gif?v=3" alt="Zinging. A self-evolving AI bot and agent ecosystem for adaptive communities, automation, and agentic utilities." width="100%">
+</picture>
 </a>
 
-<details>
-<summary><strong>Explore all 21 projects</strong> — products, research, experiments, and repositories</summary>
+<a href="https://url.nextgenaischool.in/">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/url-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/url-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/projects/url-mobile.gif?v=3">
+  <img src="assets/projects/url.gif?v=3" alt="URL Extractor. Lightweight extraction tool designed to surface links quickly from captured and generated content." width="100%">
+</picture>
+</a>
 
-The portfolio currently features **21 projects**, ordered with deployed products and active platforms first, followed by research, experiments, and repositories.
+<a href="https://github.com/Lakshay-13/RAGS-Demo">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/rags-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/rags-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/projects/rags-mobile.gif?v=3">
+  <img src="assets/projects/rags.gif?v=3" alt="RAGS-Demo. Retrieval-Augmented Generation demo for enhanced information retrieval and response generation." width="100%">
+</picture>
+</a>
 
-1. **[FREN Bot](https://lakshay-13.github.io/fren/)** — AI-powered community platform with games, moderation, social loops, AI utilities, and premium workflows.
-2. **[PINN Hub](https://pinnhub.nextgenaischool.in/)** — Deployed research hub for Physics-Informed Neural Networks and neural differential-equation experiments.
-3. **[ArtGridX](https://artgridx.nextgenaischool.in/)** — Portfolio publishing for artists, studios, and creative independents.
-4. **[NotifyMe](https://lakshay-13.github.io/notifyme/)** — Android notification platform with profile-labelled alerts, local messaging, history sync, callbacks, and portable conversation data.
-5. **[Host](https://lakshay-13.github.io/host/)** — Developer-first hosting platform for deploying projects with simple workflows and production-ready defaults.
-6. **[RL-PINNs](https://lakshay-13.github.io/rl-pinn/)** — Reinforcement-learning framework direction for adaptive Physics-Informed Neural Network training control loops.
-7. **SlideNext** — Next-generation presentation platform for AI-assisted decks, education workflows, and structured storytelling. *(Preview soon.)*
-8. **[Watermark Studio](https://watermark.nextgenaischool.in/)** — Protected publishing workspace for image watermarking, branded exports, document protection, and controlled content distribution.
-9. **[Fren Shop](https://www.nextgenaischool.in/fren)** — Official shop and support hub for FREN with premium drops, updates, and community goodies.
-10. **[Tree](https://tree.nextgenaischool.in/)** — Modern identity and profile platform direction expressed through interactive tree systems and profile surfaces.
-11. **[Zinging](https://lakshay-13.github.io/zinging/)** — Self-evolving AI bot and agent ecosystem designed for adaptive communities, automation, and agentic utilities.
-12. **[URL Extractor](https://url.nextgenaischool.in/)** — Lightweight extraction tool designed to surface links quickly from captured and generated content.
-13. **[RAGS-Demo](https://github.com/Lakshay-13/RAGS-Demo)** — Retrieval-Augmented Generation demo for enhanced information retrieval and response generation.
-14. **[Classifying Periodic Variable Stars](https://github.com/Lakshay-13/Classifying-Periodic-Variable-Stars)** — Time-series ML project classifying four classes of periodic variable stars.
-15. **[Automated Notes Maker](https://github.com/Lakshay-13/Automated-Notes-Maker-from-Audio-Recordings)** — Tooling for automated note creation from audio recordings.
-16. **[Customer Relationship Prediction](https://github.com/Lakshay-13/Customer-Relationship-Prediction)** — Predicting churn, appetency, and up-selling behavior from marketing databases.
-17. **[Music Genre Prediction](https://github.com/Lakshay-13/Music-Genre-Prediction)** — Predicting music genres using data analysis and ML techniques.
-18. **[Code Image Generator](https://github.com/Lakshay-13/Code-Image-Generator)** — Python-based tool for generating images from code snippets.
-19. **[Morph Images](https://github.com/Lakshay-13/Morph-Images)** — Image morphing project focused on computer vision techniques.
-20. **[Transcribe App](https://github.com/Lakshay-13/transcribe-app)** — Application for automatic speech-to-text transcription workflows.
-21. **[Grid](https://github.com/Lakshay-13/grid)** — Framework direction for distributed computing and resource management.
+<a href="https://github.com/Lakshay-13/Classifying-Periodic-Variable-Stars">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/variable-stars-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/variable-stars-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/projects/variable-stars-mobile.gif?v=3">
+  <img src="assets/projects/variable-stars.gif?v=3" alt="Classifying Periodic Variable Stars. Time-series ML project classifying four classes of periodic variable stars." width="100%">
+</picture>
+</a>
 
-</details>
+<a href="https://github.com/Lakshay-13/Automated-Notes-Maker-from-Audio-Recordings">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/notes-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/notes-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/projects/notes-mobile.gif?v=3">
+  <img src="assets/projects/notes.gif?v=3" alt="Automated Notes Maker. Tooling for automated note creation from audio recordings." width="100%">
+</picture>
+</a>
 
-## Across the ecosystem
+<a href="https://github.com/Lakshay-13/Customer-Relationship-Prediction">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/customer-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/customer-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/projects/customer-mobile.gif?v=3">
+  <img src="assets/projects/customer.gif?v=3" alt="Customer Relationship Prediction. Predicting churn, appetency, and up-selling behavior from marketing databases." width="100%">
+</picture>
+</a>
 
-<p align="center">
-  <a href="https://www.nextgenaischool.in/">
-    <img src="https://www.nextgenaischool.in/api/portfolio/full-stats.svg" alt="Live ecosystem stats: Fren, NotifyMe, URL Extractor, ArtGridX" width="100%">
-  </a>
-</p>
+<a href="https://github.com/Lakshay-13/Music-Genre-Prediction">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/music-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/music-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/projects/music-mobile.gif?v=3">
+  <img src="assets/projects/music.gif?v=3" alt="Music Genre Prediction. Predicting music genres using data analysis and ML techniques." width="100%">
+</picture>
+</a>
+
+<a href="https://github.com/Lakshay-13/Code-Image-Generator">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/code-image-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/code-image-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/projects/code-image-mobile.gif?v=3">
+  <img src="assets/projects/code-image.gif?v=3" alt="Code Image Generator. Python-based tool for generating images from code snippets." width="100%">
+</picture>
+</a>
+
+<a href="https://github.com/Lakshay-13/Morph-Images">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/morph-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/morph-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/projects/morph-mobile.gif?v=3">
+  <img src="assets/projects/morph.gif?v=3" alt="Morph Images. Image morphing project focused on computer vision techniques." width="100%">
+</picture>
+</a>
+
+<a href="https://github.com/Lakshay-13/transcribe-app">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/transcribe-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/transcribe-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/projects/transcribe-mobile.gif?v=3">
+  <img src="assets/projects/transcribe.gif?v=3" alt="Transcribe App. Application for automatic speech-to-text transcription workflows." width="100%">
+</picture>
+</a>
+
+<a href="https://github.com/Lakshay-13/grid">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/grid-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/grid-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/projects/grid-mobile.gif?v=3">
+  <img src="assets/projects/grid.gif?v=3" alt="Grid. Framework direction for distributed computing and resource management." width="100%">
+</picture>
+</a>
+
+<a href="https://www.nextgenaischool.in/"><img src="https://www.nextgenaischool.in/api/portfolio/full-stats.svg" alt="Live NextGenAISchool ecosystem statistics" width="100%"></a>
 
 ## Activity
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/activity-mobile-still.svg">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/activity-still.svg">
-  <source media="(max-width: 540px)" srcset="assets/activity-mobile.svg">
-  <img src="assets/activity.svg" alt="Lakshay Chawla's GitHub contribution calendar, refreshed daily from GitHub" width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/activity-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/activity-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/activity-mobile.svg?v=3">
+  <img src="assets/activity.svg?v=3" alt="Lakshay Chawla&#x27;s GitHub contribution calendar, refreshed daily from GitHub." width="100%">
 </picture>
-
-<details>
-<summary>Recent public activity</summary>
-
-<!-- ACTIVITY:START -->
-- Pushed code to [Lakshay-13/rl-pinn](https://github.com/Lakshay-13/rl-pinn) · `25 Sep 2026`
-- Pushed code to [Lakshay-13/LPINNs](https://github.com/Lakshay-13/LPINNs) · `25 Sep 2026`
-- Made a repository public: [Lakshay-13/LPINNs](https://github.com/Lakshay-13/LPINNs) · `04 Jul 2026`
-- Made a repository public: [Lakshay-13/rl-pinn](https://github.com/Lakshay-13/rl-pinn) · `10 Feb 2026`
-
-<sub>Updated 13 Oct 2026 · refreshed daily from GitHub public events. Private activity is not listed.</sub>
-<!-- ACTIVITY:END -->
-
-</details>
 
 ## Experience
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/experience-mobile-still.svg">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/experience-still.svg">
-  <source media="(max-width: 540px)" srcset="assets/experience-mobile.svg">
-  <img src="assets/experience.svg" alt="Data science, AI research, and product experience at NextGenAISchool, IIT Jodhpur, Harvard SEAS, and more. Full roles and dates in the text version." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/experience-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/experience-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/experience-mobile.svg?v=3">
+  <img src="assets/experience.svg?v=3" alt="CEO at NextGenAISchool (05/2026 - Present); Researcher at CLARITY Lab, IIT Jodhpur (06/2026 - Present); Project Associate at IIT Jodhpur (12/2025 - 05/2026); Freelancer at Independent (05/2025 - 11/2025); R&amp;D Consultant at System 3 (01/2024 - 05/2025); Research Fellow (Computer Science) at Harvard SEAS (05/2024 - 07/2024); Researcher at StellarDNN (01/2023 - 08/2024); Learning Experience Supervisor + Analytics Consultant at Univ.AI (05/2022 - 12/2023); Big Data Analytics &amp; Data Science Intern at Appinventiv (02/2022 - 06/2022); Big Data Analytics &amp; Data Science Intern at Jio (08/2021 - 02/2022); Big Data Analytics &amp; Data Science Intern at Havells India Ltd (01/2021 - 07/2021)" width="100%">
 </picture>
-
-<details>
-<summary>Text version</summary>
-
-- **CEO** at [NextGenAISchool](https://www.nextgenaischool.in/) `(05/2026 - Present)`
-- **Researcher** at CLARITY Lab, IIT Jodhpur `(06/2026 - Present)`
-- **Project Associate** at IIT Jodhpur `(12/2025 - 05/2026)`
-- **Freelancer** at Independent `(05/2025 - 11/2025)`
-- **R&D Consultant** at System 3 `(01/2024 - 05/2025)`
-- **Research Fellow (Computer Science)** at Harvard SEAS `(05/2024 - 07/2024)`
-- **Researcher** at StellarDNN `(01/2023 - 08/2024)`
-- **Learning Experience Supervisor + Analytics Consultant** at Univ.AI `(05/2022 - 12/2023)`
-- **Big Data Analytics & Data Science Intern** at Appinventiv `(02/2022 - 06/2022)`
-- **Big Data Analytics & Data Science Intern** at Jio `(08/2021 - 02/2022)`
-- **Big Data Analytics & Data Science Intern** at Havells India Ltd `(01/2021 - 07/2021)`
-
-</details>
 
 ## Toolkit
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/toolkit-mobile-still.svg">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/toolkit-still.svg">
-  <source media="(max-width: 540px)" srcset="assets/toolkit-mobile.svg">
-  <img src="assets/toolkit.svg" alt="Data science and AI toolkit: scientific ML, Python, PyTorch, SQL, data analysis, agentic AI, and production tools. Full list in the text version." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/toolkit-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/toolkit-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/toolkit-mobile.svg?v=3">
+  <img src="assets/toolkit.svg?v=3" alt="AI &amp; Machine Learning: PINNs, Neural Differential Equations, 3D Vision, 3D Generative Modeling, Computer Vision, Generative AI, LLMs, RAG, Agentic LLM Systems, Multi-Agent Workflows, Reinforcement Learning; Languages &amp; Frameworks: Python, TypeScript, Kotlin, SQL, PyTorch, TensorFlow, CUDA, Next.js, React, Jetpack Compose; LLM &amp; Data Stack: LangChain, LangGraph, OpenAI API, Google GenAI/Gemini API, Ollama, vLLM, Hugging Face, NumPy, Pandas, Hive, Hadoop, Spark, EDA, Data Visualization; Product &amp; Backend: FastAPI, Express.js, PostgreSQL, Redis, Docker, Linux, S3-Compatible Storage, Firebase/FCM; Developer Tools: Git, GitHub, GitHub Actions, API Design, Production Deployments, Observability" width="100%">
 </picture>
-
-<details>
-<summary>Text version</summary>
-
-- **AI & Machine Learning:** PINNs, Neural Differential Equations, 3D Vision, 3D Generative Modeling, Computer Vision, Generative AI, LLMs, RAG, Agentic LLM Systems, Multi-Agent Workflows, Reinforcement Learning
-- **Languages & Frameworks:** Python, TypeScript, Kotlin, SQL, PyTorch, TensorFlow, CUDA, Next.js, React, Jetpack Compose
-- **LLM & Data Stack:** LangChain, LangGraph, OpenAI API, Google GenAI/Gemini API, Ollama, vLLM, Hugging Face, NumPy, Pandas, Hive, Hadoop, Spark, EDA, Data Visualization
-- **Product & Backend:** FastAPI, Express.js, PostgreSQL, Redis, Docker, Linux, S3-Compatible Storage, Firebase/FCM
-- **Developer Tools:** Git, GitHub, GitHub Actions, API Design, Production Deployments, Observability
-
-</details>
 
 ## Education
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/education-mobile-still.svg">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/education-still.svg">
-  <source media="(max-width: 540px)" srcset="assets/education-mobile.svg">
-  <img src="assets/education.svg" alt="Master of Technology in Artificial Intelligence at IIT Jodhpur and Bachelor of Technology in Computer Science Engineering at Maharaja Agrasen Institute of Technology. Full dates and details in the text version." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/education-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/education-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/education-mobile.svg?v=3">
+  <img src="assets/education.svg?v=3" alt="Master of Technology (Artificial Intelligence), IIT Jodhpur (01/2025 - Present); Bachelor of Technology (Computer Science Engineering), Maharaja Agrasen Institute of Technology (08/2018 - 06/2022, 8.6 CGPA)" width="100%">
 </picture>
-
-<details>
-<summary>Text version</summary>
-
-- **Master of Technology (Artificial Intelligence)**, IIT Jodhpur `(01/2025 - Present)`
-- **Bachelor of Technology (Computer Science Engineering)**, Maharaja Agrasen Institute of Technology `(08/2018 - 06/2022, 8.6 CGPA)`
-
-</details>
 
 ## Connect
 
-- **Email:** [lakshaychawla13@gmail.com](mailto:lakshaychawla13@gmail.com)
-- **Phone:** [+91 9811096411](tel:+919811096411)
-- **GitHub:** [github.com/Lakshay-13](https://github.com/Lakshay-13)
-- **LinkedIn:** [linkedin.com/in/lakshaychawla13](https://www.linkedin.com/in/lakshaychawla13)
-- **Portfolio:** [lakshay-13.github.io](https://lakshay-13.github.io)
-- **Resume:** [View Resume](https://drive.google.com/file/d/18PgQ_zQ0XuA0Eyh0GeSW_2LWA-vjwEkp/view?usp=sharing)
+<a href="mailto:lakshaychawla13@gmail.com">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/connect/email-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/connect/email-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/connect/email-mobile.svg?v=3">
+  <img src="assets/connect/email.svg?v=3" alt="Email: lakshaychawla13@gmail.com" width="100%">
+</picture>
+</a>
+
+<a href="https://lakshay-13.github.io/#contact">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/connect/phone-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/connect/phone-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/connect/phone-mobile.svg?v=3">
+  <img src="assets/connect/phone.svg?v=3" alt="Phone: +91 9811096411" width="100%">
+</picture>
+</a>
+
+<a href="https://github.com/Lakshay-13">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/connect/github-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/connect/github-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/connect/github-mobile.svg?v=3">
+  <img src="assets/connect/github.svg?v=3" alt="GitHub: github.com/Lakshay-13" width="100%">
+</picture>
+</a>
+
+<a href="https://www.linkedin.com/in/lakshaychawla13">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/connect/linkedin-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/connect/linkedin-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/connect/linkedin-mobile.svg?v=3">
+  <img src="assets/connect/linkedin.svg?v=3" alt="LinkedIn: lakshaychawla13" width="100%">
+</picture>
+</a>
+
+<a href="https://lakshay-13.github.io">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/connect/portfolio-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/connect/portfolio-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/connect/portfolio-mobile.svg?v=3">
+  <img src="assets/connect/portfolio.svg?v=3" alt="Portfolio: lakshay-13.github.io" width="100%">
+</picture>
+</a>
+
+<a href="https://drive.google.com/file/d/18PgQ_zQ0XuA0Eyh0GeSW_2LWA-vjwEkp/view?usp=sharing">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/connect/resume-mobile-still.svg?v=3">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/connect/resume-still.svg?v=3">
+  <source media="(max-width: 540px)" srcset="assets/connect/resume-mobile.svg?v=3">
+  <img src="assets/connect/resume.svg?v=3" alt="Resume: View resume" width="100%">
+</picture>
+</a>

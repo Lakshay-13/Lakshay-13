@@ -46,5 +46,17 @@
     "file": null,
     "kind": "project name",
     "note": "The linked site returns 404; no unrelated or invented logo is used."
+  },
+  "url": {
+    "source": "https://lakshay-13.github.io/assets/logos/logo_url.png",
+    "sha256": "4a206f04c8d9b14885359516dc18c0ee66b7ddeb98a576b14da7811b8754af50",
+    "file": "logos/url.png",
+    "kind": "official portfolio artwork"
+  },
+  "frenshop": {
+    "source": "https://lakshay-13.github.io/fren/assets/fren-server.png",
+    "sha256": "f69b96e34ecb275a77794299cff787da768d93a2fcfe04c2da52ac1b70f824fa",
+    "file": "logos/fren.png",
+    "kind": "official FREN artwork"
   }
 }

@@ -29,6 +29,9 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#f4f7fb}
 .glint{animation:glint 4s ease-in-out infinite}
 .spin{transform-box:fill-box;transform-origin:center;animation:spin 24s linear infinite}
 .signal{animation:signal 4s ease-in-out infinite}
+.orbit{transform-box:fill-box;transform-origin:center;animation:spin 8s linear infinite}
+.drift{animation:drift 8s ease-in-out infinite}
+.meter{transform-box:fill-box;transform-origin:bottom;animation:meter 4s ease-in-out infinite}
 @keyframes flow{to{stroke-dashoffset:-688}}
 @keyframes dash{to{stroke-dashoffset:-96}}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
@@ -36,6 +39,8 @@ text{font-family:Arial,Helvetica,sans-serif;fill:#f4f7fb}
 @keyframes glint{0%,100%{opacity:.18}50%{opacity:.9}}
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes signal{0%,100%{opacity:.35}50%{opacity:1}}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(4px,-12px)}}
+@keyframes meter{0%,100%{transform:scaleY(.3);opacity:.35}50%{transform:scaleY(1);opacity:.75}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
 """
 
@@ -92,6 +97,18 @@ def chip_width(label, size=13):
     return round(len(label) * size * .65 + 32)
 
 
+def wrap_pixels(value, width, size):
+    lines, line = [], ""
+    for word in value.split():
+        candidate = f"{line} {word}".strip()
+        if line and chip_width(candidate, size) - 32 > width:
+            lines.append(line)
+            line = word
+        else:
+            line = candidate
+    return lines + ([line] if line else [])
+
+
 def chip(x, y, label, color=MINT, size=13):
     width = chip_width(label, size)
     return (
@@ -134,7 +151,7 @@ def banner(mobile=False):
     ])
     if mobile:
         parts.extend([
-            text(320, 35, "DATA SCIENTIST", 24, MINT, **{"text-anchor": "middle", "letter-spacing": 3, "class": "mono", "font-weight": 700}),
+            text(320, 35, "RESEARCHER / FREELANCER", 23, MINT, **{"text-anchor": "middle", "letter-spacing": 1.5, "class": "mono", "font-weight": 700}),
             text(320, 412, "Lakshay Chawla.", 54, **{"text-anchor": "middle", "font-weight": 700, "letter-spacing": -2}),
             text(320, 451, "Scientific ML / AI Research", 23, LAVENDER, **{"text-anchor": "middle"}),
             text(320, 558, "Useful, grounded, accessible AI.", 22, **{"text-anchor": "middle", "class": "muted"}),
@@ -144,7 +161,7 @@ def banner(mobile=False):
         x, y = (width - sum(chip_width(label, 15) for label in ["PINNs", "3D Vision", "Generative AI"]) - 16) / 2, 479
     else:
         parts.extend([
-            text(56, 55, "DATA SCIENTIST", 28, MINT, **{"letter-spacing": 3, "class": "mono", "font-weight": 700}),
+            text(56, 55, "RESEARCHER / FREELANCER", 25, MINT, **{"letter-spacing": 1.5, "class": "mono", "font-weight": 700}),
             text(52, 157, "Lakshay", 86, **{"font-weight": 700, "letter-spacing": -3}),
             text(52, 243, "Chawla.", 86, **{"font-weight": 700, "letter-spacing": -3}),
             text(56, 289, "Scientific ML / AI Research", 24, LAVENDER),
@@ -157,48 +174,57 @@ def banner(mobile=False):
         markup, pill_width = chip(x, y, label, size=15)
         parts.append(markup)
         x += pill_width + 8
-    return svg(width, height, "Lakshay Chawla — Data Scientist", "The original illustrated avatar in a mint and lavender orbital starfield. Data scientist, AI researcher, entrepreneur, and educator working on PINNs, 3D vision, and generative AI.", '<g clip-path="url(#panel-clip)">' + "".join(parts) + '</g>', defs)
+    return svg(width, height, "Lakshay Chawla — Researcher / Freelancer", "The original illustrated avatar in a mint and lavender orbital starfield. Researcher and freelancer working across data science, PINNs, 3D vision, and generative AI.", '<g clip-path="url(#panel-clip)">' + "".join(parts) + '</g>', defs)
 
 
 def artwork(project):
     color = project["color"]
-    parts = [f'<rect x="-91" y="-87" width="182" height="174" rx="24" fill="#101821" stroke="{color}" stroke-opacity=".22"/>']
+    parts = [
+        '<rect x="-120" y="-108" width="240" height="216" rx="22" fill="#0c1420" stroke="#27333f"/>',
+        f'<circle cx="0" cy="-8" r="84" fill="none" stroke="{color}" stroke-opacity=".16"/>',
+        f'<g class="orbit"><circle cx="0" cy="-8" r="84" fill="none" stroke="{color}" stroke-opacity=".6" stroke-dasharray="20 508" stroke-width="2"/></g>',
+    ]
     if project.get("artwork"):
         encoded = base64.b64encode((ASSETS / project["artwork"]).read_bytes()).decode()
-        image = f'<image x="-73" y="-70" width="146" height="140" href="data:image/png;base64,{encoded}" preserveAspectRatio="xMidYMid meet"/>'
-        parts.append(f'<g class="float">{image}</g>')
+        image = f'<image x="-70" y="-76" width="140" height="136" href="data:image/png;base64,{encoded}" preserveAspectRatio="xMidYMid meet"/>'
+        parts.append(f'<g class="drift">{image}</g>')
     else:
-        parts.append(text(0, 10, project["name"], 35, color, **{"text-anchor": "middle", "font-weight": 700}))
-    parts.append(f'<circle class="signal" cx="80" cy="-76" r="3" fill="{color}"/>')
+        # These are motion illustrations, not substitute project logos.
+        for i in range(3):
+            parts.append(f'<path class="dash" d="M -66 {-28+i*26} C -34 {-66+i*26} 10 {30+i*10} 66 {-28+i*26}" fill="none" stroke="{color}" stroke-width="2" stroke-opacity="{.65-i*.12}"/>')
+        parts.append(text(0, 68, project["tags"][0], 15, "#c2cbd7", **{"text-anchor": "middle", "class": "mono"}))
+    for i in range(9):
+        parts.append(f'<rect class="meter" x="{-46+i*12}" y="{87-(i%3)*5}" width="5" height="{12+(i%3)*5}" rx="2" fill="{color}" style="animation-delay:-{i*.4}s"/>')
     return "".join(parts)
 
 
 def project_card(project, index, mobile=False):
-    width, height = (640, 352) if mobile else (1200, 236)
+    width, height = (640, 454) if mobile else (1200, 282)
     color = project["color"]
     parts = [
         f'<rect x="1" y="1" width="{width-2}" height="{height-2}" rx="20" fill="url(#surface)" stroke="#243331"/>',
         f'<path d="M 22 1 H {width-22}" stroke="{color}" stroke-opacity=".5"/>',
-        text(30 if mobile else 36, 35 if mobile else 37, project["category"], 12 if mobile else 13, color, **{"class": "mono", "letter-spacing": 1}),
-        text(30 if mobile else 36, 81 if mobile else 83, project["name"], 34 if mobile else 38, **{"font-weight": 700, "letter-spacing": -.8}),
+        text(30 if mobile else 36, 36 if mobile else 38, project["category"], 16 if mobile else 17, "#afc9c2", **{"class": "mono", "letter-spacing": .5}),
     ]
-    lines = textwrap.wrap(project["description"], width=48 if mobile else 78)
+    title_lines = wrap_pixels(project["name"], 550 if mobile else 784, 36)
+    for line_index, line in enumerate(title_lines):
+        parts.append(text(30 if mobile else 36, 86 + line_index * 42, line, 36, **{"font-weight": 700, "letter-spacing": -.6}))
+    desc_y = 126 + (len(title_lines)-1)*42
+    lines = wrap_pixels(project["description"], 565 if mobile else 784, 25 if mobile else 24)
     for line_index, line in enumerate(lines):
-        parts.append(text(30 if mobile else 36, (119 if mobile else 124) + line_index * 24, line, 18, **{"class": "muted"}))
-    x, tag_y = (30, 314) if mobile else (36, 182)
-    for label in project["tags"]:
-        markup, chip_width = chip(x, tag_y, label, color, 13)
-        parts.append(markup)
-        x += chip_width + 9
+        parts.append(text(30 if mobile else 36, desc_y + line_index * 33, line, 25 if mobile else 24, "#c2cbd7"))
+    for line_index, line in enumerate(wrap_pixels(" / ".join(project["tags"]), 340 if mobile else 780, 18)):
+        parts.append(text(30 if mobile else 36, (342 if mobile else 241) + line_index * 26, line, 18, "#9aadb9"))
+    cta = "PREVIEW SOON" if not project.get("url") else "EXPLORE PROJECT"
     if mobile:
-        parts.append(f'<g transform="translate(510 240) scale(.72)">{artwork(project)}</g>')
-        parts.append(text(30, 254, "EXPLORE PROJECT", 12, color, **{"class": "mono", "letter-spacing": 1}))
-        parts.append(f'<path d="M 170 251 H 185 M 180 246 L 185 251 L 180 256" fill="none" stroke="{color}" stroke-width="1.5"/>')
+        parts.append(f'<g transform="translate(508 348) scale(.72)">{artwork(project)}</g>')
+        parts.append(text(30, 425, cta, 16, color, **{"class": "mono", "letter-spacing": .6}))
+        if project.get("url"):
+            parts.append(f'<path d="M 216 419 H 235 M 230 414 L 235 419 L 230 424" fill="none" stroke="{color}" stroke-width="1.5"/>')
     else:
-        parts.append(f'<path d="M 848 30 V 206" stroke="#243331"/>')
-        parts.append(f'<g transform="translate(1022 110)">{artwork(project)}</g>')
-        parts.append(text(1022, 211, "EXPLORE PROJECT", 11, color, **{"class": "mono", "letter-spacing": 1, "text-anchor": "middle"}))
-        parts.append(f'<path d="M 1150 33 H 1162 V 45 M 1149 46 L 1162 33" fill="none" stroke="{color}" stroke-width="1.5"/>')
+        parts.append('<path d="M 852 28 V 254" stroke="#243331"/>')
+        parts.append(f'<g transform="translate(1022 125)">{artwork(project)}</g>')
+        parts.append(text(1022, 261, cta, 13, color, **{"class": "mono", "letter-spacing": .6, "text-anchor": "middle"}))
     return svg(width, height, project["name"], project["description"], "".join(parts))
 
 
@@ -252,26 +278,82 @@ def education_panel(profile, mobile=False):
 
 
 def toolkit_panel(profile, mobile=False):
-    width, cursor = (640 if mobile else 1200), 46
-    parts = []
+    width, cursor = (640 if mobile else 1200), 126
+    parts = [text(36, 48, "From research to production", 32, **{"font-weight": 700}),
+             text(36, 83, "Data science / AI / systems", 22, "#afbbc9")]
     for group_index, group in enumerate(profile["toolkit"]):
         color = MINT if group_index % 2 == 0 else LAVENDER
-        parts.append(text(36, cursor, group["group"], 23 if mobile else 26, color, **{"font-weight": 700}))
-        for point in range(3):
-            parts.append(f'<circle class="signal" cx="{width-76+point*14}" cy="{cursor-8}" r="3" fill="{color}" style="animation-delay:-{group_index+point*.6}s"/>')
-        x, y = 36, cursor + 24
-        size = 16 if mobile else 16
-        for item in group["items"]:
-            item_width = chip_width(item, size)
-            if x + item_width > width-36:
-                x, y = 36, y + 42
-            markup, item_width = chip(x, y, item, color, size)
-            parts.append(markup)
-            x += item_width + 9
-        cursor = y + 91
-    height = cursor - 30
+        size = 29 if mobile else 24
+        lines = wrap_pixels("  /  ".join(group["items"]), width-90 if mobile else 762, size)
+        row_height = 88 + len(lines)*40 if mobile else max(108, 48+len(lines)*38)
+        parts.append(f'<rect x="24" y="{cursor-24}" width="{width-48}" height="{row_height-12}" rx="14" fill="{("#101824" if group_index%2==0 else "#0d1520")}"/>')
+        parts.append(f'<path d="M 36 {cursor-8} V {cursor+row_height-56}" stroke="{color}" stroke-opacity=".16" stroke-width="2"/>')
+        parts.append(f'<path class="flow" d="M 36 {cursor-8} V {cursor+row_height-56}" stroke="{color}" stroke-opacity=".6" stroke-width="2"/>')
+        parts.append(text(55, cursor+10, group["group"], 27 if mobile else 25, "#d4dde9", **{"font-weight": 700}))
+        for line_index, line in enumerate(lines):
+            parts.append(text(55 if mobile else 388, cursor+56+line_index*40 if mobile else cursor+10+line_index*38, line, size, "#b8c5d5"))
+        cursor += row_height
+    height = cursor + 8
     description = "; ".join(group["group"] + ": " + ", ".join(group["items"]) for group in profile["toolkit"])
-    return svg(width, height, "Data scientist's toolkit", description, panel(width, height, parts))
+    return svg(width, height, "Toolkit", description, panel(width, height, parts))
+
+
+def about_panel(profile, mobile=False):
+    width, height = (640, 850) if mobile else (1200, 480)
+    about = profile["about"]
+    parts = [text(36, 43, "RESEARCH / PRODUCTS / EDUCATION", 18, "#afc9c2", **{"class": "mono"})]
+    cursor = 93
+    headline = ["Data science, research,", "and useful AI."] if mobile else ["Data science, research, and useful AI."]
+    for line in headline:
+        parts.append(text(36, cursor, line, 36, **{"font-weight": 700}))
+        cursor += 43
+    for line in wrap_pixels(about["intro"], width-72, 29 if mobile else 26):
+        parts.append(text(36, cursor+6, line, 29 if mobile else 26, "#c2cbd7"))
+        cursor += 38
+    cursor += 35
+    row_start = cursor
+    for index, key in enumerate(["research", "building"]):
+        x = 36 if mobile or index == 0 else 638
+        if mobile:
+            cursor = row_start if index == 0 else cursor+48
+        else:
+            cursor = row_start
+        color = MINT if index == 0 else LAVENDER
+        label = "Research" if index == 0 else "Building"
+        parts.append(f'<circle class="signal" cx="{x+6}" cy="{cursor-9}" r="4" fill="{color}" style="animation-delay:-{index*2}s"/>')
+        parts.append(text(x+23, cursor, label, 29 if mobile else 26, "#d4dde9", **{"font-weight": 700}))
+        cursor += 39
+        for line in wrap_pixels(about[key], 568 if mobile else 526, 28 if mobile else 24):
+            parts.append(text(x, cursor, line, 28 if mobile else 24, "#b8c5d5"))
+            cursor += 37 if mobile else 33
+    height = max(height, cursor+50)
+    parts.append(f'<path d="M 36 {height-25} H {width-36}" stroke="#27363f"/><path class="flow" d="M 36 {height-25} H {width-36}" stroke="{MINT}" stroke-opacity=".65" stroke-width="2"/>')
+    return svg(width, height, "About Lakshay Chawla", " ".join(about.values()), panel(width, height, parts))
+
+
+CONTACT_ICONS = {
+    "email": '<rect x="8" y="16" width="44" height="30" rx="5"/><path d="m9 18 21 16 21-16"/>',
+    "phone": '<path d="M18 9h8l4 13-6 4c5 9 10 14 19 19l4-6 13 4v8c0 5-6 8-10 6C24 47 13 36 10 18c-1-4 3-9 8-9Z" transform="translate(-3 -1) scale(.9)"/>',
+    "github": '<path d="M21 42c-9 4-10-4-14-4M21 52v-9c0-3 1-4 3-5-9-1-17-4-17-15 0-4 2-7 4-10-1-3-1-6 0-9 6 0 10 4 10 4a35 35 0 0 1 19 0s4-4 10-4c1 3 1 6 0 9 3 3 4 6 4 10 0 11-8 14-17 15 2 2 3 4 3 7v7" transform="translate(2 5) scale(.85)"/>',
+    "linkedin": '<rect x="9" y="9" width="42" height="42" rx="5"/><path d="M20 27v15M31 42V27c0-1 12-5 12 5v10"/><circle cx="20" cy="19" r="2"/>',
+    "portfolio": '<circle cx="30" cy="30" r="22"/><ellipse cx="30" cy="30" rx="10" ry="22"/><path d="M8 30h44M12 18h36M12 42h36"/>',
+    "resume": '<path d="M16 7h22l10 10v36H16V7Z M38 7v12h10M23 29h18M23 37h18M23 45h12"/>',
+    "research": '<circle cx="21" cy="30" r="13"/><circle cx="40" cy="30" r="13"/><path d="M30 13v34"/>',
+    "building": '<path d="M10 50V20h17V10h23v40H10ZM18 28h3m-3 9h3m14-19h7m-7 10h7m-7 10h7"/>',
+}
+
+
+def contact_card(entry, mobile=False, compact=False):
+    width, height = (640, 166) if mobile else (1200, 136)
+    color = MINT if entry["id"] in ["email", "github", "portfolio", "research"] else LAVENDER
+    parts = [f'<g transform="translate(29 {height/2-30})" fill="none" stroke="#c3d6dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{CONTACT_ICONS[entry["id"]]}</g>',
+             text(114, 53 if mobile else 52, entry["label"], 28, **{"font-weight": 700})]
+    value = entry["value"]
+    for index, line in enumerate(wrap_pixels(value, width-188, 25 if mobile else 26)):
+        parts.append(text(114, 92+index*31, line, 25 if mobile else 26, "#afc1d1"))
+    parts.append(f'<path d="M {width-63} {height/2-10} H {width-43} V {height/2+10} M {width-63} {height/2+10} L {width-43} {height/2-10}" fill="none" stroke="{color}" stroke-width="2"/>')
+    parts.append(f'<path class="flow" d="M 24 {height-9} H {width-24}" stroke="{color}" stroke-opacity=".6" stroke-width="2"/>')
+    return svg(width, height, entry["label"], entry["value"], panel(width, height, parts))
 
 
 def main():
@@ -286,13 +368,19 @@ def main():
             save(ASSETS / "projects" / f"{name}.svg", card)
             save(ASSETS / "projects" / f"{name}-still.svg", still(card))
     profile = json.loads((ASSETS / "profile.json").read_text())
-    for name, render in [("experience", experience_panel), ("education", education_panel), ("toolkit", toolkit_panel)]:
+    for name, render in [("experience", experience_panel), ("education", education_panel), ("toolkit", toolkit_panel), ("about", about_panel)]:
         for mobile in (False, True):
             stem = name + ("-mobile" if mobile else "")
             content = render(profile, mobile=mobile)
             save(ASSETS / f"{stem}.svg", content)
             save(ASSETS / f"{stem}-still.svg", still(content))
-    print(f"Built two banners, {len(projects)} project cards with verified artwork, and animated experience, education, and toolkit panels.")
+    for entry in profile["connect"] + profile["about_links"]:
+        for mobile in (False, True):
+            stem = entry["id"] + ("-mobile" if mobile else "")
+            content = contact_card(entry, mobile=mobile)
+            save(ASSETS / "connect" / f"{stem}.svg", content)
+            save(ASSETS / "connect" / f"{stem}-still.svg", still(content))
+    print(f"Built two banners, {len(projects)} animated project cards, About, Toolkit, Connect, Experience, and Education.")
 
 
 if __name__ == "__main__":

@@ -1,10 +1,9 @@
-"""Refresh contribution artwork and recent public activity from GitHub."""
+"""Refresh contribution artwork from GitHub without changing README content."""
 
 import datetime as dt
 import html
 import json
 import os
-import re
 import sys
 import time
 from pathlib import Path
@@ -96,41 +95,6 @@ def calendar_svg(calendar, updated, mobile=False, still=False):
     return result
 
 
-def recent_activity(events, updated):
-    entries, seen = [], set()
-    for event in sorted(events, key=lambda item: item["created_at"], reverse=True):
-        repo = event["repo"]["name"]
-        if repo == f"{USER}/{USER}" or not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repo):
-            continue
-        event_type, payload = event["type"], event.get("payload", {})
-        url = f"https://github.com/{repo}"
-        if event_type == "PushEvent":
-            action = "Pushed code to"
-        elif event_type == "PullRequestEvent":
-            action = "Updated a pull request in"
-        elif event_type == "IssuesEvent":
-            action = "Updated an issue in"
-        elif event_type == "ReleaseEvent":
-            action = "Published a release in"
-        elif event_type == "PublicEvent":
-            action = "Made a repository public:"
-        elif event_type == "CreateEvent" and payload.get("ref_type") == "repository":
-            action = "Created"
-        else:
-            continue
-        identity = (repo, event_type)
-        if identity in seen:
-            continue
-        seen.add(identity)
-        date = dt.datetime.fromisoformat(event["created_at"].replace("Z", "+00:00")).strftime("%d %b %Y")
-        entries.append(f"- {action} [{repo}]({url}) · `{date}`")
-        if len(entries) == 4:
-            break
-    if not entries:
-        entries.append("No recent public activity was returned by GitHub.")
-    return "\n".join(entries) + f'\n\n<sub>Updated {updated.strftime("%d %b %Y")} · refreshed daily from GitHub public events. Private activity is not listed.</sub>'
-
-
 def main():
     token = os.environ.get("GITHUB_TOKEN")
     if not token:
@@ -149,22 +113,12 @@ def main():
     calendar = response["data"]["user"]["contributionsCollection"]["contributionCalendar"]
     if not calendar["weeks"] or not isinstance(calendar["totalContributions"], int):
         raise RuntimeError("GitHub returned an empty or invalid contribution calendar.")
-    events = github(f"users/{USER}/events/public?per_page=100", token)
-    if not isinstance(events, list):
-        raise RuntimeError("GitHub returned invalid public activity data.")
     updated = dt.datetime.now(ZoneInfo("Asia/Kolkata")).replace(microsecond=0)
-    readme = (ROOT / "README.md").read_text()
-    pattern = r"(?<=<!-- ACTIVITY:START -->\n).*?(?=\n<!-- ACTIVITY:END -->)"
-    replacement = recent_activity(events, updated)
-    readme, replaced = re.subn(pattern, lambda _: replacement, readme, flags=re.DOTALL)
-    if replaced != 1:
-        raise RuntimeError("README.md must contain exactly one activity marker pair.")
     output = {
         ROOT / "assets/activity.svg": calendar_svg(calendar, updated),
         ROOT / "assets/activity-mobile.svg": calendar_svg(calendar, updated, mobile=True),
         ROOT / "assets/activity-still.svg": calendar_svg(calendar, updated, still=True),
         ROOT / "assets/activity-mobile-still.svg": calendar_svg(calendar, updated, mobile=True, still=True),
-        ROOT / "README.md": readme,
     }
     for path, content in output.items():
         path.write_text(content)
