@@ -45,10 +45,10 @@
 
 <a href="https://pinnhub.nextgenaischool.in/" target="_blank" rel="noopener noreferrer">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/pinnhub-mobile-still.svg?v=6">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/pinnhub-still.svg?v=6">
-  <source media="(max-width: 540px)" srcset="assets/projects/pinnhub-mobile.gif?v=6">
-  <img src="assets/projects/pinnhub.gif?v=6" alt="PINN Hub. A research hub for Physics-Informed Neural Networks and neural differential-equation experiments." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/pinnhub-mobile-still.svg?v=8">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/pinnhub-still.svg?v=8">
+  <source media="(max-width: 540px)" srcset="assets/projects/pinnhub-mobile.gif?v=8">
+  <img src="assets/projects/pinnhub.gif?v=8" alt="PINN Hub. A research hub for Physics-Informed Neural Networks and neural differential-equation experiments." width="100%">
 </picture>
 </a>
 
@@ -124,10 +124,10 @@
 
 <a href="https://lakshay-13.github.io/zinging/" target="_blank" rel="noopener noreferrer">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/zinging-mobile-still.svg?v=6">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/zinging-still.svg?v=6">
-  <source media="(max-width: 540px)" srcset="assets/projects/zinging-mobile.gif?v=6">
-  <img src="assets/projects/zinging.gif?v=6" alt="Zinging. A self-evolving AI bot and agent ecosystem for adaptive communities, automation, and agentic utilities." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/zinging-mobile-still.svg?v=8">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/zinging-still.svg?v=8">
+  <source media="(max-width: 540px)" srcset="assets/projects/zinging-mobile.gif?v=8">
+  <img src="assets/projects/zinging.gif?v=8" alt="Zinging. A self-evolving AI bot and agent ecosystem for adaptive communities, automation, and agentic utilities." width="100%">
 </picture>
 </a>
 
@@ -151,10 +151,10 @@
 
 <a href="https://github.com/Lakshay-13/Classifying-Periodic-Variable-Stars" target="_blank" rel="noopener noreferrer">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/variable-stars-mobile-still.svg?v=6">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/variable-stars-still.svg?v=6">
-  <source media="(max-width: 540px)" srcset="assets/projects/variable-stars-mobile.gif?v=6">
-  <img src="assets/projects/variable-stars.gif?v=6" alt="Classifying Periodic Variable Stars. Time-series ML project classifying four classes of periodic variable stars." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/variable-stars-mobile-still.svg?v=8">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/variable-stars-still.svg?v=8">
+  <source media="(max-width: 540px)" srcset="assets/projects/variable-stars-mobile.gif?v=8">
+  <img src="assets/projects/variable-stars.gif?v=8" alt="Classifying Periodic Variable Stars. Time-series ML project classifying four classes of periodic variable stars." width="100%">
 </picture>
 </a>
 
@@ -169,19 +169,19 @@
 
 <a href="https://github.com/Lakshay-13/Customer-Relationship-Prediction" target="_blank" rel="noopener noreferrer">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/customer-mobile-still.svg?v=6">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/customer-still.svg?v=6">
-  <source media="(max-width: 540px)" srcset="assets/projects/customer-mobile.gif?v=6">
-  <img src="assets/projects/customer.gif?v=6" alt="Customer Relationship Prediction. Predicting churn, appetency, and up-selling behavior from marketing databases." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/customer-mobile-still.svg?v=8">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/customer-still.svg?v=8">
+  <source media="(max-width: 540px)" srcset="assets/projects/customer-mobile.gif?v=8">
+  <img src="assets/projects/customer.gif?v=8" alt="Customer Relationship Prediction. Predicting churn, appetency, and up-selling behavior from marketing databases." width="100%">
 </picture>
 </a>
 
 <a href="https://github.com/Lakshay-13/Music-Genre-Prediction" target="_blank" rel="noopener noreferrer">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/music-mobile-still.svg?v=6">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/music-still.svg?v=6">
-  <source media="(max-width: 540px)" srcset="assets/projects/music-mobile.gif?v=6">
-  <img src="assets/projects/music.gif?v=6" alt="Music Genre Prediction. Predicting music genres using data analysis and ML techniques." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/music-mobile-still.svg?v=8">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/music-still.svg?v=8">
+  <source media="(max-width: 540px)" srcset="assets/projects/music-mobile.gif?v=8">
+  <img src="assets/projects/music.gif?v=8" alt="Music Genre Prediction. Predicting music genres using data analysis and ML techniques." width="100%">
 </picture>
 </a>
 

@@ -5,10 +5,14 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+ASSET_VERSIONS = {
+    **{f"projects/{name}": 7 for name in ("artgridx", "frenshop", "url")},
+    **{f"projects/{name}": 8 for name in ("pinnhub", "variable-stars", "customer", "music", "zinging")},
+}
 
 
 def picture(stem, alt, animated="svg", still="svg", link=None, width="100%"):
-    version = 7 if stem in {"projects/artgridx", "projects/frenshop", "projects/url"} else 6
+    version = ASSET_VERSIONS.get(stem, 6)
     def asset(suffix, extension):
         return f"assets/{stem}{suffix}.{extension}?v={version}"
     markup = f'''<picture>

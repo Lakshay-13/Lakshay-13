@@ -56,16 +56,19 @@ def fren():
 
 
 def pinnhub():
-    p = label(24,24,"PHYSICS-INFORMED SOLUTIONS",12,PURPLE)
-    for row in range(7):
-        points=[]
-        for col in range(29):
-            x=34+col*8+row*3; y=80+row*15+12*math.sin(col*.23+row*.45)
-            points.append(f'{x:.1f},{y:.1f}')
-        p += f'<polyline points="{" ".join(points)}" fill="none" stroke="{MINT if row%2==0 else PURPLE}" stroke-width="1.4" class="pinn-field" style="animation-delay:-{row*.5}s"/>'
-    p += path('M28 196H290M28 196V58',DIM) + label(235,216,'x, t → u',15,MINT)
-    for x,y in [(60,84),(110,135),(178,101),(229,170)]: p+=dot(x,y,3,WHITE,'class="pinn-point"')
-    return scene(p,'.pinn-field{animation:pinnField 8s ease-in-out infinite}.pinn-point{animation:pinnPoint 4s infinite}@keyframes pinnField{0%,100%{opacity:.35;transform:translateY(0)}50%{opacity:.95;transform:translateY(-8px)}}@keyframes pinnPoint{0%,100%{opacity:.4}50%{opacity:1}}')
+    p=rect(17,32,286,172,'#111b2a','#384858',13)+label(31,56,'NEURODIFFEQ / SOLVER HUB',11,PURPLE)
+    for y,title in [(73,'ODE'),(133,'PDE')]:
+        p+=rect(31,y,74,51,'#172b30','#36545a',7)+label(42,y+19,title,12,MINT)
+    p+=path('M43 111Q60 90 92 109',PURPLE,width=1.4)+path('M43 172Q56 148 69 167T93 165',PURPLE,width=1.4)
+    p+=path('M106 99H117M106 159H117','#667d8c',width=1.3)
+    p+=rect(121,73,167,111,'#121e30','#37465c',8)+label(134,91,'SOLVER ARTIFACT',9,'#a5b8c8')
+    for x in (145,174,203,232,261):p+=path(f'M{x} 103V171','#24364b',width=.7)
+    for y in (113,141,168):p+=path(f'M135 {y}H276','#24364b',width=.7)
+    p+=path('M139 164C163 154 181 103 210 127S249 164 270 106','#637086',width=1.2)
+    p+=path('M139 164C163 154 181 103 210 127S249 164 270 106',PURPLE,'class="pinn-solver-trace"',width=2)
+    for x,y in [(139,164),(270,106)]:p+=dot(x,y,3,MINT,'class="pinn-boundary"')
+    p+=label(160,224,'Publish · Version · Reuse',12,'#a9c3cc','text-anchor="middle"')
+    return scene(p,'.pinn-solver-trace{stroke-dasharray:185;animation:pinnSolverTrace 8s ease-in-out infinite}.pinn-boundary{animation:pinnBoundary 4s ease-in-out infinite}@keyframes pinnSolverTrace{0%,100%{stroke-dashoffset:185;opacity:.4}55%,82%{stroke-dashoffset:0;opacity:1}}@keyframes pinnBoundary{0%,100%{opacity:.3}50%{opacity:1}}')
 
 
 def artgridx():
@@ -158,12 +161,18 @@ def tree():
 
 
 def zinging():
-    p='<g class="zing-brand">'+logo('logos/zinging.png',8,33,174,174)+'</g>'
-    routes=['M158 70H183V62H195','M179 121H195','M158 174H183V180H195']
-    for i,(y,word) in enumerate([(46,'Chat'),(105,'Translate'),(164,'Memory')]):
-        p+=path(routes[i],'#5fab66','class="zing-trace"',width=1.3)
-        p+='<g class="zing-capability" style="animation-delay:-'+str(i*1.2)+'s">'+rect(194,y,111,33,'#143425','#31553a',7)+dot(208,y+16,2.5,'#b5f55f')+label(220,y+21,word,14,'#d1f0c5')+'</g>'
-    return scene(p,'.zing-brand{animation:zingBrand 4s ease-in-out infinite}.zing-trace{stroke-dasharray:4 11;animation:zingTrace 4s linear infinite}.zing-capability{animation:zingCapability 4s ease-in-out infinite}@keyframes zingBrand{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}@keyframes zingTrace{to{stroke-dashoffset:-60}}@keyframes zingCapability{0%,100%{opacity:.65}50%{opacity:1}}')
+    p=label(160,17,'SELF-EVOLVING BOT',11,'#b4c8cf','text-anchor="middle"')
+    p+='<ellipse cx="160" cy="118" rx="94" ry="91" fill="url(#mint-glow)"/>'
+    p+='<circle cx="160" cy="118" r="70" fill="none" stroke="#34534e" stroke-width="1.4"/><circle class="zing-evolution" cx="160" cy="118" r="70" fill="none" stroke="#2effbf" stroke-width="2.4" stroke-linecap="round"/>'
+    p+=path('M228 110 230 118 236 112M168 186 160 188 166 194M92 126 90 118 84 124M152 50 160 48 154 42','#75b6a5',width=1.3)
+    for index,(x,y) in enumerate([(160,48),(230,118),(160,188),(90,118)]):
+        p+=dot(x,y,3,MINT,f'class="zing-stage" style="animation-delay:-{index}s"')
+    p+=rect(126,92,68,54,'#152b2c','#83c9b6',9)
+    p+=path('M120 103H126M120 118H126M120 133H126M194 103H200M194 118H200M194 133H200M142 86V92M160 86V92M178 86V92M142 146V152M160 146V152M178 146V152','#5f938b',width=1.3)
+    p+=label(160,116,'BOT',18,MINT,'text-anchor="middle"')+label(160,136,'</>',13,PURPLE,'text-anchor="middle"')
+    for x,y,title,color in [(160,37,'Plan',PURPLE),(273,122,'Code',WHITE),(160,212,'Verify',MINT),(47,122,'Learn',WHITE)]:
+        p+=label(x,y,title,12,color,'text-anchor="middle"')
+    return scene(p,'.zing-evolution{stroke-dasharray:25 415;animation:zingEvolution 8s linear infinite}.zing-stage{animation:zingStage 4s ease-in-out infinite}@keyframes zingEvolution{to{stroke-dashoffset:-440}}@keyframes zingStage{0%,100%{opacity:.25}50%{opacity:1}}')
 
 
 def url():
@@ -200,12 +209,12 @@ def rags():
 def variable_stars():
     p=label(22,23,'GAIA DR3 / PERIODIC VARIABLES',11,PURPLE)
     for i,(x,y,r) in enumerate([(61,66,5),(119,48,3),(209,78,6),(271,43,4)]):
-        p+=dot(x,y,r,WHITE,f'class="star-flux" style="animation-delay:-{i*1.4}s"')+path(f'M{x-9} {y}H{x+9}M{x} {y-9}V{y+9}',PURPLE,width=.8)
+        p+=f'<g class="star-flux" style="animation-delay:-{i*.45}s">'+dot(x,y,r+5,PURPLE,'opacity=".1"')+dot(x,y,r,WHITE)+path(f'M{x-9} {y}H{x+9}M{x} {y-9}V{y+9}',PURPLE,width=.8)+'</g>'
     p+=path('M23 194H296M23 194V109',DIM)
     points=' '.join(f'{x},{154-26*math.sin((x-24)*.063):.1f}' for x in range(24,298,4))
     p+=f'<polyline points="{points}" fill="none" stroke="{PURPLE}" stroke-width="2.5"/>'
     p+=path('M26 110V194',MINT,'class="star-observation"',width=1.5)+label(184,221,'LIGHT CURVE',13,PURPLE)
-    return scene(p,'.star-flux{transform-box:fill-box;transform-origin:center;animation:starFlux 8s infinite}.star-observation{animation:starObservation 8s linear infinite}@keyframes starFlux{0%,100%{opacity:.2;transform:scale(.7)}40%,60%{opacity:1;transform:scale(1.2)}}@keyframes starObservation{0%{transform:translateX(0);opacity:.2}10%,90%{opacity:1}100%{transform:translateX(269px);opacity:.2}}')
+    return scene(p,'.star-flux{animation:starFlux 2s ease-in-out infinite}.star-observation{animation:starObservation 8s linear infinite}@keyframes starFlux{0%,100%{opacity:.12}20%,55%{opacity:1}75%{opacity:.25}}@keyframes starObservation{0%{transform:translateX(0);opacity:.2}10%,90%{opacity:1}100%{transform:translateX(269px);opacity:.2}}')
 
 
 def notes():
@@ -219,24 +228,34 @@ def notes():
 
 
 def customer():
-    p=label(22,23,'CHURN / APPETENCY / UPSELL',12,MINT)
-    for i,(x,y,color) in enumerate([(81,85,PURPLE),(237,89,MINT),(167,172,'#8caad7')]):
-        p+=f'<ellipse cx="{x}" cy="{y}" rx="48" ry="34" fill="{color}" fill-opacity=".055" stroke="{color}" stroke-opacity=".4"/>'
-        for j in range(7):
-            angle=j*2.4;dx=math.cos(angle)*(12+j*3);dy=math.sin(angle)*(8+j*2)
-            p+=dot(round(x+dx,1),round(y+dy,1),3,color,f'class="customer-segment" style="animation-delay:-{i+j*.3}s"')
-        p+=path(f'M{x-7} {y}H{x+7}M{x} {y-7}V{y+7}',color,width=1.4)
-    return scene(p,'.customer-segment{animation:customerSegment 8s ease-in-out infinite}@keyframes customerSegment{0%,100%{opacity:.2;transform:translateY(5px)}45%,65%{opacity:1;transform:translateY(0)}}')
+    p=rect(17,32,286,172,'#121c2c','#37485b',13)+label(31,56,'BEHAVIORAL PREDICTION',11,MINT)
+    p+=rect(31,75,89,109,'#142733','#344e60',7)
+    for row in range(5):
+        for col in range(3):
+            color=PURPLE if (row+col)%3==0 else MINT
+            p+=rect(41+col*24,86+row*18,17,9,color,'none',2,f'class="customer-feature" style="animation-delay:-{row*.45+col*.3}s"')
+    p+=path('M128 129H156M150 123 156 129 150 135','#7f94a8',width=1.3)
+    for index,(y,title,width,color) in enumerate([(84,'Churn',74,PURPLE),(123,'Appetency',96,MINT),(162,'Upsell',63,'#8caad7')]):
+        p+=label(172,y,title,12,WHITE)+rect(172,y+10,113,6,'#29394b','none',3)
+        p+=rect(172,y+10,width,6,color,'none',3,f'class="customer-score" style="animation-delay:-{index*1.4}s"')
+    p+=label(160,224,'Features → Customer propensity',11,'#b0c2cf','text-anchor="middle"')
+    return scene(p,'.customer-feature{animation:customerFeature 4s ease-in-out infinite}.customer-score{transform-box:fill-box;transform-origin:left;animation:customerScore 8s ease-in-out infinite}@keyframes customerFeature{0%,100%{opacity:.16}50%{opacity:.46}}@keyframes customerScore{0%,100%{transform:scaleX(.35);opacity:.5}50%,75%{transform:scaleX(1);opacity:1}}')
 
 
 def music():
-    p=f'<circle cx="112" cy="115" r="80" fill="#182030" stroke="{DIM}"/>'
+    p=rect(17,32,286,172,'#111b2b','#3e4b61',14)+label(31,56,'AUDIO / GENRE CLASSIFICATION',10,'#b6c4d3')
+    p=f'{p}<circle cx="102" cy="132" r="60" fill="#080f1a" stroke="#4c526c" stroke-width="1.2"/>'
     p+='<g class="music-record">'
-    for radius in [69,58,47]: p+=f'<circle cx="112" cy="115" r="{radius}" fill="none" stroke="#34405b"/>'
-    p+=path('M112 41V87M112 143V189',PURPLE,width=7)+dot(112,115,27,PURPLE)+dot(112,115,4,'#111a29')+'</g>'
-    p+=path('M228 39H254V118L188 154',MINT,width=5)+rect(174,147,25,14,'#26745d',MINT,3)
-    p+=label(210,202,'GENRE',15,MINT)+label(38,218,'AUDIO FEATURES',12,PURPLE)
-    return scene(p,'.music-record{transform-origin:112px 115px;animation:musicRecord 8s linear infinite}@keyframes musicRecord{to{transform:rotate(360deg)}}')
+    for radius in (51,44,37,30):p+=f'<circle cx="102" cy="132" r="{radius}" fill="none" stroke="#343b50" stroke-width=".8"/>'
+    p+=path('M68 93A52 52 0 0 1 147 108',PURPLE,width=1)+dot(102,132,19,'#8477bd')+dot(102,132,10,'#212039')+dot(102,132,2.5,WHITE)+'</g>'
+    p+=dot(264,79,8,'#243d41')+dot(264,79,3,MINT)+path('M264 79H232L170 96 153 117','#9ac3bd',width=2)
+    p+=rect(145,112,18,10,'#224b40',MINT,3)
+    p+=rect(188,102,97,30,'#18253a','#485071',7)+label(236.5,121,'GENRE',11,PURPLE,'text-anchor="middle"')
+    p+=label(187,154,'MFCC FEATURES',10,'#b7c7d5')
+    for index,height in enumerate((16,23,12,28,20,14,24)):
+        p+=rect(189+index*13,194-height,7,height,MINT if index%2==0 else PURPLE,'none',2,f'class="music-feature" style="animation-delay:-{index*.4}s"')
+    p+=label(160,224,'Listen · Extract · Classify',12,'#adc5cd','text-anchor="middle"')
+    return scene(p,'.music-record{transform-origin:102px 132px;animation:musicRecord 8s linear infinite}.music-feature{transform-box:fill-box;transform-origin:bottom;animation:musicFeature 4s ease-in-out infinite}@keyframes musicRecord{to{transform:rotate(360deg)}}@keyframes musicFeature{0%,100%{transform:scaleY(.35);opacity:.5}50%{transform:scaleY(1);opacity:.9}}')
 
 
 def code_image():
