@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-ASSET_VERSIONS = {"experience": 7, "projects/notes": 10, "projects/music": 10, "projects/zinging": 10}
+ASSET_VERSIONS = {"experience": 7, "projects/notes": 10, "projects/music": 10, "projects/zinging": 11}
 PROJECT_ART_VERSION = 9
 
 
