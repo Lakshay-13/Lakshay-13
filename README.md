@@ -81,10 +81,10 @@
 
 <a href="https://lakshay-13.github.io/zinging/" target="_blank" rel="noopener noreferrer">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/zinging-mobile-still.svg?v=9">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/zinging-still.svg?v=9">
-  <source media="(max-width: 540px)" srcset="assets/projects/zinging-mobile.gif?v=9">
-  <img src="assets/projects/zinging.gif?v=9" alt="Zinging. A self-evolving AI bot and agent ecosystem for adaptive communities, automation, and agentic utilities." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/zinging-mobile-still.svg?v=10">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/zinging-still.svg?v=10">
+  <source media="(max-width: 540px)" srcset="assets/projects/zinging-mobile.gif?v=10">
+  <img src="assets/projects/zinging.gif?v=10" alt="Zinging. A self-evolving AI bot and agent ecosystem for adaptive communities, automation, and agentic utilities." width="100%">
 </picture>
 </a>
 
