@@ -235,10 +235,10 @@
 ## Experience
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/experience-mobile-still.svg?v=6">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/experience-still.svg?v=6">
-  <source media="(max-width: 540px)" srcset="assets/experience-mobile.svg?v=6">
-  <img src="assets/experience.svg?v=6" alt="CEO at NextGenAISchool (05/2026 - Present); Researcher at CLARITY Lab, IIT Jodhpur (06/2026 - Present); Project Associate at IIT Jodhpur (12/2025 - 05/2026); Freelancer at Independent (05/2025 - 11/2025); R&amp;D Consultant at System 3 (01/2024 - 05/2025); Research Fellow (Computer Science) at Harvard SEAS (05/2024 - 07/2024); Researcher at StellarDNN (01/2023 - 08/2024); Learning Experience Supervisor + Analytics Consultant at Univ.AI (05/2022 - 12/2023); Big Data Analytics &amp; Data Science Intern at Appinventiv (02/2022 - 06/2022); Big Data Analytics &amp; Data Science Intern at Jio (08/2021 - 02/2022); Big Data Analytics &amp; Data Science Intern at Havells India Ltd (01/2021 - 07/2021)" width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/experience-mobile-still.svg?v=7">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/experience-still.svg?v=7">
+  <source media="(max-width: 540px)" srcset="assets/experience-mobile.svg?v=7">
+  <img src="assets/experience.svg?v=7" alt="CEO / CTO / Lead Developer at NextGenAISchool (05/2026 - Present); Researcher at CLARITY Lab, IIT Jodhpur (06/2026 - Present); Project Associate at IIT Jodhpur (12/2025 - 05/2026); Freelancer at Independent (05/2025 - 11/2025); R&amp;D Consultant at System 3 (01/2024 - 05/2025); Research Fellow (Computer Science) at Harvard SEAS (05/2024 - 07/2024); Researcher at StellarDNN (01/2023 - 08/2024); Learning Experience Supervisor + Analytics Consultant at Univ.AI (05/2022 - 12/2023); Big Data Analytics &amp; Data Science Intern at Appinventiv (02/2022 - 06/2022); Big Data Analytics &amp; Data Science Intern at Jio (08/2021 - 02/2022); Big Data Analytics &amp; Data Science Intern at Havells India Ltd (01/2021 - 07/2021)" width="100%">
 </picture>
 
 ## Toolkit
