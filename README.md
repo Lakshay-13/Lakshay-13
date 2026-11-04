@@ -235,10 +235,10 @@
 ## Toolkit
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/toolkit-mobile-still.svg?v=6">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/toolkit-still.svg?v=6">
-  <source media="(max-width: 540px)" srcset="assets/toolkit-mobile.svg?v=6">
-  <img src="assets/toolkit.svg?v=6" alt="AI &amp; Machine Learning: PINNs, Neural Differential Equations, 3D Vision, 3D Generative Modeling, Computer Vision, Generative AI, LLMs, RAG, Agentic LLM Systems, Multi-Agent Workflows, Reinforcement Learning; Languages &amp; Frameworks: Python, TypeScript, Kotlin, SQL, PyTorch, TensorFlow, CUDA, Next.js, React, Jetpack Compose; LLM &amp; Data Stack: LangChain, LangGraph, OpenAI API, Google GenAI/Gemini API, Ollama, vLLM, Hugging Face, NumPy, Pandas, Hive, Hadoop, Spark, EDA, Data Visualization; Product &amp; Backend: FastAPI, Express.js, PostgreSQL, Redis, Docker, Linux, S3-Compatible Storage, Firebase/FCM; Developer Tools: Git, GitHub, GitHub Actions, API Design, Production Deployments, Observability" width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/toolkit-mobile-still.svg?v=7">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/toolkit-still.svg?v=7">
+  <source media="(max-width: 540px)" srcset="assets/toolkit-mobile.svg?v=7">
+  <img src="assets/toolkit.svg?v=7" alt="AI &amp; Machine Learning: PINNs, Neural Differential Equations, 3D Vision, 3D Generative Modeling, Computer Vision, Generative AI, LLMs, RAG, Agentic LLM Systems, Multi-Agent Workflows, Reinforcement Learning; Languages &amp; Frameworks: Python, TypeScript, Kotlin, SQL, PyTorch, TensorFlow, CUDA, Next.js, React, Jetpack Compose; LLM &amp; Data Stack: LangChain, LangGraph, OpenAI API, Google GenAI/Gemini API, Ollama, vLLM, Hugging Face, NumPy, Pandas, Hive, Hadoop, Spark, EDA, Data Visualization; Product &amp; Backend: FastAPI, Express.js, PostgreSQL, Redis, Docker, Linux, S3-Compatible Storage, Firebase/FCM; Developer Tools: Git, GitHub, GitHub Actions, CLI, API Design, Production Deployments, Observability" width="100%">
 </picture>
 
 ## Education
