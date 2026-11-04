@@ -14,34 +14,6 @@
     "artwork": "logos/fren.png"
   },
   {
-    "id": "pinnhub",
-    "name": "PINN Hub",
-    "category": "RESEARCH / SCIENTIFIC ML",
-    "color": "#b9a7ff",
-    "description": "A research hub for Physics-Informed Neural Networks and neural differential-equation experiments.",
-    "tags": [
-      "PINNs",
-      "Differential equations",
-      "Research"
-    ],
-    "url": "https://pinnhub.nextgenaischool.in/",
-    "artwork": "logos/pinnhub.png"
-  },
-  {
-    "id": "artgridx",
-    "name": "ArtGridX",
-    "category": "PRODUCTS / CREATIVE TOOLS",
-    "color": "#2effbf",
-    "description": "Portfolio publishing for artists, studios, and creative independents.",
-    "tags": [
-      "Portfolios",
-      "Publishing",
-      "Creative tools"
-    ],
-    "url": "https://artgridx.nextgenaischool.in/",
-    "artwork": null
-  },
-  {
     "id": "notifyme",
     "name": "NotifyMe",
     "category": "ANDROID / DEVELOPER TOOLS",
@@ -70,88 +42,18 @@
     "artwork": "logos/host.png"
   },
   {
-    "id": "rlpinn",
-    "name": "RL-PINNs",
-    "category": "RESEARCH / REINFORCEMENT LEARNING",
-    "color": "#b9a7ff",
-    "description": "Adaptive Physics-Informed Neural Network training control loops through reinforcement learning.",
-    "tags": [
-      "Reinforcement learning",
-      "PINNs",
-      "Adaptive training"
-    ],
-    "url": "https://lakshay-13.github.io/rl-pinn/",
-    "artwork": "logos/rlpinn.png"
-  },
-  {
-    "id": "slidenext",
-    "name": "SlideNext",
-    "category": "AI / PRESENTATIONS",
+    "id": "artgridx",
+    "name": "ArtGridX",
+    "category": "PRODUCTS / CREATIVE TOOLS",
     "color": "#2effbf",
-    "description": "Next-generation presentation platform for AI-assisted decks, education workflows, and structured storytelling.",
+    "description": "Portfolio publishing for artists, studios, and creative independents.",
     "tags": [
-      "Presentations",
-      "AI",
-      "Education"
+      "Portfolios",
+      "Publishing",
+      "Creative tools"
     ],
-    "url": null,
+    "url": "https://artgridx.nextgenaischool.in/",
     "artwork": null
-  },
-  {
-    "id": "watermark",
-    "name": "Watermark Studio",
-    "category": "PRODUCTS / PUBLISHING",
-    "color": "#b9a7ff",
-    "description": "Protected publishing workspace for image watermarking, branded exports, document protection, and controlled content distribution with per-user history and admin visibility.",
-    "tags": [
-      "Watermarking",
-      "PDF/DOCX",
-      "Publishing"
-    ],
-    "url": "https://watermark.nextgenaischool.in/",
-    "artwork": "logos/watermark.png"
-  },
-  {
-    "id": "frenshop",
-    "name": "Fren Shop",
-    "category": "COMMUNITY / FREN",
-    "color": "#2effbf",
-    "description": "Official shop and support hub for FREN with premium drops, updates, and community goodies.",
-    "tags": [
-      "Web",
-      "Discord",
-      "Premium"
-    ],
-    "url": "https://www.nextgenaischool.in/fren",
-    "artwork": "logos/frenshop.png"
-  },
-  {
-    "id": "tree",
-    "name": "Tree",
-    "category": "PRODUCTS / IDENTITY",
-    "color": "#2effbf",
-    "description": "Modern identity and profile surfaces built around interactive tree systems.",
-    "tags": [
-      "Identity",
-      "Profiles",
-      "Interactive systems"
-    ],
-    "url": "https://tree.nextgenaischool.in/",
-    "artwork": null
-  },
-  {
-    "id": "zinging",
-    "name": "Zinging",
-    "category": "AGENTIC AI / AUTOMATION",
-    "color": "#b9a7ff",
-    "description": "A self-evolving AI bot and agent ecosystem for adaptive communities, automation, and agentic utilities.",
-    "tags": [
-      "Agents",
-      "Automation",
-      "Communities"
-    ],
-    "url": "https://lakshay-13.github.io/zinging/",
-    "artwork": "logos/zinging.png"
   },
   {
     "id": "url",
@@ -168,6 +70,90 @@
     "artwork": "logos/url.png"
   },
   {
+    "id": "zinging",
+    "name": "Zinging",
+    "category": "AGENTIC AI / AUTOMATION",
+    "color": "#b9a7ff",
+    "description": "A self-evolving AI bot and agent ecosystem for adaptive communities, automation, and agentic utilities.",
+    "tags": [
+      "Agents",
+      "Automation",
+      "Communities"
+    ],
+    "url": "https://lakshay-13.github.io/zinging/",
+    "artwork": "logos/zinging.png"
+  },
+  {
+    "id": "frenshop",
+    "name": "Fren Shop",
+    "category": "COMMUNITY / FREN",
+    "color": "#2effbf",
+    "description": "Official shop and support hub for FREN with premium drops, updates, and community goodies.",
+    "tags": [
+      "Web",
+      "Discord",
+      "Premium"
+    ],
+    "url": "https://www.nextgenaischool.in/fren",
+    "artwork": "logos/frenshop.png"
+  },
+  {
+    "id": "pinnhub",
+    "name": "PINN Hub",
+    "category": "RESEARCH / SCIENTIFIC ML",
+    "color": "#b9a7ff",
+    "description": "A research hub for Physics-Informed Neural Networks and neural differential-equation experiments.",
+    "tags": [
+      "PINNs",
+      "Differential equations",
+      "Research"
+    ],
+    "url": "https://pinnhub.nextgenaischool.in/",
+    "artwork": "logos/pinnhub.png"
+  },
+  {
+    "id": "tree",
+    "name": "Tree",
+    "category": "SCIENCE / EDUCATION",
+    "color": "#2effbf",
+    "description": "An interactive phylogenetic explorer for tracing evolutionary relationships, comparing branches, and opening species profiles.",
+    "tags": [
+      "Phylogenetics",
+      "Species profiles",
+      "Interactive"
+    ],
+    "url": "https://tree.nextgenaischool.in/",
+    "artwork": "showcase/tree-mark.webp"
+  },
+  {
+    "id": "watermark",
+    "name": "Watermark Studio",
+    "category": "PRODUCTS / PUBLISHING",
+    "color": "#b9a7ff",
+    "description": "Protected publishing workspace for image watermarking, branded exports, document protection, and controlled content distribution with per-user history and admin visibility.",
+    "tags": [
+      "Watermarking",
+      "PDF/DOCX",
+      "Publishing"
+    ],
+    "url": "https://watermark.nextgenaischool.in/",
+    "artwork": "logos/watermark.png"
+  },
+  {
+    "id": "rlpinn",
+    "name": "RL-PINNs",
+    "category": "RESEARCH / REINFORCEMENT LEARNING",
+    "color": "#b9a7ff",
+    "description": "Adaptive Physics-Informed Neural Network training control loops through reinforcement learning.",
+    "tags": [
+      "Reinforcement learning",
+      "PINNs",
+      "Adaptive training"
+    ],
+    "url": "https://lakshay-13.github.io/rl-pinn/",
+    "artwork": "showcase/rlpinn-mark.svg"
+  },
+  {
     "id": "rags",
     "name": "RAGS-Demo",
     "category": "NLP / RETRIEVAL",
@@ -178,7 +164,7 @@
       "AI"
     ],
     "url": "https://github.com/Lakshay-13/RAGS-Demo",
-    "artwork": null
+    "artwork": "showcase/rags-mark.svg"
   },
   {
     "id": "variable-stars",
@@ -194,19 +180,6 @@
     "artwork": null
   },
   {
-    "id": "notes",
-    "name": "Automated Notes Maker",
-    "category": "SPEECH / AUTOMATION",
-    "color": "#2effbf",
-    "description": "Tooling for automated note creation from audio recordings.",
-    "tags": [
-      "Speech",
-      "Python"
-    ],
-    "url": "https://github.com/Lakshay-13/Automated-Notes-Maker-from-Audio-Recordings",
-    "artwork": null
-  },
-  {
     "id": "customer",
     "name": "Customer Relationship Prediction",
     "category": "DATA SCIENCE / PREDICTION",
@@ -217,6 +190,19 @@
       "ML"
     ],
     "url": "https://github.com/Lakshay-13/Customer-Relationship-Prediction",
+    "artwork": null
+  },
+  {
+    "id": "notes",
+    "name": "Automated Notes Maker",
+    "category": "SPEECH / AUTOMATION",
+    "color": "#2effbf",
+    "description": "Tooling for automated note creation from audio recordings.",
+    "tags": [
+      "Speech",
+      "Python"
+    ],
+    "url": "https://github.com/Lakshay-13/Automated-Notes-Maker-from-Audio-Recordings",
     "artwork": null
   },
   {
@@ -260,20 +246,6 @@
     "artwork": null
   },
   {
-    "id": "transcribe",
-    "name": "Transcribe App",
-    "category": "SPEECH / TRANSCRIPTION",
-    "color": "#b9a7ff",
-    "description": "A native macOS transcription app for audio and video, with local Whisper and optional OpenAI API modes.",
-    "tags": [
-      "SwiftUI",
-      "Whisper",
-      "Transcription"
-    ],
-    "url": "https://github.com/Lakshay-13/transcribe-app",
-    "artwork": null
-  },
-  {
     "id": "grid",
     "name": "Grid",
     "category": "CREATIVE CODE / GENERATIVE DESIGN",
@@ -285,6 +257,20 @@
       "Streamlit"
     ],
     "url": "https://github.com/Lakshay-13/grid",
+    "artwork": null
+  },
+  {
+    "id": "slidenext",
+    "name": "SlideNext",
+    "category": "AI / PRESENTATIONS",
+    "color": "#2effbf",
+    "description": "Next-generation presentation platform for AI-assisted decks, education workflows, and structured storytelling.",
+    "tags": [
+      "Presentations",
+      "AI",
+      "Education"
+    ],
+    "url": null,
     "artwork": null
   }
 ]

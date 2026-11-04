@@ -1,5 +1,6 @@
 """Build self-contained SVG artwork from local profile data and verified logos."""
 
+import argparse
 import base64
 import html
 import json
@@ -9,7 +10,6 @@ import textwrap
 from pathlib import Path
 from xml.etree import ElementTree
 from PIL import ImageFont
-from project_scenes import render as project_scene
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "assets"
@@ -111,9 +111,11 @@ def wrap_pixels(value, width, size):
     return lines + ([line] if line else [])
 
 
-def asset_image(file, x, y, width, height):
-    mime = "image/svg+xml" if file.endswith(".svg") else "image/png"
-    encoded = base64.b64encode((ASSETS / file).read_bytes()).decode()
+def asset_image(file, x, y, width, height, static=False):
+    path = ASSETS / file
+    mime = {".svg": "image/svg+xml", ".webp": "image/webp", ".png": "image/png"}[path.suffix]
+    payload = still(path.read_text()).encode() if static and path.suffix == ".svg" else path.read_bytes()
+    encoded = base64.b64encode(payload).decode()
     return f'<image x="{x}" y="{y}" width="{width}" height="{height}" href="data:{mime};base64,{encoded}" preserveAspectRatio="xMidYMid meet"/>'
 
 
@@ -196,36 +198,43 @@ def banner(mobile=False):
     return svg(width, height, "Lakshay Chawla — Data Scientist", "Original titles restored: AI researcher / Entrepreneur / Educator. Data Scientist working on PINNs, 3D Vision, and Generative AI. The unchanged illustrated avatar is surrounded by a circular wreath of blinking stars.", '<g clip-path="url(#panel-clip)">' + "".join(parts) + '</g>', defs)
 
 
-def project_card(project, index, mobile=False):
-    width, height = (640, 454) if mobile else (1200, 282)
+def project_card(project, mobile=False, static=False):
+    width = 640 if mobile else 1200
     color = project["color"]
+    x = 30 if mobile else 36
+    name_x = x + 60 if project.get("artwork") else x
+    title_lines = wrap_pixels(project["name"], (610 if mobile else 680) - name_x, 36)
+    desc_y = 126 + (len(title_lines) - 1) * 42
+    lines = wrap_pixels(project["description"], 574 if mobile else 628, 25 if mobile else 24)
+    tag_lines = wrap_pixels(" / ".join(project["tags"]), 574 if mobile else 628, 18)
+    content_bottom = desc_y + (len(lines) - 1) * 33 + 39 + (len(tag_lines) - 1) * 26
+    preview_y = content_bottom + 29
+    if not project.get("url"):
+        content_bottom = preview_y
+    height = content_bottom + 395 if mobile else max(346, content_bottom + 34)
     parts = [
-        f'<rect x="1" y="1" width="{width-2}" height="{height-2}" rx="20" fill="url(#surface)" stroke="#243331"/>',
-        f'<path d="M 22 1 H {width-22}" stroke="{color}" stroke-opacity=".5"/>',
-        text(30 if mobile else 36, 36 if mobile else 38, project["category"], 16 if mobile else 17, "#afc9c2", **{"class": "mono", "letter-spacing": .5}),
+        f'<rect x="1" y="1" width="{width - 2}" height="{height - 2}" rx="20" fill="url(#surface)" stroke="#243331"/>',
+        f'<path d="M 22 1 H {width - 22}" stroke="{color}" stroke-opacity=".5"/>',
+        text(x, 38, project["category"], 16 if mobile else 17, "#afc9c2", **{"class": "mono", "letter-spacing": .5}),
     ]
-    name_x = 92 if project.get("artwork") else (30 if mobile else 36)
     if project.get("artwork"):
-        artwork = asset_image(project["artwork"], 30 if mobile else 36, 55, 44, 44)
+        artwork = asset_image(project["artwork"], x, 55, 44, 44, static=static)
         if project["id"] == "fren":
-            icon_x = 52 if mobile else 58
-            artwork = f'<defs><clipPath id="project-emblem"><circle cx="{icon_x}" cy="77" r="22"/></clipPath></defs><g clip-path="url(#project-emblem)">{artwork}</g>'
+            artwork = f'<defs><clipPath id="project-emblem"><circle cx="{x + 22}" cy="77" r="22"/></clipPath></defs><g clip-path="url(#project-emblem)">{artwork}</g>'
         parts.append(artwork)
-    title_lines = wrap_pixels(project["name"], 590-name_x if mobile else 820-name_x, 36)
     for line_index, line in enumerate(title_lines):
         parts.append(text(name_x, 86 + line_index * 42, line, 36, **{"font-weight": 700, "letter-spacing": -.6}))
-    desc_y = 126 + (len(title_lines)-1)*42
-    lines = wrap_pixels(project["description"], 565 if mobile else 784, 25 if mobile else 24)
     for line_index, line in enumerate(lines):
-        parts.append(text(30 if mobile else 36, desc_y + line_index * 33, line, 25 if mobile else 24, "#c2cbd7"))
-    for line_index, line in enumerate(wrap_pixels(" / ".join(project["tags"]), 340 if mobile else 780, 18)):
-        parts.append(text(30 if mobile else 36, (342 if mobile else 241) + line_index * 26, line, 18, "#9aadb9"))
-    if mobile:
-        parts.append(f'<g transform="translate(384 267) scale(.72)">{project_scene(project["id"])}</g>')
-    else:
-        parts.append(f'<g transform="translate(862 24)">{project_scene(project["id"])}</g>')
+        parts.append(text(x, desc_y + line_index * 33, line, 25 if mobile else 24, "#c2cbd7"))
+    for line_index, line in enumerate(tag_lines):
+        parts.append(text(x, desc_y + (len(lines) - 1) * 33 + 39 + line_index * 26, line, 18, "#9aadb9"))
     if not project.get("url"):
-        parts.append(text(30 if mobile else 36, 425 if mobile else 268, "PREVIEW SOON", 15, color, **{"class": "mono"}))
+        parts.append(text(x, preview_y, "PREVIEW SOON", 15, color, **{"class": "mono"}))
+
+    key = project["id"]
+    illustration = f"showcase/{key}.{'webp' if key == 'tree' else 'svg'}"
+    frame = (27, content_bottom + 17, 586, 348) if mobile else (690, 14, 490, height - 28)
+    parts.append(asset_image(illustration, *frame, static=static))
     return svg(width, height, project["name"], project["description"], "".join(parts))
 
 
@@ -418,16 +427,22 @@ def contact_card(entry, mobile=False):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--projects-only", action="store_true", help="Rebuild just the project cards.")
+    args = parser.parse_args()
     ASSETS.mkdir(exist_ok=True)
-    save(ASSETS / "banner.svg", banner())
-    save(ASSETS / "banner-mobile.svg", banner(mobile=True))
     projects = json.loads((ASSETS / "projects.json").read_text())
-    for index, project in enumerate(projects):
+    for project in projects:
         for mobile in (False, True):
             name = project["id"] + ("-mobile" if mobile else "")
-            card = project_card(project, index, mobile=mobile)
-            save(ASSETS / "projects" / f"{name}.svg", card)
-            save(ASSETS / "projects" / f"{name}-still.svg", still(card))
+            save(ASSETS / "projects" / f"{name}.svg", project_card(project, mobile=mobile))
+            save(ASSETS / "projects" / f"{name}-still.svg", still(project_card(project, mobile=mobile, static=True)))
+    if args.projects_only:
+        print(f"Built {len(projects)} responsive project cards with portfolio illustrations.")
+        return
+
+    save(ASSETS / "banner.svg", banner())
+    save(ASSETS / "banner-mobile.svg", banner(mobile=True))
     profile = json.loads((ASSETS / "profile.json").read_text())
     for name, render in [("experience", experience_panel), ("education", education_panel), ("toolkit", toolkit_panel), ("about", about_panel)]:
         for mobile in (False, True):

@@ -36,190 +36,181 @@
 
 <a href="https://lakshay-13.github.io/fren/" target="_blank" rel="noopener noreferrer">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/fren-mobile-still.svg?v=6">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/fren-still.svg?v=6">
-  <source media="(max-width: 540px)" srcset="assets/projects/fren-mobile.gif?v=6">
-  <img src="assets/projects/fren.gif?v=6" alt="FREN Bot. AI-powered communities with games, moderation, social loops, AI utilities, and premium workflows." width="100%">
-</picture>
-</a>
-
-<a href="https://pinnhub.nextgenaischool.in/" target="_blank" rel="noopener noreferrer">
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/pinnhub-mobile-still.svg?v=8">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/pinnhub-still.svg?v=8">
-  <source media="(max-width: 540px)" srcset="assets/projects/pinnhub-mobile.gif?v=8">
-  <img src="assets/projects/pinnhub.gif?v=8" alt="PINN Hub. A research hub for Physics-Informed Neural Networks and neural differential-equation experiments." width="100%">
-</picture>
-</a>
-
-<a href="https://artgridx.nextgenaischool.in/" target="_blank" rel="noopener noreferrer">
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/artgridx-mobile-still.svg?v=7">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/artgridx-still.svg?v=7">
-  <source media="(max-width: 540px)" srcset="assets/projects/artgridx-mobile.gif?v=7">
-  <img src="assets/projects/artgridx.gif?v=7" alt="ArtGridX. Portfolio publishing for artists, studios, and creative independents." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/fren-mobile-still.svg?v=9">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/fren-still.svg?v=9">
+  <source media="(max-width: 540px)" srcset="assets/projects/fren-mobile.svg?v=9">
+  <img src="assets/projects/fren.svg?v=9" alt="FREN Bot. AI-powered communities with games, moderation, social loops, AI utilities, and premium workflows." width="100%">
 </picture>
 </a>
 
 <a href="https://lakshay-13.github.io/notifyme/" target="_blank" rel="noopener noreferrer">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/notifyme-mobile-still.svg?v=6">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/notifyme-still.svg?v=6">
-  <source media="(max-width: 540px)" srcset="assets/projects/notifyme-mobile.gif?v=6">
-  <img src="assets/projects/notifyme.gif?v=6" alt="NotifyMe. Profile-labelled alerts, local messaging, history sync, callbacks, and portable conversation data." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/notifyme-mobile-still.svg?v=9">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/notifyme-still.svg?v=9">
+  <source media="(max-width: 540px)" srcset="assets/projects/notifyme-mobile.svg?v=9">
+  <img src="assets/projects/notifyme.svg?v=9" alt="NotifyMe. Profile-labelled alerts, local messaging, history sync, callbacks, and portable conversation data." width="100%">
 </picture>
 </a>
 
 <a href="https://lakshay-13.github.io/host/" target="_blank" rel="noopener noreferrer">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/host-mobile-still.svg?v=6">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/host-still.svg?v=6">
-  <source media="(max-width: 540px)" srcset="assets/projects/host-mobile.gif?v=6">
-  <img src="assets/projects/host.gif?v=6" alt="Host. Upload images and documents, organize your files, and share them through simple public links." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/host-mobile-still.svg?v=9">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/host-still.svg?v=9">
+  <source media="(max-width: 540px)" srcset="assets/projects/host-mobile.svg?v=9">
+  <img src="assets/projects/host.svg?v=9" alt="Host. Upload images and documents, organize your files, and share them through simple public links." width="100%">
 </picture>
 </a>
 
-<a href="https://lakshay-13.github.io/rl-pinn/" target="_blank" rel="noopener noreferrer">
+<a href="https://artgridx.nextgenaischool.in/" target="_blank" rel="noopener noreferrer">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/rlpinn-mobile-still.svg?v=6">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/rlpinn-still.svg?v=6">
-  <source media="(max-width: 540px)" srcset="assets/projects/rlpinn-mobile.gif?v=6">
-  <img src="assets/projects/rlpinn.gif?v=6" alt="RL-PINNs. Adaptive Physics-Informed Neural Network training control loops through reinforcement learning." width="100%">
-</picture>
-</a>
-
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/slidenext-mobile-still.svg?v=6">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/slidenext-still.svg?v=6">
-  <source media="(max-width: 540px)" srcset="assets/projects/slidenext-mobile.gif?v=6">
-  <img src="assets/projects/slidenext.gif?v=6" alt="SlideNext. Next-generation presentation platform for AI-assisted decks, education workflows, and structured storytelling. Preview soon." width="100%">
-</picture>
-
-<a href="https://watermark.nextgenaischool.in/" target="_blank" rel="noopener noreferrer">
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/watermark-mobile-still.svg?v=6">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/watermark-still.svg?v=6">
-  <source media="(max-width: 540px)" srcset="assets/projects/watermark-mobile.gif?v=6">
-  <img src="assets/projects/watermark.gif?v=6" alt="Watermark Studio. Protected publishing workspace for image watermarking, branded exports, document protection, and controlled content distribution with per-user history and admin visibility." width="100%">
-</picture>
-</a>
-
-<a href="https://www.nextgenaischool.in/fren" target="_blank" rel="noopener noreferrer">
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/frenshop-mobile-still.svg?v=7">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/frenshop-still.svg?v=7">
-  <source media="(max-width: 540px)" srcset="assets/projects/frenshop-mobile.gif?v=7">
-  <img src="assets/projects/frenshop.gif?v=7" alt="Fren Shop. Official shop and support hub for FREN with premium drops, updates, and community goodies." width="100%">
-</picture>
-</a>
-
-<a href="https://tree.nextgenaischool.in/" target="_blank" rel="noopener noreferrer">
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/tree-mobile-still.svg?v=6">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/tree-still.svg?v=6">
-  <source media="(max-width: 540px)" srcset="assets/projects/tree-mobile.gif?v=6">
-  <img src="assets/projects/tree.gif?v=6" alt="Tree. Modern identity and profile surfaces built around interactive tree systems." width="100%">
-</picture>
-</a>
-
-<a href="https://lakshay-13.github.io/zinging/" target="_blank" rel="noopener noreferrer">
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/zinging-mobile-still.svg?v=8">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/zinging-still.svg?v=8">
-  <source media="(max-width: 540px)" srcset="assets/projects/zinging-mobile.gif?v=8">
-  <img src="assets/projects/zinging.gif?v=8" alt="Zinging. A self-evolving AI bot and agent ecosystem for adaptive communities, automation, and agentic utilities." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/artgridx-mobile-still.svg?v=9">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/artgridx-still.svg?v=9">
+  <source media="(max-width: 540px)" srcset="assets/projects/artgridx-mobile.svg?v=9">
+  <img src="assets/projects/artgridx.svg?v=9" alt="ArtGridX. Portfolio publishing for artists, studios, and creative independents." width="100%">
 </picture>
 </a>
 
 <a href="https://url.nextgenaischool.in/" target="_blank" rel="noopener noreferrer">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/url-mobile-still.svg?v=7">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/url-still.svg?v=7">
-  <source media="(max-width: 540px)" srcset="assets/projects/url-mobile.gif?v=7">
-  <img src="assets/projects/url.gif?v=7" alt="URL Extractor. Resolve Tenor, Pinterest, Giphy, and KLIPY links into direct media URLs through an API." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/url-mobile-still.svg?v=9">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/url-still.svg?v=9">
+  <source media="(max-width: 540px)" srcset="assets/projects/url-mobile.svg?v=9">
+  <img src="assets/projects/url.svg?v=9" alt="URL Extractor. Resolve Tenor, Pinterest, Giphy, and KLIPY links into direct media URLs through an API." width="100%">
+</picture>
+</a>
+
+<a href="https://lakshay-13.github.io/zinging/" target="_blank" rel="noopener noreferrer">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/zinging-mobile-still.svg?v=9">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/zinging-still.svg?v=9">
+  <source media="(max-width: 540px)" srcset="assets/projects/zinging-mobile.svg?v=9">
+  <img src="assets/projects/zinging.svg?v=9" alt="Zinging. A self-evolving AI bot and agent ecosystem for adaptive communities, automation, and agentic utilities." width="100%">
+</picture>
+</a>
+
+<a href="https://www.nextgenaischool.in/fren" target="_blank" rel="noopener noreferrer">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/frenshop-mobile-still.svg?v=9">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/frenshop-still.svg?v=9">
+  <source media="(max-width: 540px)" srcset="assets/projects/frenshop-mobile.svg?v=9">
+  <img src="assets/projects/frenshop.svg?v=9" alt="Fren Shop. Official shop and support hub for FREN with premium drops, updates, and community goodies." width="100%">
+</picture>
+</a>
+
+<a href="https://pinnhub.nextgenaischool.in/" target="_blank" rel="noopener noreferrer">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/pinnhub-mobile-still.svg?v=9">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/pinnhub-still.svg?v=9">
+  <source media="(max-width: 540px)" srcset="assets/projects/pinnhub-mobile.svg?v=9">
+  <img src="assets/projects/pinnhub.svg?v=9" alt="PINN Hub. A research hub for Physics-Informed Neural Networks and neural differential-equation experiments." width="100%">
+</picture>
+</a>
+
+<a href="https://tree.nextgenaischool.in/" target="_blank" rel="noopener noreferrer">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/tree-mobile-still.svg?v=9">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/tree-still.svg?v=9">
+  <source media="(max-width: 540px)" srcset="assets/projects/tree-mobile.svg?v=9">
+  <img src="assets/projects/tree.svg?v=9" alt="Tree. An interactive phylogenetic explorer for tracing evolutionary relationships, comparing branches, and opening species profiles." width="100%">
+</picture>
+</a>
+
+<a href="https://watermark.nextgenaischool.in/" target="_blank" rel="noopener noreferrer">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/watermark-mobile-still.svg?v=9">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/watermark-still.svg?v=9">
+  <source media="(max-width: 540px)" srcset="assets/projects/watermark-mobile.svg?v=9">
+  <img src="assets/projects/watermark.svg?v=9" alt="Watermark Studio. Protected publishing workspace for image watermarking, branded exports, document protection, and controlled content distribution with per-user history and admin visibility." width="100%">
+</picture>
+</a>
+
+<a href="https://lakshay-13.github.io/rl-pinn/" target="_blank" rel="noopener noreferrer">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/rlpinn-mobile-still.svg?v=9">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/rlpinn-still.svg?v=9">
+  <source media="(max-width: 540px)" srcset="assets/projects/rlpinn-mobile.svg?v=9">
+  <img src="assets/projects/rlpinn.svg?v=9" alt="RL-PINNs. Adaptive Physics-Informed Neural Network training control loops through reinforcement learning." width="100%">
 </picture>
 </a>
 
 <a href="https://github.com/Lakshay-13/RAGS-Demo" target="_blank" rel="noopener noreferrer">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/rags-mobile-still.svg?v=6">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/rags-still.svg?v=6">
-  <source media="(max-width: 540px)" srcset="assets/projects/rags-mobile.gif?v=6">
-  <img src="assets/projects/rags.gif?v=6" alt="RAGS-Demo. Retrieval-Augmented Generation demo for enhanced information retrieval and response generation." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/rags-mobile-still.svg?v=9">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/rags-still.svg?v=9">
+  <source media="(max-width: 540px)" srcset="assets/projects/rags-mobile.svg?v=9">
+  <img src="assets/projects/rags.svg?v=9" alt="RAGS-Demo. Retrieval-Augmented Generation demo for enhanced information retrieval and response generation." width="100%">
 </picture>
 </a>
 
 <a href="https://github.com/Lakshay-13/Classifying-Periodic-Variable-Stars" target="_blank" rel="noopener noreferrer">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/variable-stars-mobile-still.svg?v=8">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/variable-stars-still.svg?v=8">
-  <source media="(max-width: 540px)" srcset="assets/projects/variable-stars-mobile.gif?v=8">
-  <img src="assets/projects/variable-stars.gif?v=8" alt="Classifying Periodic Variable Stars. Time-series ML project classifying four classes of periodic variable stars." width="100%">
-</picture>
-</a>
-
-<a href="https://github.com/Lakshay-13/Automated-Notes-Maker-from-Audio-Recordings" target="_blank" rel="noopener noreferrer">
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/notes-mobile-still.svg?v=6">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/notes-still.svg?v=6">
-  <source media="(max-width: 540px)" srcset="assets/projects/notes-mobile.gif?v=6">
-  <img src="assets/projects/notes.gif?v=6" alt="Automated Notes Maker. Tooling for automated note creation from audio recordings." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/variable-stars-mobile-still.svg?v=9">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/variable-stars-still.svg?v=9">
+  <source media="(max-width: 540px)" srcset="assets/projects/variable-stars-mobile.svg?v=9">
+  <img src="assets/projects/variable-stars.svg?v=9" alt="Classifying Periodic Variable Stars. Time-series ML project classifying four classes of periodic variable stars." width="100%">
 </picture>
 </a>
 
 <a href="https://github.com/Lakshay-13/Customer-Relationship-Prediction" target="_blank" rel="noopener noreferrer">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/customer-mobile-still.svg?v=8">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/customer-still.svg?v=8">
-  <source media="(max-width: 540px)" srcset="assets/projects/customer-mobile.gif?v=8">
-  <img src="assets/projects/customer.gif?v=8" alt="Customer Relationship Prediction. Predicting churn, appetency, and up-selling behavior from marketing databases." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/customer-mobile-still.svg?v=9">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/customer-still.svg?v=9">
+  <source media="(max-width: 540px)" srcset="assets/projects/customer-mobile.svg?v=9">
+  <img src="assets/projects/customer.svg?v=9" alt="Customer Relationship Prediction. Predicting churn, appetency, and up-selling behavior from marketing databases." width="100%">
+</picture>
+</a>
+
+<a href="https://github.com/Lakshay-13/Automated-Notes-Maker-from-Audio-Recordings" target="_blank" rel="noopener noreferrer">
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/notes-mobile-still.svg?v=9">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/notes-still.svg?v=9">
+  <source media="(max-width: 540px)" srcset="assets/projects/notes-mobile.svg?v=9">
+  <img src="assets/projects/notes.svg?v=9" alt="Automated Notes Maker. Tooling for automated note creation from audio recordings." width="100%">
 </picture>
 </a>
 
 <a href="https://github.com/Lakshay-13/Music-Genre-Prediction" target="_blank" rel="noopener noreferrer">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/music-mobile-still.svg?v=8">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/music-still.svg?v=8">
-  <source media="(max-width: 540px)" srcset="assets/projects/music-mobile.gif?v=8">
-  <img src="assets/projects/music.gif?v=8" alt="Music Genre Prediction. Predicting music genres using data analysis and ML techniques." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/music-mobile-still.svg?v=9">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/music-still.svg?v=9">
+  <source media="(max-width: 540px)" srcset="assets/projects/music-mobile.svg?v=9">
+  <img src="assets/projects/music.svg?v=9" alt="Music Genre Prediction. Predicting music genres using data analysis and ML techniques." width="100%">
 </picture>
 </a>
 
 <a href="https://github.com/Lakshay-13/Code-Image-Generator" target="_blank" rel="noopener noreferrer">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/code-image-mobile-still.svg?v=6">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/code-image-still.svg?v=6">
-  <source media="(max-width: 540px)" srcset="assets/projects/code-image-mobile.gif?v=6">
-  <img src="assets/projects/code-image.gif?v=6" alt="Code Image Generator. Python-based tool for generating images from code snippets." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/code-image-mobile-still.svg?v=9">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/code-image-still.svg?v=9">
+  <source media="(max-width: 540px)" srcset="assets/projects/code-image-mobile.svg?v=9">
+  <img src="assets/projects/code-image.svg?v=9" alt="Code Image Generator. Python-based tool for generating images from code snippets." width="100%">
 </picture>
 </a>
 
 <a href="https://github.com/Lakshay-13/Morph-Images" target="_blank" rel="noopener noreferrer">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/morph-mobile-still.svg?v=6">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/morph-still.svg?v=6">
-  <source media="(max-width: 540px)" srcset="assets/projects/morph-mobile.gif?v=6">
-  <img src="assets/projects/morph.gif?v=6" alt="Morph Images. Turn two or more graph images into a smooth morphing GIF, with adjustable frames and timing." width="100%">
-</picture>
-</a>
-
-<a href="https://github.com/Lakshay-13/transcribe-app" target="_blank" rel="noopener noreferrer">
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/transcribe-mobile-still.svg?v=6">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/transcribe-still.svg?v=6">
-  <source media="(max-width: 540px)" srcset="assets/projects/transcribe-mobile.gif?v=6">
-  <img src="assets/projects/transcribe.gif?v=6" alt="Transcribe App. A native macOS transcription app for audio and video, with local Whisper and optional OpenAI API modes." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/morph-mobile-still.svg?v=9">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/morph-still.svg?v=9">
+  <source media="(max-width: 540px)" srcset="assets/projects/morph-mobile.svg?v=9">
+  <img src="assets/projects/morph.svg?v=9" alt="Morph Images. Turn two or more graph images into a smooth morphing GIF, with adjustable frames and timing." width="100%">
 </picture>
 </a>
 
 <a href="https://github.com/Lakshay-13/grid" target="_blank" rel="noopener noreferrer">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/grid-mobile-still.svg?v=6">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/grid-still.svg?v=6">
-  <source media="(max-width: 540px)" srcset="assets/projects/grid-mobile.gif?v=6">
-  <img src="assets/projects/grid.gif?v=6" alt="Grid. Create customizable triangular tessellation patterns with colors, gradients, transparency, and high-resolution exports." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/grid-mobile-still.svg?v=9">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/grid-still.svg?v=9">
+  <source media="(max-width: 540px)" srcset="assets/projects/grid-mobile.svg?v=9">
+  <img src="assets/projects/grid.svg?v=9" alt="Grid. Create customizable triangular tessellation patterns with colors, gradients, transparency, and high-resolution exports." width="100%">
 </picture>
 </a>
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/slidenext-mobile-still.svg?v=9">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/slidenext-still.svg?v=9">
+  <source media="(max-width: 540px)" srcset="assets/projects/slidenext-mobile.svg?v=9">
+  <img src="assets/projects/slidenext.svg?v=9" alt="SlideNext. Next-generation presentation platform for AI-assisted decks, education workflows, and structured storytelling. Preview soon." width="100%">
+</picture>
 
 <a href="https://www.nextgenaischool.in/" target="_blank" rel="noopener noreferrer"><img src="https://www.nextgenaischool.in/api/portfolio/full-stats.svg" alt="Live NextGenAISchool ecosystem statistics" width="100%"></a>
 

@@ -5,15 +5,12 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-ASSET_VERSIONS = {
-    "experience": 7,
-    **{f"projects/{name}": 7 for name in ("artgridx", "frenshop", "url")},
-    **{f"projects/{name}": 8 for name in ("pinnhub", "variable-stars", "customer", "music", "zinging")},
-}
+ASSET_VERSIONS = {"experience": 7}
+PROJECT_ART_VERSION = 9
 
 
 def picture(stem, alt, animated="svg", still="svg", link=None, width="100%"):
-    version = ASSET_VERSIONS.get(stem, 6)
+    version = PROJECT_ART_VERSION if stem.startswith("projects/") else ASSET_VERSIONS.get(stem, 6)
     def asset(suffix, extension):
         return f"assets/{stem}{suffix}.{extension}?v={version}"
     markup = f'''<picture>
@@ -37,7 +34,7 @@ def main():
         alt = f'{project["name"]}. {project["description"]}'
         if not project["url"]:
             alt += " Preview soon."
-        parts.append(picture(f'projects/{project["id"]}', alt, animated="gif", link=project["url"]))
+        parts.append(picture(f'projects/{project["id"]}', alt, link=project["url"]))
     parts.extend([
         '<a href="https://www.nextgenaischool.in/" target="_blank" rel="noopener noreferrer"><img src="https://www.nextgenaischool.in/api/portfolio/full-stats.svg" alt="Live NextGenAISchool ecosystem statistics" width="100%"></a>',
         "## Activity", picture("activity", "Lakshay Chawla's GitHub contribution calendar, refreshed daily from GitHub."),
