@@ -34,7 +34,8 @@ def main():
         alt = f'{project["name"]}. {project["description"]}'
         if not project["url"]:
             alt += " Preview soon."
-        parts.append(picture(f'projects/{project["id"]}', alt, link=project["url"]))
+        animated = "gif" if project.get("loop_seconds") else "svg"
+        parts.append(picture(f'projects/{project["id"]}', alt, animated=animated, link=project["url"]))
     parts.extend([
         '<a href="https://www.nextgenaischool.in/" target="_blank" rel="noopener noreferrer"><img src="https://www.nextgenaischool.in/api/portfolio/full-stats.svg" alt="Live NextGenAISchool ecosystem statistics" width="100%"></a>',
         "## Activity", picture("activity", "Lakshay Chawla's GitHub contribution calendar, refreshed daily from GitHub."),

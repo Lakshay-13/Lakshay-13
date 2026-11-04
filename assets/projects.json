@@ -11,7 +11,8 @@
       "Moderation"
     ],
     "url": "https://lakshay-13.github.io/fren/",
-    "artwork": "logos/fren.png"
+    "artwork": "logos/fren.png",
+    "loop_seconds": 8.4
   },
   {
     "id": "notifyme",
@@ -25,7 +26,8 @@
       "Callbacks"
     ],
     "url": "https://lakshay-13.github.io/notifyme/",
-    "artwork": "logos/notifyme.png"
+    "artwork": "logos/notifyme.png",
+    "loop_seconds": 7.2
   },
   {
     "id": "host",
@@ -39,7 +41,8 @@
       "Shareable links"
     ],
     "url": "https://lakshay-13.github.io/host/",
-    "artwork": "logos/host.png"
+    "artwork": "logos/host.png",
+    "loop_seconds": 5.4
   },
   {
     "id": "artgridx",
@@ -67,7 +70,8 @@
       "Automation"
     ],
     "url": "https://url.nextgenaischool.in/",
-    "artwork": "logos/url.png"
+    "artwork": "logos/url.png",
+    "loop_seconds": 5.4
   },
   {
     "id": "zinging",
@@ -81,7 +85,8 @@
       "Communities"
     ],
     "url": "https://lakshay-13.github.io/zinging/",
-    "artwork": "logos/zinging.png"
+    "artwork": "logos/zinging.png",
+    "loop_seconds": 5
   },
   {
     "id": "frenshop",
@@ -109,7 +114,8 @@
       "Research"
     ],
     "url": "https://pinnhub.nextgenaischool.in/",
-    "artwork": "logos/pinnhub.png"
+    "artwork": "logos/pinnhub.png",
+    "loop_seconds": 5.4
   },
   {
     "id": "tree",
@@ -151,7 +157,8 @@
       "Adaptive training"
     ],
     "url": "https://lakshay-13.github.io/rl-pinn/",
-    "artwork": "showcase/rlpinn-mark.svg"
+    "artwork": "showcase/rlpinn-mark.svg",
+    "loop_seconds": 4
   },
   {
     "id": "rags",
@@ -164,7 +171,8 @@
       "AI"
     ],
     "url": "https://github.com/Lakshay-13/RAGS-Demo",
-    "artwork": "showcase/rags-mark.svg"
+    "artwork": "showcase/rags-mark.svg",
+    "loop_seconds": 5.4
   },
   {
     "id": "variable-stars",
@@ -243,7 +251,8 @@
       "Streamlit"
     ],
     "url": "https://github.com/Lakshay-13/Morph-Images",
-    "artwork": null
+    "artwork": null,
+    "loop_seconds": 5.4
   },
   {
     "id": "grid",

@@ -38,8 +38,8 @@
 <picture>
   <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/fren-mobile-still.svg?v=9">
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/fren-still.svg?v=9">
-  <source media="(max-width: 540px)" srcset="assets/projects/fren-mobile.svg?v=9">
-  <img src="assets/projects/fren.svg?v=9" alt="FREN Bot. AI-powered communities with games, moderation, social loops, AI utilities, and premium workflows." width="100%">
+  <source media="(max-width: 540px)" srcset="assets/projects/fren-mobile.gif?v=9">
+  <img src="assets/projects/fren.gif?v=9" alt="FREN Bot. AI-powered communities with games, moderation, social loops, AI utilities, and premium workflows." width="100%">
 </picture>
 </a>
 
@@ -47,8 +47,8 @@
 <picture>
   <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/notifyme-mobile-still.svg?v=9">
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/notifyme-still.svg?v=9">
-  <source media="(max-width: 540px)" srcset="assets/projects/notifyme-mobile.svg?v=9">
-  <img src="assets/projects/notifyme.svg?v=9" alt="NotifyMe. Profile-labelled alerts, local messaging, history sync, callbacks, and portable conversation data." width="100%">
+  <source media="(max-width: 540px)" srcset="assets/projects/notifyme-mobile.gif?v=9">
+  <img src="assets/projects/notifyme.gif?v=9" alt="NotifyMe. Profile-labelled alerts, local messaging, history sync, callbacks, and portable conversation data." width="100%">
 </picture>
 </a>
 
@@ -56,8 +56,8 @@
 <picture>
   <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/host-mobile-still.svg?v=9">
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/host-still.svg?v=9">
-  <source media="(max-width: 540px)" srcset="assets/projects/host-mobile.svg?v=9">
-  <img src="assets/projects/host.svg?v=9" alt="Host. Upload images and documents, organize your files, and share them through simple public links." width="100%">
+  <source media="(max-width: 540px)" srcset="assets/projects/host-mobile.gif?v=9">
+  <img src="assets/projects/host.gif?v=9" alt="Host. Upload images and documents, organize your files, and share them through simple public links." width="100%">
 </picture>
 </a>
 
@@ -74,8 +74,8 @@
 <picture>
   <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/url-mobile-still.svg?v=9">
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/url-still.svg?v=9">
-  <source media="(max-width: 540px)" srcset="assets/projects/url-mobile.svg?v=9">
-  <img src="assets/projects/url.svg?v=9" alt="URL Extractor. Resolve Tenor, Pinterest, Giphy, and KLIPY links into direct media URLs through an API." width="100%">
+  <source media="(max-width: 540px)" srcset="assets/projects/url-mobile.gif?v=9">
+  <img src="assets/projects/url.gif?v=9" alt="URL Extractor. Resolve Tenor, Pinterest, Giphy, and KLIPY links into direct media URLs through an API." width="100%">
 </picture>
 </a>
 
@@ -83,8 +83,8 @@
 <picture>
   <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/zinging-mobile-still.svg?v=9">
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/zinging-still.svg?v=9">
-  <source media="(max-width: 540px)" srcset="assets/projects/zinging-mobile.svg?v=9">
-  <img src="assets/projects/zinging.svg?v=9" alt="Zinging. A self-evolving AI bot and agent ecosystem for adaptive communities, automation, and agentic utilities." width="100%">
+  <source media="(max-width: 540px)" srcset="assets/projects/zinging-mobile.gif?v=9">
+  <img src="assets/projects/zinging.gif?v=9" alt="Zinging. A self-evolving AI bot and agent ecosystem for adaptive communities, automation, and agentic utilities." width="100%">
 </picture>
 </a>
 
@@ -101,8 +101,8 @@
 <picture>
   <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/pinnhub-mobile-still.svg?v=9">
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/pinnhub-still.svg?v=9">
-  <source media="(max-width: 540px)" srcset="assets/projects/pinnhub-mobile.svg?v=9">
-  <img src="assets/projects/pinnhub.svg?v=9" alt="PINN Hub. A research hub for Physics-Informed Neural Networks and neural differential-equation experiments." width="100%">
+  <source media="(max-width: 540px)" srcset="assets/projects/pinnhub-mobile.gif?v=9">
+  <img src="assets/projects/pinnhub.gif?v=9" alt="PINN Hub. A research hub for Physics-Informed Neural Networks and neural differential-equation experiments." width="100%">
 </picture>
 </a>
 
@@ -128,8 +128,8 @@
 <picture>
   <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/rlpinn-mobile-still.svg?v=9">
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/rlpinn-still.svg?v=9">
-  <source media="(max-width: 540px)" srcset="assets/projects/rlpinn-mobile.svg?v=9">
-  <img src="assets/projects/rlpinn.svg?v=9" alt="RL-PINNs. Adaptive Physics-Informed Neural Network training control loops through reinforcement learning." width="100%">
+  <source media="(max-width: 540px)" srcset="assets/projects/rlpinn-mobile.gif?v=9">
+  <img src="assets/projects/rlpinn.gif?v=9" alt="RL-PINNs. Adaptive Physics-Informed Neural Network training control loops through reinforcement learning." width="100%">
 </picture>
 </a>
 
@@ -137,8 +137,8 @@
 <picture>
   <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/rags-mobile-still.svg?v=9">
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/rags-still.svg?v=9">
-  <source media="(max-width: 540px)" srcset="assets/projects/rags-mobile.svg?v=9">
-  <img src="assets/projects/rags.svg?v=9" alt="RAGS-Demo. Retrieval-Augmented Generation demo for enhanced information retrieval and response generation." width="100%">
+  <source media="(max-width: 540px)" srcset="assets/projects/rags-mobile.gif?v=9">
+  <img src="assets/projects/rags.gif?v=9" alt="RAGS-Demo. Retrieval-Augmented Generation demo for enhanced information retrieval and response generation." width="100%">
 </picture>
 </a>
 
@@ -191,8 +191,8 @@
 <picture>
   <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/morph-mobile-still.svg?v=9">
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/morph-still.svg?v=9">
-  <source media="(max-width: 540px)" srcset="assets/projects/morph-mobile.svg?v=9">
-  <img src="assets/projects/morph.svg?v=9" alt="Morph Images. Turn two or more graph images into a smooth morphing GIF, with adjustable frames and timing." width="100%">
+  <source media="(max-width: 540px)" srcset="assets/projects/morph-mobile.gif?v=9">
+  <img src="assets/projects/morph.gif?v=9" alt="Morph Images. Turn two or more graph images into a smooth morphing GIF, with adjustable frames and timing." width="100%">
 </picture>
 </a>
 
