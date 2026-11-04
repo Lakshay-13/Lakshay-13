@@ -211,7 +211,8 @@
       "Python"
     ],
     "url": "https://github.com/Lakshay-13/Automated-Notes-Maker-from-Audio-Recordings",
-    "artwork": null
+    "artwork": null,
+    "loop_seconds": 2
   },
   {
     "id": "music",
@@ -224,7 +225,8 @@
       "Python"
     ],
     "url": "https://github.com/Lakshay-13/Music-Genre-Prediction",
-    "artwork": null
+    "artwork": null,
+    "loop_seconds": 2
   },
   {
     "id": "code-image",

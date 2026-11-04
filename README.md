@@ -162,19 +162,19 @@
 
 <a href="https://github.com/Lakshay-13/Automated-Notes-Maker-from-Audio-Recordings" target="_blank" rel="noopener noreferrer">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/notes-mobile-still.svg?v=9">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/notes-still.svg?v=9">
-  <source media="(max-width: 540px)" srcset="assets/projects/notes-mobile.svg?v=9">
-  <img src="assets/projects/notes.svg?v=9" alt="Automated Notes Maker. Tooling for automated note creation from audio recordings." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/notes-mobile-still.svg?v=10">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/notes-still.svg?v=10">
+  <source media="(max-width: 540px)" srcset="assets/projects/notes-mobile.gif?v=10">
+  <img src="assets/projects/notes.gif?v=10" alt="Automated Notes Maker. Tooling for automated note creation from audio recordings." width="100%">
 </picture>
 </a>
 
 <a href="https://github.com/Lakshay-13/Music-Genre-Prediction" target="_blank" rel="noopener noreferrer">
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/music-mobile-still.svg?v=9">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/music-still.svg?v=9">
-  <source media="(max-width: 540px)" srcset="assets/projects/music-mobile.svg?v=9">
-  <img src="assets/projects/music.svg?v=9" alt="Music Genre Prediction. Predicting music genres using data analysis and ML techniques." width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/projects/music-mobile-still.svg?v=10">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/projects/music-still.svg?v=10">
+  <source media="(max-width: 540px)" srcset="assets/projects/music-mobile.gif?v=10">
+  <img src="assets/projects/music.gif?v=10" alt="Music Genre Prediction. Predicting music genres using data analysis and ML techniques." width="100%">
 </picture>
 </a>
 
