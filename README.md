@@ -244,10 +244,10 @@
 ## Education
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/education-mobile-still.svg?v=6">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/education-still.svg?v=6">
-  <source media="(max-width: 540px)" srcset="assets/education-mobile.svg?v=6">
-  <img src="assets/education.svg?v=6" alt="Master of Technology (Artificial Intelligence), IIT Jodhpur (01/2025 - Present); Bachelor of Technology (Computer Science Engineering), Maharaja Agrasen Institute of Technology (08/2018 - 06/2022, 8.6 CGPA)" width="100%">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 540px)" srcset="assets/education-mobile-still.svg?v=7">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/education-still.svg?v=7">
+  <source media="(max-width: 540px)" srcset="assets/education-mobile.svg?v=7">
+  <img src="assets/education.svg?v=7" alt="Master of Technology (Artificial Intelligence), IIT Jodhpur (01/2025 - 11/2026); Bachelor of Technology (Computer Science Engineering), Maharaja Agrasen Institute of Technology (08/2018 - 06/2022, 8.6 CGPA)" width="100%">
 </picture>
 
 ## Connect
